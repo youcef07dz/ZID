@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "setup": "setup_1.0.exe",
-  "sha256": "74a507512e877c1c338da273208b972319dfa8b6c8cf88a7c2fc2c5070cf6f4e",
-  "build_date": "2026-11-01 19:10:54",
+  "sha256": "3fd5325288221868f0b8fd379f50b8e03eff6982cd682773fa4c497707849292",
+  "build_date": "2026-11-03 20:48:30",
   "whats_new": [
     "First public release — free, no ads, no registration.",
     "Up to 16 parallel connections per file, with pause, resume and stop.",

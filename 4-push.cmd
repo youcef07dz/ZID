@@ -91,7 +91,8 @@ if errorlevel 1 (
     echo [INFO] Nothing new to commit.
 )
 
-git push -u origin main
+rem HTTP/1.1 avoids "Empty reply from server" on some GitHub connections.
+git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 push -u origin main
 if errorlevel 1 (
     echo [ERROR] git push failed.
     exit /b 1
