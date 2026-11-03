@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Nederlands
+code=nl
+name=Nederlands
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Bestand
+menu.downloads=Downloads
+menu.view=Beeld
+menu.options=Opties
+menu.help=Help
+menu.add_url=URL toevoegen...
+menu.resume_selected=Selectie hervatten
+menu.pause_selected=Selectie pauzeren
+menu.restart_selected=Selectie opnieuw starten
+menu.export=Lijst exporteren...
+menu.exit=Afsluiten
+menu.pause_all=Alles pauzeren
+menu.resume_all=Alles hervatten
+menu.stop_all=Alles stoppen
+menu.theme_light=Windows 7 licht thema
+menu.theme_dark=Windows 7 donker thema
+menu.settings=Instellingen...
+menu.about=Over...
+
+btn.add=URL toevoegen
+btn.start=Starten
+btn.pause=Pauzeren
+btn.resume=Hervatten
+btn.restart=Opnieuw starten
+btn.edit=Bewerken
+btn.info=Info
+btn.remove=Verwijderen
+btn.about=Over
+btn.stop_all=Alles stoppen
+btn.cancel=Annuleren
+btn.ok=OK
+btn.close=Sluiten
+btn.paste=Plakken
+btn.open_folder=Map openen
+btn.hide=Verbergen
+
+tb.filter=Filteren...
+
+cat.all=Alle downloads
+cat.queue=Wachtrij
+cat.downloading=Bezig met downloaden
+cat.paused=Gepauzeerd
+cat.done=Voltooid
+cat.error=Fout
+cat.video=Video
+cat.image=Afbeelding
+cat.audio=Audio
+cat.compressed=Gecomprimeerd
+cat.program=Programma
+cat.other=Overig
+
+col.name=Bestandsnaam
+col.status=Status
+col.type=Type
+col.size=Grootte
+col.progress=Voortgang
+col.speed=Snelheid
+col.eta=Resterende tijd
+col.date=Datum
+
+ctx.open=Openen
+ctx.folder=Map openen
+ctx.copy=URL kopiëren
+ctx.resume=Starten / hervatten
+ctx.pause=Pauzeren
+ctx.restart=Opnieuw starten
+ctx.edit=Bewerken...
+ctx.info=Info...
+ctx.prio_high=Prioriteit: Hoog
+ctx.prio_normal=Prioriteit: Normaal
+ctx.prio_low=Prioriteit: Laag
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Verwijderen
+
+label.name=Naam:
+label.url=URL:
+label.type=Type:
+label.size=Grootte:
+label.received=Ontvangen:
+label.status=Status:
+label.started=Gestart:
+label.priority=Prioriteit:
+label.save_to=Opslaan in:
+label.file=Bestand:
+label.speed=Snelheid:
+label.eta=Resterende tijd:
+label.urls=URL's (één per regel)
+label.file_name=Bestandsnaam
+label.save_folder=Opslagmap
+label.cookie=Cookie (optioneel)
+label.connections=Verbindingen (0 = standaard gebruiken)
+label.speed_limit=Snelheidslimiet KB/s (0 = standaard gebruiken)
+
+add.title=Download toevoegen
+add.edit_title=Download #{id} bewerken
+add.auto_url=(automatisch uit URL)
+add.default_folder=(Standaard: Downloads\ZID)
+add.cookie_ph=naam=waarde; andere=waarde
+add.paste_fail=Klembord kon niet worden gelezen. Druk op Ctrl+V in het veld.
+add.skipped={n} regels overgeslagen. Alleen http-, https- en ftp-URL's kunnen worden toegevoegd.
+
+info.title=Downloadinfo
+prio.high=Hoog
+prio.normal=Normaal
+prio.low=Laag
+
+rm.title=Downloads verwijderen
+rm.text={n} downloads uit de lijst verwijderen?
+rm.also_file=Gedownloade bestanden ook van schijf verwijderen
+rm.select_first=Selecteer eerst een rij
+
+set.title=Instellingen
+set.maxconc=Maximaal gelijktijdige downloads
+set.parts=Segmenten per download
+set.speed=Maximale snelheid (KB/s, 0 = onbeperkt)
+set.proxy=Proxy (leeg = direct, bijv. http://gebruiker:wachtwoord@host:8080)
+set.clip=Klembord bewaken op http/https-URL's
+set.shutdown=Pc uitschakelen wanneer wachtrij klaar is
+set.sort=Nieuwe downloads in mappen per type ordenen (video, afbeelding, ...)
+set.schedule=Starttijd wachtrij (UU:MM, leeg = nu)
+set.language=Taal
+
+status.queued=In wachtrij
+status.downloading=Bezig met downloaden
+status.connecting=Verbinden
+status.paused=Gepauzeerd
+status.done=Voltooid
+status.error=Fout
+status.starting=Starten...
+status.scheduled=Gepland:
+status.retrying=Netwerkfout, opnieuw proberen
+
+msg.url_copied=URL gekopieerd
+msg.open=Openen
+msg.file_not_found=Bestand niet gevonden:
+msg.missing_resource=Bron ontbreekt
+msg.export_failed=Exporteren mislukt:
+msg.export=Exporteren
+
+tray.show=Venster tonen
+tray.pause_all=Alles pauzeren
+tray.resume_all=Alles hervatten
+tray.exit=Afsluiten
+tray.balloon=Draait nog in het systeemvak.
+
+about.title=Over
+about.folder=Downloadmap:
+about.state=Statusbestand:
+about.config=Instellingenbestand:
+
+popup.title=Download - {name}
+
+# empty state
+empty.title=Niets om te tonen
+empty.hint=Voeg een URL toe, sleep een link hierheen of pas het filter aan.
+menu.retry_all=Alle fouten opnieuw proberen
+menu.clear_done=Voltooide wissen
+menu.reset_columns=Kolomindeling herstellen
+menu.browsers=Browserintegratie...
+btn.retry_all=Alles opnieuw proberen
+btn.import=Importeren...
+btn.open_file=Bestand openen
+btn.hide_details=Details verbergen
+btn.show_details=Details tonen
+label.avg_speed=Gemiddelde snelheid:
+label.time_taken=Verstreken tijd:
+label.mirror=Mirror-URL (optioneel)
+label.checksum=Controlesom (optioneel)
+label.headers=Extra headers (optioneel, één per regel)
+label.item_proxy=Proxy (optioneel, leeg = standaard gebruiken)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL's staan al in de lijst. Toch toevoegen?
+set.tab_general=Algemeen
+set.tab_connection=Verbinding
+set.tab_schedule=Planning
+set.tab_appearance=Weergave
+set.capture=Bestandstypen die de browserextensie moet vastleggen (komma's gescheiden)
+set.stop=Stoppen om (UU:MM, leeg = nooit)
+set.daily=Het start-/stopvenster elke dag herhalen
+set.accent=Accentkleur
+set.prog_start=Startkleur voortgangsbalk
+set.prog_end=Eindkleur voortgangsbalk
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Actief
+st.speed=Snelheid
+st.free=Vrij
+status.verified=Geverifieerd
+tray.done=Download voltooid:
+bi.title=Browserintegratie
+bi.intro=Kies je browserfamilie. De extensiepagina wordt geopend in de browser die je kiest.
+bi.firefox=Firefox
+bi.chromium=Chromium-browsers
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Kies de browser waarin de extensiepagina wordt geopend:
+bi.none=Er is geen ondersteunde browser gevonden.
+bi.open_failed=Kan de browser niet starten:
+bi.copy_path=Extensiepad kopiëren
+bi.copied=Gekopieerd
+bi.copy_failed=Kopiëren mislukt
+neat.title=Download toevoegen
+neat.url=URL:
+neat.name=Bestandsnaam:
+neat.folder=Opslaan in:
+neat.size=Grootte:
+neat.unknown_size=Onbekend
+neat.start=Starten
+neat.later=Later starten
+neat.browse=Bladeren...
+popup.tab_download=Download
+popup.tab_options=Opties
+popup.parts_downloading=Segmenten aan het downloaden:
+popup.finished_title=Download voltooid
+popup.finished=Download afgerond
+popup.after=Wanneer de download klaar is
+popup.after_dialog=Venster voor voltooid tonen
+popup.after_none=Niets doen
+popup.after_open=Het bestand openen
+popup.after_folder=De map openen
+popup.after_shutdown=De pc uitschakelen
+popup.saved=Opgeslagen
+btn.apply=Toepassen
+popup.details=Verbindingsdetails
+popup.connections=Actieve verbindingen:
+popup.parts=Segmenten:
+popup.remaining=Resterend:
+popup.host=Host:
+msg.merged_restart=Dit bestand is samengevoegd uit afzonderlijke video- en audiostreams. Verwijder het en download de video opnieuw om het opnieuw op te halen.
+
+ctx.refresh=URL vernieuwen
+msg.refresh_no_page=Deze download heeft geen referentiepagina om te openen.
+about.no_errors=Geen fouten
+about.recent_errors=Recente fouten:
+add.advanced=Geavanceerde opties
+add.probe_checking=URL wordt gecontroleerd...
+add.probe_size=Grootte
+auth.forget_confirm=Alle opgeslagen site-inloggegevens vergeten?
+auth.message=Deze server vereist een gebruikersnaam en wachtwoord.
+auth.pass=Wachtwoord:
+auth.remember=Onthouden voor deze site
+auth.title=Inloggegevens vereist
+auth.user=Gebruikersnaam:
+btn.clean_history=Geschiedenis wissen
+btn.forget_credentials=Opgeslagen inloggegevens vergeten
+btn.no=Nee
+btn.show_more=Meer tonen
+btn.yes=Ja
+clean.button=Wissen
+clean.orphans=Ook achtergebleven deelbestanden (.aria2, .part) in de downloadmap verwijderen
+clean.text=Alle voltooide downloads uit de lijst verwijderen? De gedownloade bestanden blijven op schijf.
+clean.title=Geschiedenis wissen
+ctx.credentials=Inloggegevens invoeren...
+ctx.retry_single=Opnieuw proberen met 1 verbinding
+dup.cancel=Annuleren
+dup.file=Het doelbestand bestaat al.
+dup.hint=Hervatten gaat verder met het bestaande item. Beide behouden slaat nog een kopie op onder een nieuwe naam. Vervangen verwijdert het bestaande bestand en begint opnieuw.
+dup.hint_file=Beide behouden slaat nog een kopie op onder een nieuwe naam. Vervangen verwijdert het bestaande bestand en begint opnieuw.
+dup.keep=Beide behouden
+dup.open=Openen
+dup.replace=Vervangen
+dup.resume=Hervatten
+dup.title=Dubbele download
+dup.url=Deze URL staat al in de downloadlijst.
+info.tab_advanced=Geavanceerd
+info.tab_general=Algemeen
+info.tab_network=Netwerk
+info.tab_progress=Voortgang
+label.active_conn=Actieve verbindingen:
+label.after_done=Na download:
+label.checksum_short=Controlesom:
+label.cookie_short=Cookie:
+label.headers_short=Headers:
+label.max_conn=Verbindingslimiet:
+label.mirror_short=Mirror-URL:
+label.referer=Verwijzer:
+label.remaining=Resterend:
+label.retry=Aantal pogingen:
+label.start_at=Later downloaden om (HH:MM, leeg = nu)
+label.user_agent=User-agent:
+menu.check_updates=Controleren op updates...
+menu.copy_diag=Diagnostiek kopiëren
+menu.open_log=Logmap openen
+msg.diag_copied=Diagnostiek gekopieerd
+neat.block=Nooit automatisch downloaden van dit domein
+neat.block_ask=Stoppen met overnemen van downloads van {0}? Ze blijven in de browser.
+neat.block_title=Geblokkeerde websites
+set.blocked=Geblokkeerde websites (één per regel; downloads ervan blijven in de browser)
+set.naming=Naamgevingssjabloon ({host}/{type}/{name}; leeg = downloadmap)
+set.speed_from=Tijdelijke limiet geldt vanaf (HH:MM)
+set.speed_to=Tijdelijke limiet geldt tot (HH:MM)
+set.speed_window=Tijdelijke snelheidslimiet (KB/s, 0 = uit)
+set.tab_updates=Updates
+set.update_check=Automatisch controleren op een nieuwe versie
+set.update_days=Elke (dagen) controleren
+st.eta=Resterende tijd
+st.left=Resterend
+status.file_missing=Bestand verplaatst of verwijderd
+status.waitingnetwork=Wachten op netwerk
+update.available=Versie {0} is beschikbaar (je hebt {1}). Nu downloaden?
+update.downloading=De update is toegevoegd aan je downloads.
+update.error=Kan niet controleren op updates: {0}
+update.latest=Je hebt de nieuwste versie ({0}).
+update.notes=Wat is er nieuw:
+update.title=Software-update

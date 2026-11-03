@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "ZyZoom Internet Downloader",
+  "version": "1.0.0",
+  "description": "Floating ZyZoom Internet Downloader panel that lists every video, audio and playlist on the page and sends the link to the ZyZoom Internet Downloader app.",
+  "author": "ZyZoom",
+  "minimum_chrome_version": "109",
+  "permissions": ["webRequest", "webNavigation", "cookies", "storage", "downloads", "contextMenus", "<all_urls>"],
+  "background": {
+    "scripts": ["common.js", "background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "ZyZoom Internet Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["common.js", "content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["injected/loader.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["injected/youtube.js"]
+}

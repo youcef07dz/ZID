@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Polski
+code=pl
+name=Polski
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Plik
+menu.downloads=Pobierane
+menu.view=Widok
+menu.options=Opcje
+menu.help=Pomoc
+menu.add_url=Dodaj URL...
+menu.resume_selected=Wznów wybrane
+menu.pause_selected=Wstrzymaj wybrane
+menu.restart_selected=Uruchom ponownie wybrane
+menu.export=Eksportuj listę...
+menu.exit=Zakończ
+menu.pause_all=Wstrzymaj wszystko
+menu.resume_all=Wznów wszystko
+menu.stop_all=Zatrzymaj wszystko
+menu.theme_light=Jasny motyw Windows 7
+menu.theme_dark=Ciemny motyw Windows 7
+menu.settings=Ustawienia...
+menu.about=Informacje...
+
+btn.add=Dodaj URL
+btn.start=Start
+btn.pause=Wstrzymaj
+btn.resume=Wznów
+btn.restart=Uruchom ponownie
+btn.edit=Edytuj
+btn.info=Informacje
+btn.remove=Usuń
+btn.about=Informacje
+btn.stop_all=Zatrzymaj wszystko
+btn.cancel=Anuluj
+btn.ok=OK
+btn.close=Zamknij
+btn.paste=Wklej
+btn.open_folder=Otwórz folder
+btn.hide=Ukryj
+
+tb.filter=Filtruj...
+
+cat.all=Wszystkie pobierania
+cat.queue=Kolejka
+cat.downloading=Pobierane
+cat.paused=Wstrzymane
+cat.done=Ukończone
+cat.error=Błąd
+cat.video=Wideo
+cat.image=Obraz
+cat.audio=Audio
+cat.compressed=Skompresowane
+cat.program=Program
+cat.other=Inne
+
+col.name=Nazwa pliku
+col.status=Stan
+col.type=Typ
+col.size=Rozmiar
+col.progress=Postęp
+col.speed=Prędkość
+col.eta=Pozostały czas
+col.date=Data
+
+ctx.open=Otwórz
+ctx.folder=Otwórz folder
+ctx.copy=Kopiuj URL
+ctx.resume=Start / wznów
+ctx.pause=Wstrzymaj
+ctx.restart=Uruchom ponownie
+ctx.edit=Edytuj...
+ctx.info=Informacje...
+ctx.prio_high=Priorytet: wysoki
+ctx.prio_normal=Priorytet: normalny
+ctx.prio_low=Priorytet: niski
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Usuń
+
+label.name=Nazwa:
+label.url=URL:
+label.type=Typ:
+label.size=Rozmiar:
+label.received=Odebrano:
+label.status=Stan:
+label.started=Rozpoczęto:
+label.priority=Priorytet:
+label.save_to=Zapisz w:
+label.file=Plik:
+label.speed=Prędkość:
+label.eta=Pozostały czas:
+label.urls=Adresy URL (jeden w wierszu)
+label.file_name=Nazwa pliku
+label.save_folder=Folder zapisu
+label.cookie=Cookie (opcjonalne)
+label.connections=Połączenia (0 = użyj domyślnych)
+label.speed_limit=Limit prędkości KB/s (0 = użyj domyślnego)
+
+add.title=Dodaj pobieranie
+add.edit_title=Edytuj pobieranie #{id}
+add.auto_url=(automatycznie z URL)
+add.default_folder=(Domyślnie: Downloads\ZID)
+add.cookie_ph=nazwa=wartość; inne=wartość
+add.paste_fail=Nie można odczytać schowka. Naciśnij Ctrl+V w polu.
+add.skipped=Pominięto {n} wierszy. Można dodawać tylko adresy http, https i ftp.
+
+info.title=Informacje o pobieraniu
+prio.high=Wysoki
+prio.normal=Normalny
+prio.low=Niski
+
+rm.title=Usuń pobierania
+rm.text=Usunąć {n} pobierań z listy?
+rm.also_file=Usuń także pobrane pliki z dysku
+rm.select_first=Najpierw wybierz wiersz
+
+set.title=Ustawienia
+set.maxconc=Maksymalna liczba równoczesnych pobierań
+set.parts=Segmentów na pobieranie
+set.speed=Maksymalna prędkość (KB/s, 0 = bez limitu)
+set.proxy=Serwer proxy (puste = bezpośrednio, np. http://użytkownik:hasło@host:8080)
+set.clip=Obserwuj schowek pod kątem adresów http/https
+set.shutdown=Wyłącz komputer po zakończeniu kolejki
+set.sort=Porządkuj nowe pobierania w folderach według typu (wideo, obraz, ...)
+set.schedule=Czas startu kolejki (GG:MM, puste = teraz)
+set.language=Język
+
+status.queued=W kolejce
+status.downloading=Pobieranie
+status.connecting=Łączenie
+status.paused=Wstrzymane
+status.done=Ukończone
+status.error=Błąd
+status.starting=Uruchamianie...
+status.scheduled=Zaplanowano:
+status.retrying=Błąd sieci, ponawianie
+
+msg.url_copied=Skopiowano URL
+msg.open=Otwórz
+msg.file_not_found=Nie znaleziono pliku:
+msg.missing_resource=Brak zasobu
+msg.export_failed=Eksport nie powiódł się:
+msg.export=Eksportuj
+
+tray.show=Pokaż okno
+tray.pause_all=Wstrzymaj wszystko
+tray.resume_all=Wznów wszystko
+tray.exit=Zakończ
+tray.balloon=Nadal działa w zasobniku systemowym.
+
+about.title=Informacje
+about.folder=Folder pobierania:
+about.state=Plik stanu:
+about.config=Plik ustawień:
+
+popup.title=Pobieranie - {name}
+
+# empty state
+empty.title=Brak elementów do wyświetlenia
+empty.hint=Dodaj adres URL, przeciągnij link lub zmień filtr.
+menu.retry_all=Ponów wszystkie błędy
+menu.clear_done=Wyczyść ukończone
+menu.reset_columns=Przywróć układ kolumn
+menu.browsers=Integracja z przeglądarką...
+btn.retry_all=Ponów wszystko
+btn.import=Importuj...
+btn.open_file=Otwórz plik
+btn.hide_details=Ukryj szczegóły
+btn.show_details=Pokaż szczegóły
+label.avg_speed=Średnia prędkość:
+label.time_taken=Czas trwania:
+label.mirror=URL serwera lustrzanego (opcjonalnie)
+label.checksum=Suma kontrolna (opcjonalnie)
+label.headers=Dodatkowe nagłówki (opcjonalnie, jeden w wierszu)
+label.item_proxy=Proxy (opcjonalnie, puste = użyj domyślnego)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} adresów URL jest już na liście. Dodać mimo to?
+set.tab_general=Ogólne
+set.tab_connection=Połączenie
+set.tab_schedule=Harmonogram
+set.tab_appearance=Wygląd
+set.capture=Typy plików przechwytywane przez rozszerzenie przeglądarki (oddzielone przecinkami)
+set.stop=Zatrzymaj o (GG:MM, puste = nigdy)
+set.daily=Powtarzaj okno startu/zatrzymania codziennie
+set.accent=Kolor akcentu
+set.prog_start=Kolor początku paska postępu
+set.prog_end=Kolor końca paska postępu
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Aktywne
+st.speed=Prędkość
+st.free=Wolne
+status.verified=Zweryfikowano
+tray.done=Pobieranie ukończone:
+bi.title=Integracja z przeglądarką
+bi.intro=Wybierz rodzinę przeglądarki. Strona rozszerzenia otworzy się w wybranej przeglądarce.
+bi.firefox=Firefox
+bi.chromium=Przeglądarki Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Wybierz przeglądarkę, w której ma się otworzyć strona rozszerzenia:
+bi.none=Nie znaleziono obsługiwanej przeglądarki.
+bi.open_failed=Nie można uruchomić przeglądarki:
+bi.copy_path=Kopiuj ścieżkę rozszerzenia
+bi.copied=Skopiowano
+bi.copy_failed=Kopiowanie nie powiodło się
+neat.title=Dodaj pobieranie
+neat.url=URL:
+neat.name=Nazwa pliku:
+neat.folder=Zapisz w:
+neat.size=Rozmiar:
+neat.unknown_size=Nieznany
+neat.start=Start
+neat.later=Uruchom później
+neat.browse=Przeglądaj...
+popup.tab_download=Pobieranie
+popup.tab_options=Opcje
+popup.parts_downloading=Pobierane części:
+popup.finished_title=Pobieranie ukończone
+popup.finished=Pobieranie zakończone
+popup.after=Po zakończeniu pobierania
+popup.after_dialog=Pokaż okno zakończenia
+popup.after_none=Nic nie rób
+popup.after_open=Otwórz plik
+popup.after_folder=Otwórz folder
+popup.after_shutdown=Wyłącz komputer
+popup.saved=Zapisano
+btn.apply=Zastosuj
+popup.details=Szczegóły połączenia
+popup.connections=Aktywne połączenia:
+popup.parts=Części:
+popup.remaining=Pozostało:
+popup.host=Host:
+msg.merged_restart=Ten plik scalono z oddzielnych strumieni wideo i audio. Usuń go i pobierz wideo ponownie, aby pobrać go od nowa.
+
+ctx.refresh=Odśwież URL
+msg.refresh_no_page=To pobieranie nie ma strony odniesienia do otwarcia.
+about.no_errors=Brak błędów
+about.recent_errors=Ostatnie błędy:
+add.advanced=Opcje zaawansowane
+add.probe_checking=Sprawdzanie adresu URL...
+add.probe_size=Rozmiar
+auth.forget_confirm=Zapomnieć wszystkie zapisane dane logowania do witryn?
+auth.message=Ten serwer wymaga nazwy użytkownika i hasła.
+auth.pass=Hasło:
+auth.remember=Zapamiętaj dla tej witryny
+auth.title=Wymagane dane logowania
+auth.user=Nazwa użytkownika:
+btn.clean_history=Wyczyść historię
+btn.forget_credentials=Zapomnij zapisane dane logowania
+btn.no=Nie
+btn.show_more=Pokaż więcej
+btn.yes=Tak
+clean.button=Wyczyść
+clean.orphans=Usuń także pozostałe pliki częściowe (.aria2, .part) w folderze pobierania
+clean.text=Usunąć wszystkie ukończone pobrania z listy? Pobrane pliki pozostaną na dysku.
+clean.title=Wyczyść historię
+ctx.credentials=Wprowadź dane logowania...
+ctx.retry_single=Ponów z 1 połączeniem
+dup.cancel=Anuluj
+dup.file=Plik docelowy już istnieje.
+dup.hint=Wznów kontynuuje istniejący wpis. Zachowaj oba zapisuje kolejną kopię pod nową nazwą. Zastąp usuwa istniejący plik i zaczyna od nowa.
+dup.hint_file=Zachowaj oba zapisuje kolejną kopię pod nową nazwą. Zastąp usuwa istniejący plik i zaczyna od nowa.
+dup.keep=Zachowaj oba
+dup.open=Otwórz
+dup.replace=Zastąp
+dup.resume=Wznów
+dup.title=Zduplikowane pobieranie
+dup.url=Ten adres URL jest już na liście pobrań.
+info.tab_advanced=Zaawansowane
+info.tab_general=Ogólne
+info.tab_network=Sieć
+info.tab_progress=Postęp
+label.active_conn=Aktywne połączenia:
+label.after_done=Po pobraniu:
+label.checksum_short=Suma kontrolna:
+label.cookie_short=Cookie:
+label.headers_short=Nagłówki:
+label.max_conn=Limit połączeń:
+label.mirror_short=Adres lustra:
+label.referer=Źródło:
+label.remaining=Pozostało:
+label.retry=Liczba prób:
+label.start_at=Pobierz później o (HH:MM, puste = teraz)
+label.user_agent=Agent użytkownika:
+menu.check_updates=Sprawdź aktualizacje...
+menu.copy_diag=Kopiuj diagnostykę
+menu.open_log=Otwórz folder dziennika
+msg.diag_copied=Skopiowano diagnostykę
+neat.block=Nigdy nie pobieraj automatycznie z tej domeny
+neat.block_ask=Przestać przejmować pobrania z {0}? Pozostaną w przeglądarce.
+neat.block_title=Zablokowane witryny
+set.blocked=Zablokowane witryny (jedna w wierszu; ich pobrania pozostaną w przeglądarce)
+set.naming=Szablon nazw ({host}/{type}/{name}; puste = folder pobierania)
+set.speed_from=Limit tymczasowy obowiązuje od (HH:MM)
+set.speed_to=Limit tymczasowy obowiązuje do (HH:MM)
+set.speed_window=Tymczasowy limit prędkości (KB/s, 0 = wyłączony)
+set.tab_updates=Aktualizacje
+set.update_check=Automatycznie sprawdzaj nową wersję
+set.update_days=Sprawdzaj co (dni)
+st.eta=Pozostały czas
+st.left=Pozostało
+status.file_missing=Plik przeniesiony lub usunięty
+status.waitingnetwork=Oczekiwanie na sieć
+update.available=Wersja {0} jest dostępna (masz {1}). Pobrać teraz?
+update.downloading=Aktualizacja została dodana do pobrań.
+update.error=Nie można sprawdzić aktualizacji: {0}
+update.latest=Masz najnowszą wersję ({0}).
+update.notes=Co nowego:
+update.title=Aktualizacja oprogramowania

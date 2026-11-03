@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - हिन्दी
+code=hi
+name=हिन्दी
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=फ़ाइल
+menu.downloads=डाउनलोड
+menu.view=देखें
+menu.options=विकल्प
+menu.help=सहायता
+menu.add_url=URL जोड़ें...
+menu.resume_selected=चयनित फिर शुरू करें
+menu.pause_selected=चयनित रोकें
+menu.restart_selected=चयनित पुनः आरंभ करें
+menu.export=सूची निर्यात करें...
+menu.exit=बाहर निकलें
+menu.pause_all=सभी रोकें
+menu.resume_all=सभी फिर शुरू करें
+menu.stop_all=सभी बंद करें
+menu.theme_light=Windows 7 हल्की थीम
+menu.theme_dark=Windows 7 गहरी थीम
+menu.settings=सेटिंग्स...
+menu.about=परिचय...
+
+btn.add=URL जोड़ें
+btn.start=शुरू करें
+btn.pause=रोकें
+btn.resume=फिर शुरू करें
+btn.restart=पुनः आरंभ करें
+btn.edit=संपादित करें
+btn.info=जानकारी
+btn.remove=हटाएं
+btn.about=परिचय
+btn.stop_all=सभी बंद करें
+btn.cancel=रद्द करें
+btn.ok=ठीक है
+btn.close=बंद करें
+btn.paste=पेस्ट करें
+btn.open_folder=फ़ोल्डर खोलें
+btn.hide=छिपाएं
+
+tb.filter=फ़िल्टर...
+
+cat.all=सभी डाउनलोड
+cat.queue=कतार
+cat.downloading=डाउनलोड हो रहे हैं
+cat.paused=रोके गए
+cat.done=पूर्ण
+cat.error=त्रुटि
+cat.video=वीडियो
+cat.image=छवि
+cat.audio=ऑडियो
+cat.compressed=संपीड़ित
+cat.program=प्रोग्राम
+cat.other=अन्य
+
+col.name=फ़ाइल नाम
+col.status=स्थिति
+col.type=प्रकार
+col.size=आकार
+col.progress=प्रगति
+col.speed=गति
+col.eta=शेष समय
+col.date=दिनांक
+
+ctx.open=खोलें
+ctx.folder=फ़ोल्डर खोलें
+ctx.copy=URL कॉपी करें
+ctx.resume=शुरू / फिर शुरू करें
+ctx.pause=रोकें
+ctx.restart=पुनः आरंभ करें
+ctx.edit=संपादित करें...
+ctx.info=जानकारी...
+ctx.prio_high=प्राथमिकता: उच्च
+ctx.prio_normal=प्राथमिकता: सामान्य
+ctx.prio_low=प्राथमिकता: निम्न
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=हटाएं
+
+label.name=नाम:
+label.url=URL:
+label.type=प्रकार:
+label.size=आकार:
+label.received=प्राप्त:
+label.status=स्थिति:
+label.started=शुरू हुआ:
+label.priority=प्राथमिकता:
+label.save_to=यहाँ सहेजें:
+label.file=फ़ाइल:
+label.speed=गति:
+label.eta=शेष समय:
+label.urls=URL (प्रति पंक्ति एक)
+label.file_name=फ़ाइल नाम
+label.save_folder=सहेजने का फ़ोल्डर
+label.cookie=Cookie (वैकल्पिक)
+label.connections=कनेक्शन (0 = डिफ़ॉल्ट उपयोग करें)
+label.speed_limit=गति सीमा KB/s (0 = डिफ़ॉल्ट उपयोग करें)
+
+add.title=डाउनलोड जोड़ें
+add.edit_title=डाउनलोड #{id} संपादित करें
+add.auto_url=(URL से स्वतः)
+add.default_folder=(डिफ़ॉल्ट: Downloads\ZID)
+add.cookie_ph=नाम=मान; अन्य=मान
+add.paste_fail=क्लिपबोर्ड पढ़ा नहीं जा सका। फ़ील्ड में Ctrl+V दबाएं।
+add.skipped={n} पंक्तियाँ छोड़ी गईं। केवल http, https, ftp URL जोड़े जा सकते हैं।
+
+info.title=डाउनलोड जानकारी
+prio.high=उच्च
+prio.normal=सामान्य
+prio.low=निम्न
+
+rm.title=डाउनलोड हटाएं
+rm.text=सूची से {n} डाउनलोड हटाएं?
+rm.also_file=डाउनलोड की गई फ़ाइलें भी डिस्क से हटाएं
+rm.select_first=पहले एक पंक्ति चुनें
+
+set.title=सेटिंग्स
+set.maxconc=अधिकतम समवर्ती डाउनलोड
+set.parts=प्रति डाउनलोड भाग
+set.speed=अधिकतम गति (KB/s, 0 = असीमित)
+set.proxy=प्रॉक्सी (खाली = सीधा, जैसे http://उपयोगकर्ता:पासवर्ड@होस्ट:8080)
+set.clip=क्लिपबोर्ड में http/https URL देखें
+set.shutdown=कतार पूरी होने पर PC बंद करें
+set.sort=नए डाउनलोड को प्रकार के अनुसार फ़ोल्डर में रखें (वीडियो, छवि, ...)
+set.schedule=कतार शुरू समय (HH:MM, खाली = अभी)
+set.language=भाषा
+
+status.queued=कतार में
+status.downloading=डाउनलोड हो रहा है
+status.connecting=कनेक्ट हो रहा है
+status.paused=रोका गया
+status.done=पूर्ण
+status.error=त्रुटि
+status.starting=शुरू हो रहा है...
+status.scheduled=निर्धारित:
+status.retrying=नेटवर्क त्रुटि, पुनः प्रयास
+
+msg.url_copied=URL कॉपी हो गया
+msg.open=खोलें
+msg.file_not_found=फ़ाइल नहीं मिली:
+msg.missing_resource=संसाधन अनुपलब्ध
+msg.export_failed=निर्यात विफल:
+msg.export=निर्यात
+
+tray.show=विंडो दिखाएं
+tray.pause_all=सभी रोकें
+tray.resume_all=सभी फिर शुरू करें
+tray.exit=बाहर निकलें
+tray.balloon=सिस्टम ट्रे में चल रहा है।
+
+about.title=परिचय
+about.folder=डाउनलोड फ़ोल्डर:
+about.state=स्थिति फ़ाइल:
+about.config=कॉन्फ़िग फ़ाइल:
+
+popup.title=डाउनलोड - {name}
+
+# empty state
+empty.title=दिखाने के लिए कुछ नहीं
+empty.hint=URL जोड़ें, लिंक यहाँ छोड़ें या फ़िल्टर बदलें।
+menu.retry_all=सभी त्रुटियाँ फिर प्रयास करें
+menu.clear_done=पूर्ण हटाएं
+menu.reset_columns=कॉलम लेआउट रीसेट करें
+menu.browsers=ब्राउज़र एकीकरण...
+btn.retry_all=सभी फिर प्रयास करें
+btn.import=आयात करें...
+btn.open_file=फ़ाइल खोलें
+btn.hide_details=विवरण छिपाएं
+btn.show_details=विवरण दिखाएं
+label.avg_speed=औसत गति:
+label.time_taken=लिया गया समय:
+label.mirror=मिरर URL (वैकल्पिक)
+label.checksum=चेकसम (वैकल्पिक)
+label.headers=अतिरिक्त हेडर (वैकल्पिक, प्रति पंक्ति एक)
+label.item_proxy=प्रॉक्सी (वैकल्पिक, खाली = डिफ़ॉल्ट उपयोग करें)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL पहले से सूची में हैं। फिर भी जोड़ें?
+set.tab_general=सामान्य
+set.tab_connection=कनेक्शन
+set.tab_schedule=शेड्यूल
+set.tab_appearance=रूप
+set.capture=ब्राउज़र एक्सटेंशन द्वारा पकड़े जाने वाले फ़ाइल प्रकार (अल्पविराम से अलग)
+set.stop=यहाँ रोकें (HH:MM, खाली = कभी नहीं)
+set.daily=हर दिन शुरू/रोकें विंडो दोहराएं
+set.accent=एक्सेंट रंग
+set.prog_start=प्रगति बार का शुरुआती रंग
+set.prog_end=प्रगति बार का अंतिम रंग
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=सक्रिय
+st.speed=गति
+st.free=खाली
+status.verified=सत्यापित
+tray.done=डाउनलोड पूर्ण:
+bi.title=ब्राउज़र एकीकरण
+bi.intro=अपना ब्राउज़र परिवार चुनें। एक्सटेंशन पेज आपके चुने ब्राउज़र में खुलेगा।
+bi.firefox=Firefox
+bi.chromium=Chromium ब्राउज़र
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=एक्सटेंशन पेज खोलने के लिए ब्राउज़र चुनें:
+bi.none=कोई समर्थित ब्राउज़र नहीं मिला।
+bi.open_failed=ब्राउज़र शुरू नहीं हो सका:
+bi.copy_path=एक्सटेंशन पथ कॉपी करें
+bi.copied=कॉपी हो गया
+bi.copy_failed=कॉपी विफल
+neat.title=डाउनलोड जोड़ें
+neat.url=URL:
+neat.name=फ़ाइल नाम:
+neat.folder=यहाँ सहेजें:
+neat.size=आकार:
+neat.unknown_size=अज्ञात
+neat.start=शुरू करें
+neat.later=बाद में शुरू करें
+neat.browse=ब्राउज़ करें...
+popup.tab_download=डाउनलोड
+popup.tab_options=विकल्प
+popup.parts_downloading=डाउनलोड हो रहे भाग:
+popup.finished_title=डाउनलोड पूर्ण
+popup.finished=डाउनलोड समाप्त
+popup.after=डाउनलोड पूरा होने पर
+popup.after_dialog=पूर्णता संवाद दिखाएं
+popup.after_none=कुछ न करें
+popup.after_open=फ़ाइल खोलें
+popup.after_folder=फ़ोल्डर खोलें
+popup.after_shutdown=PC बंद करें
+popup.saved=सहेजा गया
+btn.apply=लागू करें
+popup.details=कनेक्शन विवरण
+popup.connections=सक्रिय कनेक्शन:
+popup.parts=भाग:
+popup.remaining=शेष:
+popup.host=होस्ट:
+msg.merged_restart=यह फ़ाइल अलग वीडियो और ऑडियो स्ट्रीम से मिलाई गई थी। इसे हटाएं और वीडियो फिर से डाउनलोड करें ताकि इसे दोबारा लाया जा सके।
+
+ctx.refresh=URL रीफ़्रेश करें
+msg.refresh_no_page=इस डाउनलोड में खोलने के लिए कोई संदर्भ पृष्ठ नहीं है।
+about.no_errors=कोई त्रुटि नहीं
+about.recent_errors=हाल की त्रुटियाँ:
+add.advanced=उन्नत विकल्प
+add.probe_checking=URL की जाँच हो रही है...
+add.probe_size=आकार
+auth.forget_confirm=सभी सहेजे गए साइट क्रेडेंशियल भूलें?
+auth.message=इस सर्वर को उपयोगकर्ता नाम और पासवर्ड चाहिए।
+auth.pass=पासवर्ड:
+auth.remember=इस साइट के लिए याद रखें
+auth.title=क्रेडेंशियल आवश्यक
+auth.user=उपयोगकर्ता नाम:
+btn.clean_history=इतिहास साफ़ करें
+btn.forget_credentials=सहेजे गए क्रेडेंशियल भूलें
+btn.no=नहीं
+btn.show_more=और दिखाएँ
+btn.yes=हाँ
+clean.button=साफ़ करें
+clean.orphans=डाउनलोड फ़ोल्डर में बची आंशिक फ़ाइलें (.aria2, .part) भी हटाएँ
+clean.text=सूची से सभी पूर्ण डाउनलोड हटाएँ? डाउनलोड की गई फ़ाइलें डिस्क पर रहेंगी।
+clean.title=इतिहास साफ़ करें
+ctx.credentials=क्रेडेंशियल दर्ज करें...
+ctx.retry_single=1 कनेक्शन के साथ फिर से प्रयास करें
+dup.cancel=रद्द करें
+dup.file=लक्ष्य फ़ाइल पहले से मौजूद है।
+dup.hint=फिर शुरू करें मौजूदा प्रविष्टि को जारी रखता है। दोनों रखें नए नाम से एक और प्रतिलिपि सहेजता है। बदलें मौजूदा फ़ाइल हटाकर नए सिरे से शुरू करता है।
+dup.hint_file=दोनों रखें नए नाम से एक और प्रतिलिपि सहेजता है। बदलें मौजूदा फ़ाइल हटाकर नए सिरे से शुरू करता है।
+dup.keep=दोनों रखें
+dup.open=खोलें
+dup.replace=बदलें
+dup.resume=फिर शुरू करें
+dup.title=डुप्लिकेट डाउनलोड
+dup.url=यह URL पहले से डाउनलोड सूची में है।
+info.tab_advanced=उन्नत
+info.tab_general=सामान्य
+info.tab_network=नेटवर्क
+info.tab_progress=प्रगति
+label.active_conn=सक्रिय कनेक्शन:
+label.after_done=डाउनलोड के बाद:
+label.checksum_short=चेकसम:
+label.cookie_short=कुकी:
+label.headers_short=हेडर:
+label.max_conn=कनेक्शन सीमा:
+label.mirror_short=मिरर URL:
+label.referer=रेफ़रर:
+label.remaining=शेष:
+label.retry=पुनः प्रयास संख्या:
+label.start_at=बाद में डाउनलोड करें (HH:MM, खाली = अभी)
+label.user_agent=उपयोगकर्ता एजेंट:
+menu.check_updates=अपडेट जाँचें...
+menu.copy_diag=डायग्नोस्टिक्स कॉपी करें
+menu.open_log=लॉग फ़ोल्डर खोलें
+msg.diag_copied=डायग्नोस्टिक्स कॉपी हो गए
+neat.block=इस डोमेन से कभी स्वतः डाउनलोड न करें
+neat.block_ask={0} से डाउनलोड लेना बंद करें? वे ब्राउज़र में रहेंगे।
+neat.block_title=अवरुद्ध वेबसाइटें
+set.blocked=अवरुद्ध वेबसाइटें (प्रति पंक्ति एक; उनके डाउनलोड ब्राउज़र में रहते हैं)
+set.naming=नामकरण टेम्पलेट ({host}/{type}/{name}; खाली = डाउनलोड फ़ोल्डर)
+set.speed_from=अस्थायी सीमा यहाँ से लागू (HH:MM)
+set.speed_to=अस्थायी सीमा यहाँ तक लागू (HH:MM)
+set.speed_window=अस्थायी गति सीमा (KB/s, 0 = बंद)
+set.tab_updates=अपडेट
+set.update_check=नई संस्करण की स्वतः जाँच करें
+set.update_days=हर (दिन) जाँचें
+st.eta=शेष समय
+st.left=शेष
+status.file_missing=फ़ाइल हटाई या स्थानांतरित की गई
+status.waitingnetwork=नेटवर्क की प्रतीक्षा
+update.available=संस्करण {0} उपलब्ध है (आपके पास {1} है)। अभी डाउनलोड करें?
+update.downloading=अपडेट आपके डाउनलोड में जोड़ दिया गया।
+update.error=अपडेट की जाँच नहीं हो सकी: {0}
+update.latest=आपके पास नवीनतम संस्करण है ({0})।
+update.notes=नया क्या है:
+update.title=सॉफ़्टवेयर अपडेट

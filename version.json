@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "setup": "setup_1.0.exe",
+  "sha256": "74a507512e877c1c338da273208b972319dfa8b6c8cf88a7c2fc2c5070cf6f4e",
+  "build_date": "2026-11-01 19:10:54",
+  "whats_new": [
+    "First public release — free, no ads, no registration.",
+    "Up to 16 parallel connections per file, with pause, resume and stop.",
+    "Crash-safe queue: atomic saves, a backup file, and recovery after a kill or power cut.",
+    "Browser hand-off for Chrome, Edge, Chrome 109 and Firefox, plus MP4 merging with mp4mux.",
+    "Automatic update check with a configurable interval in days."
+  ]
+}

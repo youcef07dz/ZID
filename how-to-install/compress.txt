@@ -1,0 +1,1 @@
+ffmpeg -i firefox.mp4 -c:v libx264 -preset slow firefox-c.mp4

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZyZoom Internet Downloader</title>
+<meta name="description" content="A fast, crash-proof download manager for Windows 7 SP1 and newer. Free, native, no runtime dependencies.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><path d='M16 7v12m0 0 5-5m-5 5-5-5M9 24h14' stroke='%23fff' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#0d1327; --panel:#131a33; --panel2:#182141;
+    --line:rgba(148,163,214,.16); --line2:rgba(148,163,214,.28);
+    --text:#e8ecfa; --muted:#9aa4c4; --dim:#6d7899;
+    --brand:#6366f1; --brand2:#8b5cf6; --ok:#22c55e; --ff:#ff7139;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 "Segoe UI",-apple-system,BlinkMacSystemFont,Tahoma,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  [dir="rtl"] body{font-family:"Segoe UI",Tahoma,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  h1,h2,h3{line-height:1.2;margin:0;letter-spacing:-.02em}
+  p{margin:0}
+
+  /* glow backdrop */
+  body::before{
+    content:"";position:fixed;inset:-20% -10% auto -10%;height:80vh;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(45% 55% at 22% 0%, rgba(99,102,241,.30), transparent 70%),
+      radial-gradient(40% 50% at 78% 8%, rgba(139,92,246,.22), transparent 70%),
+      radial-gradient(60% 40% at 50% 0%, rgba(34,197,94,.08), transparent 70%);
+  }
+
+  .wrap{width:min(1140px,calc(100% - 40px));margin-inline:auto}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,16,32,.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;gap:18px;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+  .logo svg{width:30px;height:30px;flex:none}
+  nav.links{display:flex;gap:22px;margin-inline-start:auto;font-size:14.5px;color:var(--muted)}
+  nav.links a{transition:color .18s}
+  nav.links a:hover{color:var(--text)}
+  .langs{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}
+  .langs button{
+    all:unset;cursor:pointer;padding:5px 11px;border-radius:8px;font-size:13px;font-weight:600;
+    color:var(--muted);transition:background .18s,color .18s;
+  }
+  .langs button:hover{color:var(--text);background:rgba(255,255,255,.05)}
+  .langs button[aria-pressed="true"]{
+    color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));
+    box-shadow:0 4px 14px -6px var(--brand);
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:74px 0 8px;text-align:center}
+  .tag{
+    display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;
+    border:1px solid var(--line2);background:rgba(99,102,241,.10);color:#c3c9f5;
+    font-size:13px;font-weight:600;letter-spacing:.01em;
+  }
+  .tag i{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+  .hero h1{
+    margin:22px auto 0;max-width:22ch;
+    font-size:clamp(34px,5.4vw,62px);font-weight:800;
+    background:linear-gradient(180deg,#fff 30%,#b9c1ee);
+    color:#fff;
+  }
+  .hero .sub{margin:20px auto 0;max-width:62ch;color:var(--muted);font-size:clamp(15px,1.6vw,18px)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:13px;
+    font-weight:650;font-size:15.5px;border:1px solid transparent;transition:transform .18s,box-shadow .18s,background .18s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-primary{
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    box-shadow:0 14px 30px -12px var(--brand),inset 0 1px 0 rgba(255,255,255,.22);
+  }
+  .btn-primary:hover{box-shadow:0 20px 38px -12px var(--brand),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn-ghost{background:rgba(255,255,255,.045);border-color:var(--line2);color:var(--text)}
+  .btn-ghost:hover{background:rgba(255,255,255,.085)}
+
+  /* ---------- screenshot ---------- */
+  .shot{position:relative;margin:58px auto 0}
+  .shot::after{
+    content:"";position:absolute;inset:8% 6% -8% 6%;z-index:-1;border-radius:40px;
+    background:linear-gradient(135deg,rgba(99,102,241,.55),rgba(139,92,246,.35));
+    filter:blur(70px);opacity:.6;
+  }
+  .shot img{
+    width:100%;border-radius:16px;border:1px solid var(--line2);
+    box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.04);
+  }
+
+  /* ---------- stats ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:56px 0 0;
+    background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  }
+  .stat{background:var(--bg2);padding:22px 18px;text-align:center}
+  .stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;
+    background:linear-gradient(180deg,#fff,#a9b3e6);color:#fff}
+  /* gradient text only where clipping is supported, so old engines keep visible headings */
+  @supports ((background-clip:text) or (-webkit-background-clip:text)){
+    .hero h1,.stat b{-webkit-background-clip:text;background-clip:text;color:transparent}
+  }
+  .stat span{font-size:13px;color:var(--dim)}
+
+  /* what's new */
+  .news{
+    margin-top:16px;padding:28px 30px;border-radius:var(--radius);border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(99,102,241,.11),rgba(255,255,255,.02));
+  }
+  .news .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+  .news h2{font-size:19px;font-weight:750}
+  .news .ver{
+    font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:.02em;
+    background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.38);color:#8ce7a8;
+  }
+  .news ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+  .news li{position:relative;padding-inline-start:24px;font-size:14.5px;color:var(--muted)}
+  .news li::before{content:"✓";position:absolute;inset-inline-start:0;top:0;color:#5ee08a;font-weight:700}
+
+  /* ---------- sections ---------- */
+  section{padding:88px 0 0}
+  .head{max-width:60ch;margin:0 auto 40px;text-align:center}
+  .head .kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand2)}
+  .head h2{margin-top:10px;font-size:clamp(26px,3.4vw,38px);font-weight:800}
+  .head p{margin-top:12px;color:var(--muted)}
+
+  /* features */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{
+    position:relative;padding:26px 24px;border-radius:var(--radius);
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    border:1px solid var(--line);transition:border-color .2s,transform .2s,background .2s;
+  }
+  .card:hover{transform:translateY(-3px);border-color:rgba(139,92,246,.45);background:linear-gradient(180deg,rgba(139,92,246,.10),rgba(255,255,255,.02))}
+  .ico{
+    width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+    background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(139,92,246,.14));
+    border:1px solid rgba(139,92,246,.30);color:#b8befb;
+  }
+  .ico svg{width:21px;height:21px}
+  .card h3{font-size:16.5px;font-weight:700;margin-bottom:7px}
+  .card p{font-size:14.5px;color:var(--muted)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+  .step{padding:26px 24px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg2);position:relative}
+  .step::before{
+    counter-increment:s;content:counter(s);
+    display:grid;place-items:center;width:34px;height:34px;border-radius:10px;margin-bottom:16px;
+    font-weight:800;font-size:15px;color:#fff;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));
+    box-shadow:0 8px 20px -10px var(--brand);
+  }
+  .step h3{font-size:16px;margin-bottom:6px}
+  .step p{font-size:14.5px;color:var(--muted)}
+  .step code{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13px}
+
+  /* downloads */
+  .dl{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .dlcard{
+    padding:30px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg2);
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .dlcard.win{border-color:rgba(34,197,94,.30);background:linear-gradient(180deg,rgba(34,197,94,.07),var(--bg2))}
+  .dlcard.ff{border-color:rgba(255,113,57,.30);background:linear-gradient(180deg,rgba(255,113,57,.07),var(--bg2))}
+  .dlcard h3{font-size:19px;font-weight:750}
+  .dlcard .meta{font-size:13.5px;color:var(--dim)}
+  .dlcard .btn{margin-top:auto;justify-content:center}
+  .dlcard.win .btn-primary{background:linear-gradient(135deg,#16a34a,#22c55e);box-shadow:0 14px 30px -12px #16a34a}
+  .dlcard.ff .btn-primary{background:linear-gradient(135deg,#ea580c,var(--ff));box-shadow:0 14px 30px -12px #ea580c}
+  .note{margin-top:18px;font-size:13.5px;color:var(--dim);text-align:center}
+  .note a{color:#b8befb;border-bottom:1px solid rgba(184,190,251,.35)}
+
+  /* footer */
+  footer{margin-top:96px;border-top:1px solid var(--line);padding:34px 0 46px;color:var(--dim);font-size:13.5px}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+  .foot a{color:var(--muted)}
+  .foot a:hover{color:var(--text)}
+
+  /* reveal */
+  .fade{animation:fade .7s cubic-bezier(.22,.61,.36,1) both}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+  /* responsive */
+  @media (max-width:900px){
+    nav.links{display:none}
+    .grid,.steps{grid-template-columns:1fr 1fr}
+    .dl{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .news ul{grid-template-columns:1fr}
+    section{padding-top:64px}
+    .hero{padding-top:52px}
+  }
+  @media (max-width:600px){
+    .grid,.steps{grid-template-columns:1fr}
+    .cta .btn{width:100%;justify-content:center}
+    .bar{gap:10px}
+    .logo span{display:none}
+    .hero h1{max-width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="ZyZoom Internet Downloader">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="url(#g)"/><path d="M16 7v12m0 0 5-5m-5 5-5-5M9 24h14" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+      <span>ZyZoom Downloader</span>
+    </a>
+    <nav class="links">
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#install" data-i18n="nav_install">Install</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="https://github.com/youcef07dz/ZID">GitHub</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang-btn="en" onclick="setLang('en')" aria-pressed="true">EN</button>
+      <button type="button" data-lang-btn="fr" onclick="setLang('fr')" aria-pressed="false">FR</button>
+      <button type="button" data-lang-btn="ar" onclick="setLang('ar')" aria-pressed="false">ع</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <span class="tag fade"><i></i><span data-i18n="hero_tag">Version 1.0 · Windows 7 SP1 and newer</span></span>
+    <h1 class="fade" data-i18n="hero_title">Fast, crash-proof downloads for Windows</h1>
+    <p class="sub fade" data-i18n="hero_sub">A small native download manager that drives aria2 in the background, keeps a queue, survives crashes and network drops, and takes over links from your browser.</p>
+
+    <div class="cta fade">
+      <a class="btn btn-primary" href="https://github.com/youcef07dz/ZID/raw/main/dist/setup_1.0.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+        <span data-i18n="cta_download">Download for Windows</span>
+      </a>
+      <a class="btn btn-ghost" href="#features">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span data-i18n="cta_features">See what it does</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="shot fade" style="margin-bottom:0">
+      <img src="screenshoot/zid1.png" alt="ZyZoom Internet Downloader main window with a download in progress">
+    </figure>
+
+    <div class="stats fade">
+      <div class="stat"><b>16</b><span data-i18n="stat_parts">parallel parts per file</span></div>
+      <div class="stat"><b>20</b><span data-i18n="stat_langs">interface languages</span></div>
+      <div class="stat"><b>296</b><span data-i18n="stat_tests">automated tests</span></div>
+      <div class="stat"><b>0</b><span data-i18n="stat_deps">runtime dependencies</span></div>
+    </div>
+
+    <div class="news fade">
+      <div class="top">
+        <span class="ver">v1.0</span>
+        <h2 data-i18n="wn_title">What's new in 1.0</h2>
+      </div>
+      <ul>
+        <li><span data-i18n="wn_1">First public release — free, no ads, no registration.</span></li>
+        <li><span data-i18n="wn_2">Up to 16 parallel connections per file, with pause, resume and stop.</span></li>
+        <li><span data-i18n="wn_3">Crash-safe queue: atomic saves, a backup file, and recovery after a kill or power cut.</span></li>
+        <li><span data-i18n="wn_4">Browser hand-off for Chrome, Edge, Chrome 109 and Firefox, plus MP4 merging with mp4mux.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker" data-i18n="features_kicker">Features</div>
+        <h2 data-i18n="features_title">Built for connections that give up</h2>
+        <p data-i18n="features_sub">Every part of ZID assumes the network will fail at some point — and makes that a non-event.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg></div>
+          <h3 data-i18n="f1_t">Multi-connection speed</h3>
+          <p data-i18n="f1_d">Up to 16 parallel connections per file through aria2, with pause, resume and stop at any moment.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5v5c0 5 3.4 8.4 8 9.5 4.6-1.1 8-4.5 8-9.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 data-i18n="f2_t">Crash-safe queue</h3>
+          <p data-i18n="f2_d">Atomic saves and a backup file. A killed process or a power cut resumes exactly where it stopped.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V4m6 3V4M7 7h10v5a5 5 0 0 1-10 0V7Z"/><path d="M12 17v4"/></svg></div>
+          <h3 data-i18n="f3_t">Browser hand-off</h3>
+          <p data-i18n="f3_d">Chrome, Edge, Chrome 109, Firefox and the clipboard send links over ws://127.0.0.1:10007.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.5-4.5L3 9"/><path d="M3 4v5h5"/><path d="M4 13a8 8 0 0 0 14.5 4.5L21 15"/><path d="M21 20v-5h-5"/></svg></div>
+          <h3 data-i18n="f4_t">Retry that works</h3>
+          <p data-i18n="f4_d">Automatic retry with backoff, a live network monitor, and resume the second the connection returns.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m10 9.5 5 2.5-5 2.5v-5Z"/></svg></div>
+          <h3 data-i18n="f5_t">Video and audio</h3>
+          <p data-i18n="f5_d">Detects media links, pairs subtitles and merges MP4 parts with the bundled mp4mux.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A2.5 2.5 0 0 0 21 9V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9"/><path d="M17 20v-6l4 3-4 3Z"/></svg></div>
+          <h3 data-i18n="f6_t">Small and offline</h3>
+          <p data-i18n="f6_d">A 300 KB native app, 20 interface languages, light and dark themes, nothing to install at runtime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker" data-i18n="install_kicker">Install</div>
+        <h2 data-i18n="install_title">Three steps, two minutes</h2>
+        <p data-i18n="install_sub">No account, no bundled toolbars, no telemetry.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3 data-i18n="s1_t">Download the setup</h3>
+          <p data-i18n="s1_d">Grab setup_1.0.exe — 3.6 MB, signed with the app icon and version info.</p>
+        </div>
+        <div class="step">
+          <h3 data-i18n="s2_t">Run the installer</h3>
+          <p data-i18n="s2_d">Windows 7 SP1 or newer, administrator rights. It registers the zid:// protocol.</p>
+        </div>
+        <div class="step">
+          <h3 data-i18n="s3_t">Start downloading</h3>
+          <p data-i18n="s3_d">Open ZID from the Start menu or the desktop shortcut and paste a link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker" data-i18n="dl_kicker">Download</div>
+        <h2 data-i18n="dl_title">Pick your build</h2>
+        <p data-i18n="dl_sub">Free, no ads, no registration.</p>
+      </div>
+      <div class="dl">
+        <div class="dlcard win">
+          <h3 data-i18n="win_t">Windows installer</h3>
+          <p class="meta" data-i18n="win_m">setup_1.0.exe · 3.6 MB · Windows 7 SP1 and newer</p>
+          <a class="btn btn-primary" href="https://github.com/youcef07dz/ZID/raw/main/dist/setup_1.0.exe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+            <span data-i18n="win_b">Download setup_1.0.exe</span>
+          </a>
+        </div>
+        <div class="dlcard ff">
+          <h3 data-i18n="ff_t">Firefox add-on</h3>
+          <p class="meta" data-i18n="ff_m">zid-firefox-1.0.xpi · 28 KB · unsigned</p>
+          <a class="btn btn-primary" href="https://github.com/youcef07dz/ZID/raw/main/dist/zid-firefox-1.0.xpi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+            <span data-i18n="ff_b">Get the extension</span>
+          </a>
+        </div>
+      </div>
+      <p class="note" data-i18n="dl_note">Chrome, Edge and Chrome 109 extensions ship inside the installer. The Firefox XPI is unsigned: load it from about:debugging or use Firefox Developer Edition.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span data-i18n="foot_left">ZyZoom Internet Downloader 1.0 · Windows 7 SP1+ · C# 2.0 / .NET 2.0</span>
+    <span>
+      <a href="https://github.com/youcef07dz/ZID" data-i18n="foot_src">Source code</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/youcef07dz/ZID/blob/main/README.md" data-i18n="foot_readme">Documentation</a>
+    </span>
+  </div>
+</footer>
+
+<noscript>
+  <div style="padding:16px;text-align:center;background:#182141;border-top:1px solid rgba(148,163,214,.2)">
+    JavaScript is off, so the language switcher cannot run — the page is shown in English.
+    <a href="https://github.com/youcef07dz/ZID/raw/main/dist/setup_1.0.exe" style="color:#b8befb">Download setup_1.0.exe</a>
+  </div>
+</noscript>
+
+<script>
+var I18N = {
+  en: {
+    page_title: "ZyZoom Internet Downloader",
+    nav_features: "Features", nav_install: "Install", nav_download: "Download",
+    hero_tag: "Version 1.0 · Windows 7 SP1 and newer",
+    hero_title: "Fast, crash-proof downloads for Windows",
+    hero_sub: "A small native download manager that drives aria2 in the background, keeps a queue, survives crashes and network drops, and takes over links from your browser.",
+    cta_download: "Download for Windows", cta_features: "See what it does",
+    stat_parts: "parallel parts per file", stat_langs: "interface languages",
+    stat_tests: "automated tests", stat_deps: "runtime dependencies",
+    wn_title: "What's new in 1.0",
+    wn_1: "First public release — free, no ads, no registration.",
+    wn_2: "Up to 16 parallel connections per file, with pause, resume and stop.",
+    wn_3: "Crash-safe queue: atomic saves, a backup file, and recovery after a kill or power cut.",
+    wn_4: "Browser hand-off for Chrome, Edge, Chrome 109 and Firefox, plus MP4 merging with mp4mux.",
+    features_kicker: "Features", features_title: "Built for connections that give up",
+    features_sub: "Every part of ZID assumes the network will fail at some point — and makes that a non-event.",
+    f1_t: "Multi-connection speed", f1_d: "Up to 16 parallel connections per file through aria2, with pause, resume and stop at any moment.",
+    f2_t: "Crash-safe queue", f2_d: "Atomic saves and a backup file. A killed process or a power cut resumes exactly where it stopped.",
+    f3_t: "Browser hand-off", f3_d: "Chrome, Edge, Chrome 109, Firefox and the clipboard send links over ws://127.0.0.1:10007.",
+    f4_t: "Retry that works", f4_d: "Automatic retry with backoff, a live network monitor, and resume the second the connection returns.",
+    f5_t: "Video and audio", f5_d: "Detects media links, pairs subtitles and merges MP4 parts with the bundled mp4mux.",
+    f6_t: "Small and offline", f6_d: "A 300 KB native app, 20 interface languages, light and dark themes, nothing to install at runtime.",
+    install_kicker: "Install", install_title: "Three steps, two minutes",
+    install_sub: "No account, no bundled toolbars, no telemetry.",
+    s1_t: "Download the setup", s1_d: "Grab setup_1.0.exe — 3.6 MB, with the app icon and version info.",
+    s2_t: "Run the installer", s2_d: "Windows 7 SP1 or newer, administrator rights. It registers the zid:// protocol.",
+    s3_t: "Start downloading", s3_d: "Open ZID from the Start menu or the desktop shortcut and paste a link.",
+    dl_kicker: "Download", dl_title: "Pick your build", dl_sub: "Free, no ads, no registration.",
+    win_t: "Windows installer", win_m: "setup_1.0.exe · 3.6 MB · Windows 7 SP1 and newer", win_b: "Download setup_1.0.exe",
+    ff_t: "Firefox add-on", ff_m: "zid-firefox-1.0.xpi · 28 KB · unsigned", ff_b: "Get the extension",
+    dl_note: "Chrome, Edge and Chrome 109 extensions ship inside the installer. The Firefox XPI is unsigned: load it from about:debugging or use Firefox Developer Edition.",
+    foot_left: "ZyZoom Internet Downloader 1.0 · Windows 7 SP1+ · C# 2.0 / .NET 2.0",
+    foot_src: "Source code", foot_readme: "Documentation"
+  },
+  fr: {
+    page_title: "ZyZoom Internet Downloader",
+    nav_features: "Fonctions", nav_install: "Installer", nav_download: "Télécharger",
+    hero_tag: "Version 1.0 · Windows 7 SP1 et plus récent",
+    hero_title: "Des téléchargements rapides et inaltérables",
+    hero_sub: "Un petit gestionnaire de téléchargements natif qui pilote aria2 en arrière-plan, tient une file d'attente, résiste aux plantages et aux coupures réseau, et récupère les liens de votre navigateur.",
+    cta_download: "Télécharger pour Windows", cta_features: "Voir ce qu'il fait",
+    stat_parts: "connexions par fichier", stat_langs: "langues d'interface",
+    stat_tests: "tests automatisés", stat_deps: "dépendances à l'exécution",
+    wn_title: "Nouveautés de la version 1.0",
+    wn_1: "Première version publique — gratuite, sans publicité, sans inscription.",
+    wn_2: "Jusqu'à 16 connexions parallèles par fichier, avec pause, reprise et arrêt.",
+    wn_3: "File d'attente inaltérable : sauvegardes atomiques, fichier de secours et reprise après un arrêt forcé ou une coupure de courant.",
+    wn_4: "Passerelle navigateur pour Chrome, Edge, Chrome 109 et Firefox, plus la fusion MP4 avec mp4mux.",
+    features_kicker: "Fonctions", features_title: "Conçu pour les connexions capricieuses",
+    features_sub: "Chaque partie de ZID part du principe que le réseau va lâcher — et fait en sorte que cela n'ait aucune conséquence.",
+    f1_t: "Vitesse multi-connexions", f1_d: "Jusqu'à 16 connexions parallèles par fichier via aria2, avec pause, reprise et arrêt à tout moment.",
+    f2_t: "File d'attente inaltérable", f2_d: "Sauvegardes atomiques et fichier de secours. Un processus tué ou une coupure de courant reprend exactement où il s'est arrêté.",
+    f3_t: "Passerelle navigateur", f3_d: "Chrome, Edge, Chrome 109, Firefox et le presse-papiers envoient les liens via ws://127.0.0.1:10007.",
+    f4_t: "Des reprises qui marchent", f4_d: "Nouvelle tentative automatique avec temporisation, surveillance réseau en direct, et reprise dès le retour de la connexion.",
+    f5_t: "Vidéo et audio", f5_d: "Détecte les liens média, associe les sous-titres et fusionne les parties MP4 avec mp4mux.",
+    f6_t: "Petit et hors ligne", f6_d: "Une application native de 300 Ko, 20 langues d'interface, thèmes clair et sombre, aucune dépendance à l'exécution.",
+    install_kicker: "Installation", install_title: "Trois étapes, deux minutes",
+    install_sub: "Pas de compte, pas de barres d'outils imposées, pas de télémétrie.",
+    s1_t: "Téléchargez l'installateur", s1_d: "Récupérez setup_1.0.exe — 3,6 Mo, avec l'icône et les informations de version.",
+    s2_t: "Lancez l'installation", s2_d: "Windows 7 SP1 ou plus récent, droits administrateur. Le protocole zid:// est enregistré.",
+    s3_t: "Commencez à télécharger", s3_d: "Ouvrez ZID depuis le menu Démarrer ou le raccourci du bureau, puis collez un lien.",
+    dl_kicker: "Téléchargement", dl_title: "Choisissez votre version", dl_sub: "Gratuit, sans publicité, sans inscription.",
+    win_t: "Installateur Windows", win_m: "setup_1.0.exe · 3,6 Mo · Windows 7 SP1 et plus récent", win_b: "Télécharger setup_1.0.exe",
+    ff_t: "Extension Firefox", ff_m: "zid-firefox-1.0.xpi · 28 Ko · non signée", ff_b: "Obtenir l'extension",
+    dl_note: "Les extensions Chrome, Edge et Chrome 109 sont incluses dans l'installateur. Le XPI Firefox n'est pas signé : chargez-le depuis about:debugging ou utilisez Firefox Developer Edition.",
+    foot_left: "ZyZoom Internet Downloader 1.0 · Windows 7 SP1+ · C# 2.0 / .NET 2.0",
+    foot_src: "Code source", foot_readme: "Documentation"
+  },
+  ar: {
+    page_title: "ZyZoom Internet Downloader",
+    nav_features: "الميزات", nav_install: "التثبيت", nav_download: "التنزيل",
+    hero_tag: "الإصدار 1.0 · ويندوز 7 SP1 وأحدث",
+    hero_title: "تنزيلات سريعة ومحصّنة ضد الأعطال",
+    hero_sub: "مدير تنزيلات أصلي وصغير يشغّل aria2 في الخلفية، ويدير قائمة انتظار، ويستعيد التنزيلات بعد الأعطال وانقطاع الشبكة، ويستقبل الروابط من متصفحك.",
+    cta_download: "نزّل لنظام ويندوز", cta_features: "استعرض الميزات",
+    stat_parts: "اتصالًا متوازيًا لكل ملف", stat_langs: "لغة في الواجهة",
+    stat_tests: "اختبارًا آليًا", stat_deps: "تبعيات أثناء التشغيل",
+    wn_title: "الجديد في الإصدار 1.0",
+    wn_1: "أول إصدار عام — مجاني، بلا إعلانات، وبلا تسجيل.",
+    wn_2: "حتى 16 اتصالًا متوازيًا لكل ملف، مع الإيقاف المؤقت والاستئناف والإلغاء.",
+    wn_3: "قائمة انتظار محصّنة: حفظ ذرّي ونسخة احتياطية واستعادة بعد الإغلاق القسري أو انقطاع الكهرباء.",
+    wn_4: "جسر مع Chrome وEdge وChrome 109 وFirefox، مع دمج MP4 عبر mp4mux.",
+    features_kicker: "الميزات", features_title: "مصمّم لشبكات تنقطع",
+    features_sub: "كل جزء من ZID يفترض أن الشبكة ستنقطع في لحظة ما — ويجعل ذلك بلا أثر.",
+    f1_t: "سرعة متعددة الاتصالات", f1_d: "حتى 16 اتصالًا متوازيًا لكل ملف عبر aria2، مع الإيقاف المؤقت والاستئناف والإلغاء في أي لحظة.",
+    f2_t: "قائمة انتظار محصّنة", f2_d: "حفظ ذرّي ونسخة احتياطية. إغلاق قسري أو انقطاع كهرباء يستأنف من حيث توقّف تمامًا.",
+    f3_t: "جسر مع المتصفح", f3_d: "‏Chrome وEdge وChrome 109 وFirefox والحافظة ترسل الروابط عبر ws://127.0.0.1:10007.",
+    f4_t: "إعادة محاولة حقيقية", f4_d: "إعادة محاولة تلقائية بفاصل متزايد، ومراقبة شبكة مباشرة، واستئناف لحظة عودة الاتصال.",
+    f5_t: "فيديو وصوت", f5_d: "يكشف روابط الوسائط، ويقرن الترجمات، ويدمج أجزاء MP4 عبر mp4mux المرفق.",
+    f6_t: "صغير ويعمل دون إنترنت", f6_d: "تطبيق أصلي بحجم 300 كيلوبايت، و20 لغة، وسمة فاتحة وداكنة، دون أي تبعيات.",
+    install_kicker: "التثبيت", install_title: "ثلاث خطوات، دقيقتان",
+    install_sub: "دون حساب، ودون أشرطة أدوات مرفقة، ودون تتبّع.",
+    s1_t: "نزّل المثبّت", s1_d: "حمّل setup_1.0.exe — بحجم 3.6 ميغابايت، مع أيقونة التطبيق ومعلومات الإصدار.",
+    s2_t: "شغّل المثبّت", s2_d: "يتطلب ويندوز 7 SP1 أو أحدث وصلاحيات المسؤول. يسجّل بروتوكول zid://.",
+    s3_t: "ابدأ التنزيل", s3_d: "افتح ZID من قائمة ابدأ أو من اختصار سطح المكتب، ثم الصق الرابط.",
+    dl_kicker: "التنزيل", dl_title: "اختر النسخة", dl_sub: "مجاني، بلا إعلانات، وبلا تسجيل.",
+    win_t: "مثبّت ويندوز", win_m: "setup_1.0.exe · 3.6 ميغابايت · ويندوز 7 SP1 وأحدث", win_b: "نزّل setup_1.0.exe",
+    ff_t: "إضافة فايرفوكس", ff_m: "zid-firefox-1.0.xpi · 28 كيلوبايت · غير موقّعة", ff_b: "احصل على الإضافة",
+    dl_note: "إضافات Chrome وEdge وChrome 109 مضمّنة داخل المثبّت. ملف Firefox غير موقّع: حمّله من about:debugging أو استخدم Firefox Developer Edition.",
+    foot_left: "ZyZoom Internet Downloader 1.0 · ويندوز 7 SP1+ · ‏C# 2.0 / .NET 2.0",
+    foot_src: "الشيفرة المصدرية", foot_readme: "التوثيق"
+  }
+};
+
+function setLang(lang) {
+  var dict = I18N[lang] ? lang : "en";
+  var t = I18N[dict];
+  var root = document.documentElement;
+  root.lang = dict;
+  root.dir = dict === "ar" ? "rtl" : "ltr";
+  document.title = t.page_title;
+
+  var nodes = document.querySelectorAll("[data-i18n]");
+  for (var i = 0; i < nodes.length; i++) {
+    var key = nodes[i].getAttribute("data-i18n");
+    if (t[key] != null) nodes[i].textContent = t[key];
+  }
+  var btns = document.querySelectorAll("[data-lang-btn]");
+  for (var j = 0; j < btns.length; j++) {
+    btns[j].setAttribute("aria-pressed", String(btns[j].getAttribute("data-lang-btn") === dict));
+  }
+  try { localStorage.setItem("zid.lang", dict); } catch (e) {}
+}
+
+(function () {
+  var saved = null;
+  try { saved = localStorage.getItem("zid.lang"); } catch (e) {}
+  var guess = (navigator.language || "en").slice(0, 2).toLowerCase();
+  setLang(saved || (I18N[guess] ? guess : "en"));
+})();
+</script>
+</body>
+</html>

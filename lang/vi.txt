@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Tiếng Việt
+code=vi
+name=Tiếng Việt
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Tệp
+menu.downloads=Tải xuống
+menu.view=Xem
+menu.options=Tùy chọn
+menu.help=Trợ giúp
+menu.add_url=Thêm URL...
+menu.resume_selected=Tiếp tục mục đã chọn
+menu.pause_selected=Tạm dừng mục đã chọn
+menu.restart_selected=Khởi động lại mục đã chọn
+menu.export=Xuất danh sách...
+menu.exit=Thoát
+menu.pause_all=Tạm dừng tất cả
+menu.resume_all=Tiếp tục tất cả
+menu.stop_all=Dừng tất cả
+menu.theme_light=Giao diện sáng Windows 7
+menu.theme_dark=Giao diện tối Windows 7
+menu.settings=Cài đặt...
+menu.about=Giới thiệu...
+
+btn.add=Thêm URL
+btn.start=Bắt đầu
+btn.pause=Tạm dừng
+btn.resume=Tiếp tục
+btn.restart=Khởi động lại
+btn.edit=Sửa
+btn.info=Thông tin
+btn.remove=Xóa
+btn.about=Giới thiệu
+btn.stop_all=Dừng tất cả
+btn.cancel=Hủy
+btn.ok=OK
+btn.close=Đóng
+btn.paste=Dán
+btn.open_folder=Mở thư mục
+btn.hide=Ẩn
+
+tb.filter=Lọc...
+
+cat.all=Tất cả tải xuống
+cat.queue=Hàng đợi
+cat.downloading=Đang tải
+cat.paused=Đã tạm dừng
+cat.done=Hoàn tất
+cat.error=Lỗi
+cat.video=Video
+cat.image=Hình ảnh
+cat.audio=Âm thanh
+cat.compressed=Nén
+cat.program=Chương trình
+cat.other=Khác
+
+col.name=Tên tệp
+col.status=Trạng thái
+col.type=Loại
+col.size=Kích thước
+col.progress=Tiến độ
+col.speed=Tốc độ
+col.eta=Thời gian còn lại
+col.date=Ngày
+
+ctx.open=Mở
+ctx.folder=Mở thư mục
+ctx.copy=Sao chép URL
+ctx.resume=Bắt đầu / tiếp tục
+ctx.pause=Tạm dừng
+ctx.restart=Khởi động lại
+ctx.edit=Sửa...
+ctx.info=Thông tin...
+ctx.prio_high=Ưu tiên: Cao
+ctx.prio_normal=Ưu tiên: Bình thường
+ctx.prio_low=Ưu tiên: Thấp
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Xóa
+
+label.name=Tên:
+label.url=URL:
+label.type=Loại:
+label.size=Kích thước:
+label.received=Đã nhận:
+label.status=Trạng thái:
+label.started=Bắt đầu:
+label.priority=Ưu tiên:
+label.save_to=Lưu vào:
+label.file=Tệp:
+label.speed=Tốc độ:
+label.eta=Thời gian còn lại:
+label.urls=URL (mỗi dòng một URL)
+label.file_name=Tên tệp
+label.save_folder=Thư mục lưu
+label.cookie=Cookie (tùy chọn)
+label.connections=Kết nối (0 = dùng mặc định)
+label.speed_limit=Giới hạn tốc độ KB/s (0 = dùng mặc định)
+
+add.title=Thêm tải xuống
+add.edit_title=Sửa tải xuống #{id}
+add.auto_url=(tự động từ URL)
+add.default_folder=(Mặc định: Downloads\ZID)
+add.cookie_ph=tên=giá trị; khác=giá trị
+add.paste_fail=Không thể đọc clipboard. Nhấn Ctrl+V trong ô nhập.
+add.skipped=Đã bỏ qua {n} dòng. Chỉ có thể thêm URL http, https, ftp.
+
+info.title=Thông tin tải xuống
+prio.high=Cao
+prio.normal=Bình thường
+prio.low=Thấp
+
+rm.title=Xóa tải xuống
+rm.text=Xóa {n} mục tải xuống khỏi danh sách?
+rm.also_file=Xóa cả tệp đã tải khỏi đĩa
+rm.select_first=Chọn một dòng trước
+
+set.title=Cài đặt
+set.maxconc=Số tải xuống đồng thời tối đa
+set.parts=Số phần mỗi tải xuống
+set.speed=Tốc độ tối đa (KB/s, 0 = không giới hạn)
+set.proxy=Proxy (trống = trực tiếp, ví dụ http://người_dùng:mật_khẩu@máy_chủ:8080)
+set.clip=Theo dõi clipboard cho URL http/https
+set.shutdown=Tắt máy khi hàng đợi xong
+set.sort=Sắp xếp tải xuống mới vào thư mục theo loại (video, hình ảnh, ...)
+set.schedule=Thời gian bắt đầu hàng đợi (HH:MM, trống = ngay)
+set.language=Ngôn ngữ
+
+status.queued=Trong hàng đợi
+status.downloading=Đang tải
+status.connecting=Đang kết nối
+status.paused=Đã tạm dừng
+status.done=Hoàn tất
+status.error=Lỗi
+status.starting=Đang bắt đầu...
+status.scheduled=Đã lên lịch:
+status.retrying=Lỗi mạng, đang thử lại
+
+msg.url_copied=Đã sao chép URL
+msg.open=Mở
+msg.file_not_found=Không tìm thấy tệp:
+msg.missing_resource=Thiếu tài nguyên
+msg.export_failed=Xuất thất bại:
+msg.export=Xuất
+
+tray.show=Hiện cửa sổ
+tray.pause_all=Tạm dừng tất cả
+tray.resume_all=Tiếp tục tất cả
+tray.exit=Thoát
+tray.balloon=Vẫn đang chạy trong khay hệ thống.
+
+about.title=Giới thiệu
+about.folder=Thư mục tải xuống:
+about.state=Tệp trạng thái:
+about.config=Tệp cài đặt:
+
+popup.title=Tải xuống - {name}
+
+# empty state
+empty.title=Không có gì để hiển thị
+empty.hint=Thêm URL, thả liên kết hoặc điều chỉnh bộ lọc.
+menu.retry_all=Thử lại mọi lỗi
+menu.clear_done=Xóa mục đã hoàn tất
+menu.reset_columns=Đặt lại bố cục cột
+menu.browsers=Tích hợp trình duyệt...
+btn.retry_all=Thử lại tất cả
+btn.import=Nhập...
+btn.open_file=Mở tệp
+btn.hide_details=Ẩn chi tiết
+btn.show_details=Hiện chi tiết
+label.avg_speed=Tốc độ trung bình:
+label.time_taken=Thời gian đã dùng:
+label.mirror=URL gương (tùy chọn)
+label.checksum=Tổng kiểm tra (tùy chọn)
+label.headers=Tiêu đề bổ sung (tùy chọn, mỗi dòng một tiêu đề)
+label.item_proxy=Proxy (tùy chọn, trống = dùng mặc định)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL đã có trong danh sách. Vẫn thêm?
+set.tab_general=Chung
+set.tab_connection=Kết nối
+set.tab_schedule=Lịch
+set.tab_appearance=Giao diện
+set.capture=Loại tệp mà tiện ích trình duyệt sẽ bắt (cách nhau bằng dấu phẩy)
+set.stop=Dừng lúc (HH:MM, trống = không bao giờ)
+set.daily=Lặp lại khung giờ bắt đầu/dừng mỗi ngày
+set.accent=Màu nhấn
+set.prog_start=Màu đầu thanh tiến trình
+set.prog_end=Màu cuối thanh tiến trình
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Đang hoạt động
+st.speed=Tốc độ
+st.free=Còn trống
+status.verified=Đã xác minh
+tray.done=Tải xuống hoàn tất:
+bi.title=Tích hợp trình duyệt
+bi.intro=Chọn họ trình duyệt. Trang tiện ích sẽ mở trong trình duyệt bạn chọn.
+bi.firefox=Firefox
+bi.chromium=Trình duyệt Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Chọn trình duyệt để mở trang tiện ích:
+bi.none=Không tìm thấy trình duyệt được hỗ trợ.
+bi.open_failed=Không thể khởi chạy trình duyệt:
+bi.copy_path=Sao chép đường dẫn tiện ích
+bi.copied=Đã sao chép
+bi.copy_failed=Sao chép thất bại
+neat.title=Thêm tải xuống
+neat.url=URL:
+neat.name=Tên tệp:
+neat.folder=Lưu vào:
+neat.size=Kích thước:
+neat.unknown_size=Không rõ
+neat.start=Bắt đầu
+neat.later=Bắt đầu sau
+neat.browse=Duyệt...
+popup.tab_download=Tải xuống
+popup.tab_options=Tùy chọn
+popup.parts_downloading=Số phần đang tải:
+popup.finished_title=Tải xuống hoàn tất
+popup.finished=Tải xuống đã hoàn tất
+popup.after=Khi tải xuống hoàn tất
+popup.after_dialog=Hiện hộp thoại hoàn tất
+popup.after_none=Không làm gì
+popup.after_open=Mở tệp
+popup.after_folder=Mở thư mục
+popup.after_shutdown=Tắt máy tính
+popup.saved=Đã lưu
+btn.apply=Áp dụng
+popup.details=Chi tiết kết nối
+popup.connections=Kết nối đang hoạt động:
+popup.parts=Số phần:
+popup.remaining=Còn lại:
+popup.host=Máy chủ:
+msg.merged_restart=Tệp này được ghép từ luồng video và âm thanh riêng. Hãy xóa nó và tải video lại để lấy lại tệp.
+
+ctx.refresh=Làm mới URL
+msg.refresh_no_page=Bản tải xuống này không có trang tham chiếu để mở.
+about.no_errors=Không có lỗi
+about.recent_errors=Lỗi gần đây:
+add.advanced=Tùy chọn nâng cao
+add.probe_checking=Đang kiểm tra URL...
+add.probe_size=Kích thước
+auth.forget_confirm=Quên tất cả thông tin đăng nhập trang web đã lưu?
+auth.message=Máy chủ này cần tên người dùng và mật khẩu.
+auth.pass=Mật khẩu:
+auth.remember=Ghi nhớ cho trang này
+auth.title=Cần thông tin đăng nhập
+auth.user=Tên người dùng:
+btn.clean_history=Xóa lịch sử
+btn.forget_credentials=Quên thông tin đăng nhập đã lưu
+btn.no=Không
+btn.show_more=Hiện thêm
+btn.yes=Có
+clean.button=Dọn
+clean.orphans=Đồng thời xóa các tệp dở dang còn lại (.aria2, .part) trong thư mục tải xuống
+clean.text=Xóa tất cả tải xuống đã hoàn tất khỏi danh sách? Các tệp đã tải vẫn còn trên đĩa.
+clean.title=Xóa lịch sử
+ctx.credentials=Nhập thông tin đăng nhập...
+ctx.retry_single=Thử lại với 1 kết nối
+dup.cancel=Hủy
+dup.file=Tệp đích đã tồn tại.
+dup.hint=Tiếp tục tiếp tục mục hiện có. Giữ cả hai lưu một bản sao khác với tên mới. Thay thế xóa tệp hiện có và bắt đầu lại.
+dup.hint_file=Giữ cả hai lưu một bản sao khác với tên mới. Thay thế xóa tệp hiện có và bắt đầu lại.
+dup.keep=Giữ cả hai
+dup.open=Mở
+dup.replace=Thay thế
+dup.resume=Tiếp tục
+dup.title=Tải xuống trùng lặp
+dup.url=URL này đã có trong danh sách tải xuống.
+info.tab_advanced=Nâng cao
+info.tab_general=Chung
+info.tab_network=Mạng
+info.tab_progress=Tiến trình
+label.active_conn=Kết nối đang hoạt động:
+label.after_done=Sau khi tải xuống:
+label.checksum_short=Tổng kiểm tra:
+label.cookie_short=Cookie:
+label.headers_short=Tiêu đề:
+label.max_conn=Giới hạn kết nối:
+label.mirror_short=URL gương:
+label.referer=Nguồn giới thiệu:
+label.remaining=Còn lại:
+label.retry=Số lần thử lại:
+label.start_at=Tải xuống sau lúc (HH:MM, trống = bây giờ)
+label.user_agent=Tác nhân người dùng:
+menu.check_updates=Kiểm tra cập nhật...
+menu.copy_diag=Sao chép chẩn đoán
+menu.open_log=Mở thư mục nhật ký
+msg.diag_copied=Đã sao chép chẩn đoán
+neat.block=Không bao giờ tự động tải xuống từ miền này
+neat.block_ask=Ngừng tiếp nhận tải xuống từ {0}? Chúng sẽ ở lại trong trình duyệt.
+neat.block_title=Trang web bị chặn
+set.blocked=Trang web bị chặn (mỗi dòng một cái; tải xuống từ đó vẫn ở trong trình duyệt)
+set.naming=Mẫu đặt tên ({host}/{type}/{name}; trống = thư mục tải xuống)
+set.speed_from=Giới hạn tạm thời áp dụng từ (HH:MM)
+set.speed_to=Giới hạn tạm thời áp dụng đến (HH:MM)
+set.speed_window=Giới hạn tốc độ tạm thời (KB/s, 0 = tắt)
+set.tab_updates=Cập nhật
+set.update_check=Tự động kiểm tra phiên bản mới
+set.update_days=Kiểm tra mỗi (ngày)
+st.eta=Thời gian còn lại
+st.left=Còn lại
+status.file_missing=Tệp đã bị di chuyển hoặc xóa
+status.waitingnetwork=Đang chờ mạng
+update.available=Phiên bản {0} đã có (bạn đang dùng {1}). Tải xuống ngay?
+update.downloading=Bản cập nhật đã được thêm vào mục tải xuống của bạn.
+update.error=Không thể kiểm tra cập nhật: {0}
+update.latest=Bạn đang dùng phiên bản mới nhất ({0}).
+update.notes=Có gì mới:
+update.title=Cập nhật phần mềm

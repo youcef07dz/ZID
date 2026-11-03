@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "ZyZoom Internet Downloader",
+  "version": "1.0.0",
+  "description": "Floating ZyZoom Internet Downloader panel that lists every video, audio and playlist on the page and sends the link to the ZyZoom Internet Downloader app.",
+  "author": "ZyZoom",
+  "permissions": ["webRequest", "webNavigation", "cookies", "storage", "downloads", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zid-download-manager@zid.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["browsingActivity", "websiteContent"]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "background": {
+    "scripts": ["common.js", "background.js"]
+  },
+  "action": {
+    "default_title": "ZyZoom Internet Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["common.js", "content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["injected/youtube.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Türkçe
+code=tr
+name=Türkçe
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Dosya
+menu.downloads=İndirmeler
+menu.view=Görünüm
+menu.options=Seçenekler
+menu.help=Yardım
+menu.add_url=URL ekle...
+menu.resume_selected=Seçileni sürdür
+menu.pause_selected=Seçileni duraklat
+menu.restart_selected=Seçileni yeniden başlat
+menu.export=Listeyi dışa aktar...
+menu.exit=Çıkış
+menu.pause_all=Tümünü duraklat
+menu.resume_all=Tümünü sürdür
+menu.stop_all=Tümünü durdur
+menu.theme_light=Windows 7 açık tema
+menu.theme_dark=Windows 7 koyu tema
+menu.settings=Ayarlar...
+menu.about=Hakkında...
+
+btn.add=URL ekle
+btn.start=Başlat
+btn.pause=Duraklat
+btn.resume=Sürdür
+btn.restart=Yeniden başlat
+btn.edit=Düzenle
+btn.info=Bilgi
+btn.remove=Kaldır
+btn.about=Hakkında
+btn.stop_all=Tümünü durdur
+btn.cancel=İptal
+btn.ok=Tamam
+btn.close=Kapat
+btn.paste=Yapıştır
+btn.open_folder=Klasörü aç
+btn.hide=Gizle
+
+tb.filter=Filtrele...
+
+cat.all=Tüm indirmeler
+cat.queue=Sıra
+cat.downloading=İndiriliyor
+cat.paused=Duraklatıldı
+cat.done=Tamamlandı
+cat.error=Hata
+cat.video=Video
+cat.image=Resim
+cat.audio=Ses
+cat.compressed=Sıkıştırılmış
+cat.program=Program
+cat.other=Diğer
+
+col.name=Dosya adı
+col.status=Durum
+col.type=Tür
+col.size=Boyut
+col.progress=İlerleme
+col.speed=Hız
+col.eta=Kalan süre
+col.date=Tarih
+
+ctx.open=Aç
+ctx.folder=Klasörü aç
+ctx.copy=URL'yi kopyala
+ctx.resume=Başlat / sürdür
+ctx.pause=Duraklat
+ctx.restart=Yeniden başlat
+ctx.edit=Düzenle...
+ctx.info=Bilgi...
+ctx.prio_high=Öncelik: Yüksek
+ctx.prio_normal=Öncelik: Normal
+ctx.prio_low=Öncelik: Düşük
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Kaldır
+
+label.name=Ad:
+label.url=URL:
+label.type=Tür:
+label.size=Boyut:
+label.received=Alınan:
+label.status=Durum:
+label.started=Başlangıç:
+label.priority=Öncelik:
+label.save_to=Kaydetme konumu:
+label.file=Dosya:
+label.speed=Hız:
+label.eta=Kalan süre:
+label.urls=URL'ler (her satıra bir tane)
+label.file_name=Dosya adı
+label.save_folder=Kaydetme klasörü
+label.cookie=Cookie (isteğe bağlı)
+label.connections=Bağlantılar (0 = varsayılanı kullan)
+label.speed_limit=Hız sınırı KB/s (0 = varsayılanı kullan)
+
+add.title=İndirme ekle
+add.edit_title=İndirme #{id} düzenle
+add.auto_url=(URL'den otomatik)
+add.default_folder=(Varsayılan: Downloads\ZID)
+add.cookie_ph=ad=değer; diğer=değer
+add.paste_fail=Pano okunamadı. Alan içinde Ctrl+V tuşlayın.
+add.skipped={n} satır atlandı. Yalnızca http, https, ftp URL'leri eklenebilir.
+
+info.title=İndirme bilgisi
+prio.high=Yüksek
+prio.normal=Normal
+prio.low=Düşük
+
+rm.title=İndirmeleri kaldır
+rm.text={n} indirme listeden kaldırılsın mı?
+rm.also_file=İndirilen dosyaları da diskten sil
+rm.select_first=Önce bir satır seçin
+
+set.title=Ayarlar
+set.maxconc=En fazla eşzamanlı indirme
+set.parts=İndirme başına parça
+set.speed=En yüksek hız (KB/s, 0 = sınırsız)
+set.proxy=Proxy (boş = doğrudan, örn. http://kullanıcı:parola@sunucu:8080)
+set.clip=Panoyu http/https URL'leri için izle
+set.shutdown=Sıra bitince bilgisayarı kapat
+set.sort=Yeni indirmeleri türe göre klasörlere ayır (video, resim, ...)
+set.schedule=Sıra başlangıç saati (SS:DD, boş = şimdi)
+set.language=Dil
+
+status.queued=Sırada
+status.downloading=İndiriliyor
+status.connecting=Bağlanıyor
+status.paused=Duraklatıldı
+status.done=Tamamlandı
+status.error=Hata
+status.starting=Başlatılıyor...
+status.scheduled=Zamanlandı:
+status.retrying=Ağ hatası, yeniden deneniyor
+
+msg.url_copied=URL kopyalandı
+msg.open=Aç
+msg.file_not_found=Dosya bulunamadı:
+msg.missing_resource=Kaynak yok
+msg.export_failed=Dışa aktarma başarısız:
+msg.export=Dışa aktar
+
+tray.show=Pencereyi göster
+tray.pause_all=Tümünü duraklat
+tray.resume_all=Tümünü sürdür
+tray.exit=Çıkış
+tray.balloon=Hâlâ sistem tepsisinde çalışıyor.
+
+about.title=Hakkında
+about.folder=İndirme klasörü:
+about.state=Durum dosyası:
+about.config=Ayar dosyası:
+
+popup.title=İndirme - {name}
+
+# empty state
+empty.title=Gösterilecek öğe yok
+empty.hint=Bir URL ekleyin, bağlantı bırakın veya filtreyi ayarlayın.
+menu.retry_all=Tüm hataları yeniden dene
+menu.clear_done=Tamamlananları temizle
+menu.reset_columns=Sütun düzenini sıfırla
+menu.browsers=Tarayıcı entegrasyonu...
+btn.retry_all=Tümünü yeniden dene
+btn.import=İçe aktar...
+btn.open_file=Dosyayı aç
+btn.hide_details=Ayrıntıları gizle
+btn.show_details=Ayrıntıları göster
+label.avg_speed=Ortalama hız:
+label.time_taken=Geçen süre:
+label.mirror=Yansı URL'si (isteğe bağlı)
+label.checksum=Sağlama toplamı (isteğe bağlı)
+label.headers=Ek başlıklar (isteğe bağlı, her satıra bir tane)
+label.item_proxy=Proxy (isteğe bağlı, boş = varsayılanı kullan)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL zaten listede. Yine de eklensin mi?
+set.tab_general=Genel
+set.tab_connection=Bağlantı
+set.tab_schedule=Zamanlama
+set.tab_appearance=Görünüm
+set.capture=Tarayıcı uzantısının yakalayacağı dosya türleri (virgülle ayrılmış)
+set.stop=Durdurma saati (SS:DD, boş = asla)
+set.daily=Başlatma/durdurma aralığını her gün yinele
+set.accent=Vurgu rengi
+set.prog_start=İlerleme çubuğu başlangıç rengi
+set.prog_end=İlerleme çubuğu bitiş rengi
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Etkin
+st.speed=Hız
+st.free=Boş
+status.verified=Doğrulandı
+tray.done=İndirme tamamlandı:
+bi.title=Tarayıcı entegrasyonu
+bi.intro=Tarayıcı ailenizi seçin. Uzantı sayfası seçtiğiniz tarayıcıda açılacak.
+bi.firefox=Firefox
+bi.chromium=Chromium tarayıcılar
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Uzantı sayfasının açılacağı tarayıcıyı seçin:
+bi.none=Desteklenen tarayıcı bulunamadı.
+bi.open_failed=Tarayıcı başlatılamıyor:
+bi.copy_path=Uzantı yolunu kopyala
+bi.copied=Kopyalandı
+bi.copy_failed=Kopyalama başarısız
+neat.title=İndirme ekle
+neat.url=URL:
+neat.name=Dosya adı:
+neat.folder=Kaydetme konumu:
+neat.size=Boyut:
+neat.unknown_size=Bilinmiyor
+neat.start=Başlat
+neat.later=Daha sonra başlat
+neat.browse=Gözat...
+popup.tab_download=İndirme
+popup.tab_options=Seçenekler
+popup.parts_downloading=İndirilen parçalar:
+popup.finished_title=İndirme tamamlandı
+popup.finished=İndirme bitti
+popup.after=İndirme bittiğinde
+popup.after_dialog=Bitiş iletişim kutusunu göster
+popup.after_none=Hiçbir şey yapma
+popup.after_open=Dosyayı aç
+popup.after_folder=Klasörü aç
+popup.after_shutdown=Bilgisayarı kapat
+popup.saved=Kaydedildi
+btn.apply=Uygula
+popup.details=Bağlantı ayrıntıları
+popup.connections=Etkin bağlantılar:
+popup.parts=Parçalar:
+popup.remaining=Kalan:
+popup.host=Sunucu:
+msg.merged_restart=Bu dosya ayrı video ve ses akışlarından birleştirildi. Yeniden almak için dosyayı silip videoyu tekrar indirin.
+
+ctx.refresh=URL'yi yenile
+msg.refresh_no_page=Bu indirmenin açılacak bir referans sayfası yok.
+about.no_errors=Hata yok
+about.recent_errors=Son hatalar:
+add.advanced=Gelişmiş seçenekler
+add.probe_checking=URL denetleniyor...
+add.probe_size=Boyut
+auth.forget_confirm=Kayıtlı tüm site kimlik bilgileri unutulsun mu?
+auth.message=Bu sunucu bir kullanıcı adı ve parola gerektiriyor.
+auth.pass=Parola:
+auth.remember=Bu site için hatırla
+auth.title=Kimlik bilgileri gerekli
+auth.user=Kullanıcı adı:
+btn.clean_history=Geçmişi temizle
+btn.forget_credentials=Kayıtlı kimlik bilgilerini unut
+btn.no=Hayır
+btn.show_more=Daha fazla göster
+btn.yes=Evet
+clean.button=Temizle
+clean.orphans=İndirme klasöründeki kalan kısmi dosyaları (.aria2, .part) da sil
+clean.text=Tamamlanan tüm indirmeler listeden kaldırılsın mı? İndirilen dosyalar diskte kalır.
+clean.title=Geçmişi temizle
+ctx.credentials=Kimlik bilgilerini gir...
+ctx.retry_single=1 bağlantıyla yeniden dene
+dup.cancel=İptal
+dup.file=Hedef dosya zaten var.
+dup.hint=Devam et mevcut girdiyi sürdürür. İkisini tut yeni bir adla başka bir kopya kaydeder. Değiştir mevcut dosyayı siler ve baştan başlar.
+dup.hint_file=İkisini tut yeni bir adla başka bir kopya kaydeder. Değiştir mevcut dosyayı siler ve baştan başlar.
+dup.keep=İkisini tut
+dup.open=Aç
+dup.replace=Değiştir
+dup.resume=Devam et
+dup.title=Yinelenen indirme
+dup.url=Bu URL zaten indirme listesinde.
+info.tab_advanced=Gelişmiş
+info.tab_general=Genel
+info.tab_network=Ağ
+info.tab_progress=İlerleme
+label.active_conn=Etkin bağlantılar:
+label.after_done=İndirmeden sonra:
+label.checksum_short=Sağlama toplamı:
+label.cookie_short=Çerez:
+label.headers_short=Üst bilgiler:
+label.max_conn=Bağlantı sınırı:
+label.mirror_short=Yansı URL'si:
+label.referer=Yönlendiren:
+label.remaining=Kalan:
+label.retry=Yeniden deneme sayısı:
+label.start_at=Daha sonra indir (HH:MM, boş = şimdi)
+label.user_agent=Kullanıcı aracısı:
+menu.check_updates=Güncellemeleri denetle...
+menu.copy_diag=Tanılamayı kopyala
+menu.open_log=Günlük klasörünü aç
+msg.diag_copied=Tanılama kopyalandı
+neat.block=Bu etki alanından asla otomatik indirme
+neat.block_ask={0} adresinden indirmeleri devralmayı durdur? Tarayıcıda kalırlar.
+neat.block_title=Engellenen siteler
+set.blocked=Engellenen siteler (her satıra bir tane; indirmeleri tarayıcıda kalır)
+set.naming=Adlandırma şablonu ({host}/{type}/{name}; boş = indirme klasörü)
+set.speed_from=Geçici sınır şu saatten itibaren geçerli (HH:MM)
+set.speed_to=Geçici sınır şu saate kadar geçerli (HH:MM)
+set.speed_window=Geçici hız sınırı (KB/s, 0 = kapalı)
+set.tab_updates=Güncellemeler
+set.update_check=Yeni sürümü otomatik denetle
+set.update_days=Her (gün) denetle
+st.eta=Kalan süre
+st.left=Kalan
+status.file_missing=Dosya taşındı veya silindi
+status.waitingnetwork=Ağ bekleniyor
+update.available=Sürüm {0} kullanılabilir ({1} sürümünüz var). Şimdi indirilsin mi?
+update.downloading=Güncelleme indirmelerinize eklendi.
+update.error=Güncellemeler denetlenemedi: {0}
+update.latest=En son sürüme sahipsiniz ({0}).
+update.notes=Yenilikler:
+update.title=Yazılım güncellemesi

@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - فارسی
+code=fa
+name=فارسی
+dir=rtl
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=پرونده
+menu.downloads=دانلودها
+menu.view=نما
+menu.options=گزینه‌ها
+menu.help=راهنما
+menu.add_url=افزودن URL...
+menu.resume_selected=ادامه موارد انتخاب‌شده
+menu.pause_selected=توقف موقت موارد انتخاب‌شده
+menu.restart_selected=راه‌اندازی مجدد موارد انتخاب‌شده
+menu.export=برون‌بری فهرست...
+menu.exit=خروج
+menu.pause_all=توقف موقت همه
+menu.resume_all=ادامه همه
+menu.stop_all=توقف همه
+menu.theme_light=پوسته روشن ویندوز ۷
+menu.theme_dark=پوسته تیره ویندوز ۷
+menu.settings=تنظیمات...
+menu.about=درباره...
+
+btn.add=افزودن URL
+btn.start=شروع
+btn.pause=توقف موقت
+btn.resume=ادامه
+btn.restart=راه‌اندازی مجدد
+btn.edit=ویرایش
+btn.info=اطلاعات
+btn.remove=حذف
+btn.about=درباره
+btn.stop_all=توقف همه
+btn.cancel=لغو
+btn.ok=تأیید
+btn.close=بستن
+btn.paste=چسباندن
+btn.open_folder=باز کردن پوشه
+btn.hide=پنهان کردن
+
+tb.filter=صافی...
+
+cat.all=همه دانلودها
+cat.queue=صف
+cat.downloading=در حال دانلود
+cat.paused=متوقف‌شده
+cat.done=کامل‌شده
+cat.error=خطا
+cat.video=ویدیو
+cat.image=تصویر
+cat.audio=صدا
+cat.compressed=فشرده
+cat.program=برنامه
+cat.other=سایر
+
+col.name=نام پرونده
+col.status=وضعیت
+col.type=نوع
+col.size=اندازه
+col.progress=پیشرفت
+col.speed=سرعت
+col.eta=زمان باقی‌مانده
+col.date=تاریخ
+
+ctx.open=باز کردن
+ctx.folder=باز کردن پوشه
+ctx.copy=رونوشت URL
+ctx.resume=شروع / ادامه
+ctx.pause=توقف موقت
+ctx.restart=راه‌اندازی مجدد
+ctx.edit=ویرایش...
+ctx.info=اطلاعات...
+ctx.prio_high=اولویت: بالا
+ctx.prio_normal=اولویت: عادی
+ctx.prio_low=اولویت: پایین
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=حذف
+
+label.name=نام:
+label.url=URL:
+label.type=نوع:
+label.size=اندازه:
+label.received=دریافت‌شده:
+label.status=وضعیت:
+label.started=شروع:
+label.priority=اولویت:
+label.save_to=ذخیره در:
+label.file=پرونده:
+label.speed=سرعت:
+label.eta=زمان باقی‌مانده:
+label.urls=URLها (یکی در هر خط)
+label.file_name=نام پرونده
+label.save_folder=پوشه ذخیره
+label.cookie=Cookie (اختیاری)
+label.connections=اتصال‌ها (۰ = استفاده از پیش‌فرض)
+label.speed_limit=محدودیت سرعت KB/s (۰ = استفاده از پیش‌فرض)
+
+add.title=افزودن دانلود
+add.edit_title=ویرایش دانلود #{id}
+add.auto_url=(خودکار از URL)
+add.default_folder=(پیش‌فرض: Downloads\ZID)
+add.cookie_ph=نام=مقدار; دیگر=مقدار
+add.paste_fail=خواندن حافظه موقت ممکن نشد. در کادر Ctrl+V بزنید.
+add.skipped={n} خط رد شد. فقط URLهای http، https و ftp افزوده می‌شوند.
+
+info.title=اطلاعات دانلود
+prio.high=بالا
+prio.normal=عادی
+prio.low=پایین
+
+rm.title=حذف دانلودها
+rm.text={n} دانلود از فهرست حذف شود؟
+rm.also_file=پرونده‌های دانلودشده نیز از دیسک حذف شوند
+rm.select_first=نخست یک سطر انتخاب کنید
+
+set.title=تنظیمات
+set.maxconc=حداکثر دانلود هم‌زمان
+set.parts=تعداد بخش در هر دانلود
+set.speed=حداکثر سرعت (KB/s، ۰ = نامحدود)
+set.proxy=پیشکار (خالی = مستقیم، مثال: http://کاربر:رمز@میزبان:8080)
+set.clip=پایش حافظه موقت برای URLهای http/https
+set.shutdown=خاموش کردن رایانه پس از پایان صف
+set.sort=دسته‌بندی دانلودهای جدید در پوشه‌ها بر اساس نوع (ویدیو، تصویر، ...)
+set.schedule=زمان شروع صف (HH:MM، خالی = اکنون)
+set.language=زبان
+
+status.queued=در صف
+status.downloading=در حال دانلود
+status.connecting=در حال اتصال
+status.paused=متوقف موقت
+status.done=کامل شد
+status.error=خطا
+status.starting=در حال شروع...
+status.scheduled=زمان‌بندی‌شده:
+status.retrying=خطای شبکه، تلاش مجدد
+
+msg.url_copied=URL رونوشت شد
+msg.open=باز کردن
+msg.file_not_found=پرونده یافت نشد:
+msg.missing_resource=منبع موجود نیست
+msg.export_failed=برون‌بری ناموفق:
+msg.export=برون‌بری
+
+tray.show=نمایش پنجره
+tray.pause_all=توقف موقت همه
+tray.resume_all=ادامه همه
+tray.exit=خروج
+tray.balloon=همچنان در سینی سیستم در حال اجراست.
+
+about.title=درباره
+about.folder=پوشه دانلود:
+about.state=پرونده وضعیت:
+about.config=پرونده تنظیمات:
+
+popup.title=دانلود - {name}
+
+# empty state
+empty.title=چیزی برای نمایش نیست
+empty.hint=یک نشانی اضافه کنید، پیوندی را رها کنید یا فیلتر را تغییر دهید.
+menu.retry_all=تلاش مجدد برای همه خطاها
+menu.clear_done=پاک کردن کامل‌شده‌ها
+menu.reset_columns=بازنشانی چیدمان ستون‌ها
+menu.browsers=یکپارچه‌سازی مرورگر...
+btn.retry_all=تلاش مجدد برای همه
+btn.import=درون‌ریزی...
+btn.open_file=باز کردن پرونده
+btn.hide_details=پنهان کردن جزئیات
+btn.show_details=نمایش جزئیات
+label.avg_speed=میانگین سرعت:
+label.time_taken=زمان سپری‌شده:
+label.mirror=URL آینه (اختیاری)
+label.checksum=چک‌سام (اختیاری)
+label.headers=سرآیندهای اضافی (اختیاری، یکی در هر خط)
+label.item_proxy=پیشکار (اختیاری، خالی = استفاده از پیش‌فرض)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} نشانی URL از قبل در فهرست هست. با این حال افزوده شود؟
+set.tab_general=عمومی
+set.tab_connection=اتصال
+set.tab_schedule=زمان‌بندی
+set.tab_appearance=ظاهر
+set.capture=نوع پرونده‌هایی که افزونه مرورگر باید بگیرد (جداشده با ویرگول)
+set.stop=توقف در (HH:MM، خالی = هرگز)
+set.daily=تکرار بازه شروع/توقف در هر روز
+set.accent=رنگ تأکید
+set.prog_start=رنگ آغاز نوار پیشرفت
+set.prog_end=رنگ پایان نوار پیشرفت
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=فعال
+st.speed=سرعت
+st.free=آزاد
+status.verified=تأییدشده
+tray.done=دانلود کامل شد:
+bi.title=یکپارچه‌سازی مرورگر
+bi.intro=خانواده مرورگر خود را انتخاب کنید. صفحه افزونه در مرورگری که انتخاب می‌کنید باز می‌شود.
+bi.firefox=Firefox
+bi.chromium=مرورگرهای Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=مرورگر برای باز کردن صفحه افزونه را انتخاب کنید:
+bi.none=هیچ مرورگر پشتیبانی‌شده‌ای یافت نشد.
+bi.open_failed=راه‌اندازی مرورگر ممکن نشد:
+bi.copy_path=رونوشت مسیر افزونه
+bi.copied=رونوشت شد
+bi.copy_failed=رونوشت ناموفق
+neat.title=افزودن دانلود
+neat.url=URL:
+neat.name=نام پرونده:
+neat.folder=ذخیره در:
+neat.size=اندازه:
+neat.unknown_size=نامعلوم
+neat.start=شروع
+neat.later=شروع بعداً
+neat.browse=مرور...
+popup.tab_download=دانلود
+popup.tab_options=گزینه‌ها
+popup.parts_downloading=بخش‌های در حال دانلود:
+popup.finished_title=دانلود کامل شد
+popup.finished=دانلود پایان یافت
+popup.after=هنگام پایان دانلود
+popup.after_dialog=نمایش کادر پایان
+popup.after_none=هیچ کاری نکن
+popup.after_open=باز کردن پرونده
+popup.after_folder=باز کردن پوشه
+popup.after_shutdown=خاموش کردن رایانه
+popup.saved=ذخیره شد
+btn.apply=اعمال
+popup.details=جزئیات اتصال
+popup.connections=اتصال‌های فعال:
+popup.parts=بخش‌ها:
+popup.remaining=باقی‌مانده:
+popup.host=میزبان:
+msg.merged_restart=این پرونده از جریان‌های جداگانه ویدیو و صدا ادغام شده است. آن را حذف کنید و ویدیو را دوباره دانلود کنید تا از نو دریافت شود.
+
+ctx.refresh=به‌روزرسانی نشانی
+msg.refresh_no_page=این دانلود صفحه مرجعی برای باز کردن ندارد.
+about.no_errors=بدون خطا
+about.recent_errors=خطاهای اخیر:
+add.advanced=گزینه‌های پیشرفته
+add.probe_checking=در حال بررسی نشانی...
+add.probe_size=اندازه
+auth.forget_confirm=همه اعتبارنامه‌های ذخیره‌شدهٔ سایت‌ها فراموش شوند؟
+auth.message=این سرور به نام کاربری و گذرواژه نیاز دارد.
+auth.pass=گذرواژه:
+auth.remember=برای این سایت به خاطر بسپار
+auth.title=اعتبارنامه لازم است
+auth.user=نام کاربری:
+btn.clean_history=پاک کردن تاریخچه
+btn.forget_credentials=فراموش کردن اعتبارنامه‌های ذخیره‌شده
+btn.no=خیر
+btn.show_more=نمایش بیشتر
+btn.yes=بله
+clean.button=پاک‌سازی
+clean.orphans=فایل‌های جزئی باقی‌مانده (.aria2، .part) در پوشهٔ دانلود هم حذف شوند
+clean.text=همهٔ دانلودهای تمام‌شده از فهرست حذف شوند؟ فایل‌های دانلودشده روی دیسک می‌مانند.
+clean.title=پاک کردن تاریخچه
+ctx.credentials=اعتبارنامه را وارد کنید...
+ctx.retry_single=تلاش دوباره با ۱ اتصال
+dup.cancel=لغو
+dup.file=فایل مقصد از قبل وجود دارد.
+dup.hint=ادامه، ورودی موجود را ادامه می‌دهد. نگه‌داشتن هر دو یک نسخهٔ دیگر با نام جدید ذخیره می‌کند. جایگزینی فایل موجود را حذف و از نو شروع می‌کند.
+dup.hint_file=نگه‌داشتن هر دو یک نسخهٔ دیگر با نام جدید ذخیره می‌کند. جایگزینی فایل موجود را حذف و از نو شروع می‌کند.
+dup.keep=نگه‌داشتن هر دو
+dup.open=باز کردن
+dup.replace=جایگزینی
+dup.resume=ادامه
+dup.title=دانلود تکراری
+dup.url=این نشانی از قبل در فهرست دانلودها هست.
+info.tab_advanced=پیشرفته
+info.tab_general=عمومی
+info.tab_network=شبکه
+info.tab_progress=پیشرفت
+label.active_conn=اتصال‌های فعال:
+label.after_done=پس از دانلود:
+label.checksum_short=چک‌سام:
+label.cookie_short=کوکی:
+label.headers_short=سرآیندها:
+label.max_conn=محدودیت اتصال:
+label.mirror_short=نشانی آینه:
+label.referer=ارجاع‌دهنده:
+label.remaining=باقی‌مانده:
+label.retry=تعداد تلاش:
+label.start_at=دانلود بعداً در (HH:MM، خالی = اکنون)
+label.user_agent=عامل کاربر:
+menu.check_updates=بررسی به‌روزرسانی‌ها...
+menu.copy_diag=کپی تشخیص‌ها
+menu.open_log=باز کردن پوشهٔ گزارش
+msg.diag_copied=تشخیص‌ها کپی شد
+neat.block=هرگز از این دامنه به‌طور خودکار دانلود نکن
+neat.block_ask=دیگر دانلودهای {0} را بر عهده نگیر؟ در مرورگر می‌مانند.
+neat.block_title=سایت‌های مسدود
+set.blocked=سایت‌های مسدود (هر خط یکی؛ دانلودهایشان در مرورگر می‌مانند)
+set.naming=الگوی نام‌گذاری ({host}/{type}/{name}؛ خالی = پوشهٔ دانلود)
+set.speed_from=محدودیت موقت از (HH:MM) اعمال می‌شود
+set.speed_to=محدودیت موقت تا (HH:MM) اعمال می‌شود
+set.speed_window=محدودیت سرعت موقت (KB/s، ۰ = خاموش)
+set.tab_updates=به‌روزرسانی‌ها
+set.update_check=بررسی خودکار نسخهٔ جدید
+set.update_days=بررسی هر (روز)
+st.eta=زمان باقی‌مانده
+st.left=باقی‌مانده
+status.file_missing=فایل جابه‌جا یا حذف شده
+status.waitingnetwork=در انتظار شبکه
+update.available=نسخهٔ {0} موجود است (شما {1} را دارید). اکنون دانلود شود؟
+update.downloading=به‌روزرسانی به دانلودهای شما افزوده شد.
+update.error=بررسی به‌روزرسانی‌ها ممکن نشد: {0}
+update.latest=شما آخرین نسخه ({0}) را دارید.
+update.notes=چه چیز جدید است:
+update.title=به‌روزرسانی نرم‌افزار

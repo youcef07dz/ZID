@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Bahasa Indonesia
+code=id
+name=Bahasa Indonesia
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Berkas
+menu.downloads=Unduhan
+menu.view=Tampilan
+menu.options=Opsi
+menu.help=Bantuan
+menu.add_url=Tambah URL...
+menu.resume_selected=Lanjutkan yang dipilih
+menu.pause_selected=Jeda yang dipilih
+menu.restart_selected=Mulai ulang yang dipilih
+menu.export=Ekspor daftar...
+menu.exit=Keluar
+menu.pause_all=Jeda semua
+menu.resume_all=Lanjutkan semua
+menu.stop_all=Hentikan semua
+menu.theme_light=Tema terang Windows 7
+menu.theme_dark=Tema gelap Windows 7
+menu.settings=Pengaturan...
+menu.about=Tentang...
+
+btn.add=Tambah URL
+btn.start=Mulai
+btn.pause=Jeda
+btn.resume=Lanjutkan
+btn.restart=Mulai ulang
+btn.edit=Ubah
+btn.info=Info
+btn.remove=Hapus
+btn.about=Tentang
+btn.stop_all=Hentikan semua
+btn.cancel=Batal
+btn.ok=OK
+btn.close=Tutup
+btn.paste=Tempel
+btn.open_folder=Buka folder
+btn.hide=Sembunyikan
+
+tb.filter=Saring...
+
+cat.all=Semua unduhan
+cat.queue=Antrean
+cat.downloading=Mengunduh
+cat.paused=Ditunda
+cat.done=Selesai
+cat.error=Kesalahan
+cat.video=Video
+cat.image=Gambar
+cat.audio=Audio
+cat.compressed=Terkompresi
+cat.program=Program
+cat.other=Lainnya
+
+col.name=Nama berkas
+col.status=Status
+col.type=Jenis
+col.size=Ukuran
+col.progress=Kemajuan
+col.speed=Kecepatan
+col.eta=Sisa waktu
+col.date=Tanggal
+
+ctx.open=Buka
+ctx.folder=Buka folder
+ctx.copy=Salin URL
+ctx.resume=Mulai / lanjutkan
+ctx.pause=Jeda
+ctx.restart=Mulai ulang
+ctx.edit=Ubah...
+ctx.info=Info...
+ctx.prio_high=Prioritas: Tinggi
+ctx.prio_normal=Prioritas: Normal
+ctx.prio_low=Prioritas: Rendah
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Hapus
+
+label.name=Nama:
+label.url=URL:
+label.type=Jenis:
+label.size=Ukuran:
+label.received=Diterima:
+label.status=Status:
+label.started=Dimulai:
+label.priority=Prioritas:
+label.save_to=Simpan ke:
+label.file=Berkas:
+label.speed=Kecepatan:
+label.eta=Sisa waktu:
+label.urls=URL (satu per baris)
+label.file_name=Nama berkas
+label.save_folder=Folder simpan
+label.cookie=Cookie (opsional)
+label.connections=Koneksi (0 = gunakan bawaan)
+label.speed_limit=Batas kecepatan KB/s (0 = gunakan bawaan)
+
+add.title=Tambah unduhan
+add.edit_title=Ubah unduhan #{id}
+add.auto_url=(otomatis dari URL)
+add.default_folder=(Bawaan: Downloads\ZID)
+add.cookie_ph=nama=nilai; lainnya=nilai
+add.paste_fail=Tidak dapat membaca papan klip. Tekan Ctrl+V di kolom.
+add.skipped={n} baris dilewati. Hanya URL http, https, ftp yang dapat ditambahkan.
+
+info.title=Info unduhan
+prio.high=Tinggi
+prio.normal=Normal
+prio.low=Rendah
+
+rm.title=Hapus unduhan
+rm.text=Hapus {n} unduhan dari daftar?
+rm.also_file=Hapus juga berkas yang diunduh dari disk
+rm.select_first=Pilih baris terlebih dahulu
+
+set.title=Pengaturan
+set.maxconc=Unduhan bersamaan maksimum
+set.parts=Bagian per unduhan
+set.speed=Kecepatan maksimum (KB/s, 0 = tanpa batas)
+set.proxy=Proksi (kosong = langsung, mis. http://pengguna:sandi@host:8080)
+set.clip=Awasi papan klip untuk URL http/https
+set.shutdown=Matikan PC saat antrean selesai
+set.sort=Atur unduhan baru ke folder berdasarkan jenis (video, gambar, ...)
+set.schedule=Waktu mulai antrean (JJ:MM, kosong = sekarang)
+set.language=Bahasa
+
+status.queued=Dalam antrean
+status.downloading=Mengunduh
+status.connecting=Menghubungkan
+status.paused=Ditunda
+status.done=Selesai
+status.error=Kesalahan
+status.starting=Memulai...
+status.scheduled=Dijadwalkan:
+status.retrying=Kesalahan jaringan, mencoba lagi
+
+msg.url_copied=URL disalin
+msg.open=Buka
+msg.file_not_found=Berkas tidak ditemukan:
+msg.missing_resource=Sumber daya tidak ada
+msg.export_failed=Ekspor gagal:
+msg.export=Ekspor
+
+tray.show=Tampilkan jendela
+tray.pause_all=Jeda semua
+tray.resume_all=Lanjutkan semua
+tray.exit=Keluar
+tray.balloon=Masih berjalan di baki sistem.
+
+about.title=Tentang
+about.folder=Folder unduhan:
+about.state=Berkas status:
+about.config=Berkas pengaturan:
+
+popup.title=Unduhan - {name}
+
+# empty state
+empty.title=Tidak ada yang ditampilkan
+empty.hint=Tambahkan URL, jatuhkan tautan, atau sesuaikan filter.
+menu.retry_all=Coba lagi semua kesalahan
+menu.clear_done=Hapus yang selesai
+menu.reset_columns=Atur ulang tata kolom
+menu.browsers=Integrasi browser...
+btn.retry_all=Coba lagi semua
+btn.import=Impor...
+btn.open_file=Buka berkas
+btn.hide_details=Sembunyikan detail
+btn.show_details=Tampilkan detail
+label.avg_speed=Kecepatan rata-rata:
+label.time_taken=Waktu yang diperlukan:
+label.mirror=URL cermin (opsional)
+label.checksum=Checksum (opsional)
+label.headers=Header tambahan (opsional, satu per baris)
+label.item_proxy=Proksi (opsional, kosong = gunakan bawaan)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL sudah ada di daftar. Tetap tambahkan?
+set.tab_general=Umum
+set.tab_connection=Koneksi
+set.tab_schedule=Jadwal
+set.tab_appearance=Tampilan
+set.capture=Jenis berkas yang ditangkap ekstensi browser (dipisah koma)
+set.stop=Berhenti pada (JJ:MM, kosong = tidak pernah)
+set.daily=Ulangi jendela mulai/berhenti setiap hari
+set.accent=Warna aksen
+set.prog_start=Warna awal bilah kemajuan
+set.prog_end=Warna akhir bilah kemajuan
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Aktif
+st.speed=Kecepatan
+st.free=Kosong
+status.verified=Terverifikasi
+tray.done=Unduhan selesai:
+bi.title=Integrasi browser
+bi.intro=Pilih keluarga browser. Halaman ekstensi akan terbuka di browser yang Anda pilih.
+bi.firefox=Firefox
+bi.chromium=Browser Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Pilih browser untuk membuka halaman ekstensi:
+bi.none=Tidak ada browser yang didukung.
+bi.open_failed=Tidak dapat memulai browser:
+bi.copy_path=Salin jalur ekstensi
+bi.copied=Disalin
+bi.copy_failed=Gagal menyalin
+neat.title=Tambah unduhan
+neat.url=URL:
+neat.name=Nama berkas:
+neat.folder=Simpan ke:
+neat.size=Ukuran:
+neat.unknown_size=Tidak diketahui
+neat.start=Mulai
+neat.later=Mulai nanti
+neat.browse=Telusuri...
+popup.tab_download=Unduhan
+popup.tab_options=Opsi
+popup.parts_downloading=Bagian yang diunduh:
+popup.finished_title=Unduhan selesai
+popup.finished=Unduhan selesai
+popup.after=Saat unduhan selesai
+popup.after_dialog=Tampilkan dialog selesai
+popup.after_none=Jangan lakukan apa pun
+popup.after_open=Buka berkas
+popup.after_folder=Buka folder
+popup.after_shutdown=Matikan PC
+popup.saved=Disimpan
+btn.apply=Terapkan
+popup.details=Detail koneksi
+popup.connections=Koneksi aktif:
+popup.parts=Bagian:
+popup.remaining=Sisa:
+popup.host=Host:
+msg.merged_restart=Berkas ini digabung dari aliran video dan audio terpisah. Hapus berkas ini dan unduh video lagi untuk mengambilnya ulang.
+
+ctx.refresh=Segarkan URL
+msg.refresh_no_page=Unduhan ini tidak memiliki halaman referensi untuk dibuka.
+about.no_errors=Tidak ada kesalahan
+about.recent_errors=Kesalahan terbaru:
+add.advanced=Opsi lanjutan
+add.probe_checking=Memeriksa URL...
+add.probe_size=Ukuran
+auth.forget_confirm=Lupakan semua kredensial situs yang tersimpan?
+auth.message=Server ini memerlukan nama pengguna dan kata sandi.
+auth.pass=Kata sandi:
+auth.remember=Ingat untuk situs ini
+auth.title=Kredensial diperlukan
+auth.user=Nama pengguna:
+btn.clean_history=Bersihkan riwayat
+btn.forget_credentials=Lupakan kredensial tersimpan
+btn.no=Tidak
+btn.show_more=Tampilkan lebih banyak
+btn.yes=Ya
+clean.button=Bersihkan
+clean.orphans=Hapus juga file parsial yang tersisa (.aria2, .part) di folder unduhan
+clean.text=Hapus semua unduhan yang selesai dari daftar? File yang diunduh tetap ada di disk.
+clean.title=Bersihkan riwayat
+ctx.credentials=Masukkan kredensial...
+ctx.retry_single=Coba lagi dengan 1 koneksi
+dup.cancel=Batal
+dup.file=File tujuan sudah ada.
+dup.hint=Lanjutkan melanjutkan entri yang ada. Simpan keduanya menyimpan salinan lain dengan nama baru. Ganti menghapus file yang ada dan memulai ulang.
+dup.hint_file=Simpan keduanya menyimpan salinan lain dengan nama baru. Ganti menghapus file yang ada dan memulai ulang.
+dup.keep=Simpan keduanya
+dup.open=Buka
+dup.replace=Ganti
+dup.resume=Lanjutkan
+dup.title=Unduhan duplikat
+dup.url=URL ini sudah ada di daftar unduhan.
+info.tab_advanced=Lanjutan
+info.tab_general=Umum
+info.tab_network=Jaringan
+info.tab_progress=Kemajuan
+label.active_conn=Koneksi aktif:
+label.after_done=Setelah unduhan:
+label.checksum_short=Checksum:
+label.cookie_short=Cookie:
+label.headers_short=Header:
+label.max_conn=Batas koneksi:
+label.mirror_short=URL mirror:
+label.referer=Referer:
+label.remaining=Sisa:
+label.retry=Jumlah percobaan:
+label.start_at=Unduh nanti pada (HH:MM, kosong = sekarang)
+label.user_agent=User agent:
+menu.check_updates=Periksa pembaruan...
+menu.copy_diag=Salin diagnostik
+menu.open_log=Buka folder log
+msg.diag_copied=Diagnostik disalin
+neat.block=Jangan pernah mengunduh otomatis dari domain ini
+neat.block_ask=Berhenti mengambil alih unduhan dari {0}? Unduhan tetap di browser.
+neat.block_title=Situs yang diblokir
+set.blocked=Situs yang diblokir (satu per baris; unduhannya tetap di browser)
+set.naming=Templat penamaan ({host}/{type}/{name}; kosong = folder unduhan)
+set.speed_from=Batas sementara berlaku mulai (HH:MM)
+set.speed_to=Batas sementara berlaku hingga (HH:MM)
+set.speed_window=Batas kecepatan sementara (KB/s, 0 = mati)
+set.tab_updates=Pembaruan
+set.update_check=Periksa versi baru secara otomatis
+set.update_days=Periksa setiap (hari)
+st.eta=Perkiraan waktu
+st.left=Sisa
+status.file_missing=File dipindahkan atau dihapus
+status.waitingnetwork=Menunggu jaringan
+update.available=Versi {0} tersedia (Anda memiliki {1}). Unduh sekarang?
+update.downloading=Pembaruan telah ditambahkan ke unduhan Anda.
+update.error=Tidak dapat memeriksa pembaruan: {0}
+update.latest=Anda memiliki versi terbaru ({0}).
+update.notes=Yang baru:
+update.title=Pembaruan perangkat lunak

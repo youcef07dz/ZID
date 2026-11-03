@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Deutsch
+code=de
+name=Deutsch
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Datei
+menu.downloads=Downloads
+menu.view=Ansicht
+menu.options=Optionen
+menu.help=Hilfe
+menu.add_url=URL hinzufügen...
+menu.resume_selected=Auswahl fortsetzen
+menu.pause_selected=Auswahl pausieren
+menu.restart_selected=Auswahl neu starten
+menu.export=Liste exportieren...
+menu.exit=Beenden
+menu.pause_all=Alle pausieren
+menu.resume_all=Alle fortsetzen
+menu.stop_all=Alle stoppen
+menu.theme_light=Helles Windows-7-Design
+menu.theme_dark=Dunkles Windows-7-Design
+menu.settings=Einstellungen...
+menu.about=Über...
+
+btn.add=URL hinzufügen
+btn.start=Starten
+btn.pause=Pausieren
+btn.resume=Fortsetzen
+btn.restart=Neu starten
+btn.edit=Bearbeiten
+btn.info=Info
+btn.remove=Entfernen
+btn.about=Über
+btn.stop_all=Alle stoppen
+btn.cancel=Abbrechen
+btn.ok=OK
+btn.close=Schließen
+btn.paste=Einfügen
+btn.open_folder=Ordner öffnen
+btn.hide=Ausblenden
+
+tb.filter=Filtern...
+
+cat.all=Alle Downloads
+cat.queue=Warteschlange
+cat.downloading=Wird geladen
+cat.paused=Pausiert
+cat.done=Fertig
+cat.error=Fehler
+cat.video=Video
+cat.image=Bild
+cat.audio=Audio
+cat.compressed=Komprimiert
+cat.program=Programme
+cat.other=Sonstiges
+
+col.name=Dateiname
+col.status=Status
+col.type=Typ
+col.size=Größe
+col.progress=Fortschritt
+col.speed=Geschwindigkeit
+col.eta=Restzeit
+col.date=Datum
+
+ctx.open=Öffnen
+ctx.folder=Ordner öffnen
+ctx.copy=URL kopieren
+ctx.resume=Starten / Fortsetzen
+ctx.pause=Pausieren
+ctx.restart=Neu starten
+ctx.edit=Bearbeiten...
+ctx.info=Info...
+ctx.prio_high=Priorität: Hoch
+ctx.prio_normal=Priorität: Normal
+ctx.prio_low=Priorität: Niedrig
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Entfernen
+
+label.name=Name:
+label.url=URL:
+label.type=Typ:
+label.size=Größe:
+label.received=Empfangen:
+label.status=Status:
+label.started=Gestartet:
+label.priority=Priorität:
+label.save_to=Speichern unter:
+label.file=Datei:
+label.speed=Geschwindigkeit:
+label.eta=Restzeit:
+label.urls=URLs (eine pro Zeile)
+label.file_name=Dateiname
+label.save_folder=Speicherordner
+label.cookie=Cookie (optional)
+label.connections=Verbindungen (0 = Standard verwenden)
+label.speed_limit=Geschwindigkeitslimit KB/s (0 = Standard verwenden)
+
+add.title=Download hinzufügen
+add.edit_title=Download Nr. {id} bearbeiten
+add.auto_url=(automatisch aus URL)
+add.default_folder=(Standard: Downloads\ZID)
+add.cookie_ph=name=wert; andere=wert
+add.paste_fail=Zwischenablage kann nicht gelesen werden. Drücke Strg+V im Feld.
+add.skipped={n} Zeile(n) übersprungen: Es können nur http-, https- und ftp-URLs hinzugefügt werden.
+
+info.title=Download-Info
+prio.high=Hoch
+prio.normal=Normal
+prio.low=Niedrig
+
+rm.title=Downloads entfernen
+rm.text={n} Download(s) aus der Liste entfernen?
+rm.also_file=Auch die heruntergeladene(n) Datei(en) von der Festplatte löschen
+rm.select_first=Wähle zuerst eine Zeile aus
+
+set.title=Einstellungen
+set.maxconc=Max. gleichzeitige Downloads
+set.parts=Teile pro Download
+set.speed=Max. Geschwindigkeit (KB/s, 0 = unbegrenzt)
+set.proxy=Proxy (leer = direkt, z. B. http://benutzer:passwort@host:8080)
+set.clip=Zwischenablage auf http/https-URLs überwachen
+set.shutdown=PC herunterfahren, wenn die Warteschlange fertig ist
+set.sort=Neue Downloads nach Typ in Ordner sortieren (Video, Bild, ...)
+set.schedule=Warteschlange starten um (HH:MM, leer = jetzt)
+set.language=Sprache
+
+status.queued=In Warteschlange
+status.downloading=Wird geladen
+status.connecting=Verbinden
+status.paused=Pausiert
+status.done=Fertig
+status.error=Fehler
+status.starting=Startet...
+status.scheduled=Geplant für
+status.retrying=Netzwerkfehler, neuer Versuch
+
+msg.url_copied=URL kopiert
+msg.open=Öffnen
+msg.file_not_found=Datei nicht gefunden:
+msg.missing_resource=Ressource fehlt
+msg.export_failed=Export fehlgeschlagen:
+msg.export=Exportieren
+
+tray.show=Fenster anzeigen
+tray.pause_all=Alle pausieren
+tray.resume_all=Alle fortsetzen
+tray.exit=Beenden
+tray.balloon=Läuft weiter im Infobereich.
+
+about.title=Über
+about.folder=Download-Ordner:
+about.state=Statusdatei:
+about.config=Konfigurationsdatei:
+
+popup.title=Download - {name}
+
+# empty state
+empty.title=Nichts anzuzeigen
+empty.hint=Fügen Sie eine URL hinzu, ziehen Sie einen Link hierher oder passen Sie den Filter an.
+menu.retry_all=Alle Fehler erneut versuchen
+menu.clear_done=Abgeschlossene entfernen
+menu.reset_columns=Spaltenlayout zurücksetzen
+menu.browsers=Browser-Integration...
+btn.retry_all=Alle erneut versuchen
+btn.import=Importieren...
+btn.open_file=Datei öffnen
+btn.hide_details=Details ausblenden
+btn.show_details=Details anzeigen
+label.avg_speed=Durchschnittsgeschwindigkeit:
+label.time_taken=Benötigte Zeit:
+label.mirror=Spiegel-URL (optional)
+label.checksum=Prüfsumme (optional)
+label.headers=Zusätzliche Header (optional, eine pro Zeile)
+label.item_proxy=Proxy (optional, leer = Standard verwenden)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL(s) sind bereits in der Liste. Trotzdem hinzufügen?
+set.tab_general=Allgemein
+set.tab_connection=Verbindung
+set.tab_schedule=Zeitplan
+set.tab_appearance=Darstellung
+set.capture=Dateitypen, die die Browsererweiterung erfassen soll (durch Kommas getrennt)
+set.stop=Stoppen um (HH:MM, leer = nie)
+set.daily=Start-/Stopp-Fenster täglich wiederholen
+set.accent=Akzentfarbe
+set.prog_start=Startfarbe des Fortschrittsbalkens
+set.prog_end=Endfarbe des Fortschrittsbalkens
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Aktiv
+st.speed=Geschwindigkeit
+st.free=Frei
+status.verified=Verifiziert
+tray.done=Download abgeschlossen:
+bi.title=Browser-Integration
+bi.intro=Wähle deine Browserfamilie. Die Erweiterungsseite wird im gewählten Browser geöffnet.
+bi.firefox=Firefox
+bi.chromium=Chromium-Browser
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Browser zum Öffnen der Erweiterungsseite wählen:
+bi.none=Kein unterstützter Browser gefunden.
+bi.open_failed=Browser kann nicht gestartet werden:
+bi.copy_path=Erweiterungspfad kopieren
+bi.copied=Kopiert
+bi.copy_failed=Kopieren fehlgeschlagen
+neat.title=Download hinzufügen
+neat.url=URL:
+neat.name=Dateiname:
+neat.folder=Speichern unter:
+neat.size=Größe:
+neat.unknown_size=Unbekannt
+neat.start=Starten
+neat.later=Später starten
+neat.browse=Durchsuchen...
+popup.tab_download=Download
+popup.tab_options=Optionen
+popup.parts_downloading=Teile werden geladen:
+popup.finished_title=Download abgeschlossen
+popup.finished=Download fertig
+popup.after=Wenn der Download abgeschlossen ist
+popup.after_dialog=Fertig-Dialog anzeigen
+popup.after_none=Nichts tun
+popup.after_open=Datei öffnen
+popup.after_folder=Ordner öffnen
+popup.after_shutdown=PC herunterfahren
+popup.saved=Gespeichert
+btn.apply=Übernehmen
+popup.details=Verbindungsdetails
+popup.connections=Aktive Verbindungen:
+popup.parts=Teile:
+popup.remaining=Verbleibend:
+popup.host=Host:
+msg.merged_restart=Diese Datei wurde aus getrennten Video- und Audiostreams zusammengeführt. Entferne sie und lade das Video erneut, um sie neu abzurufen.
+
+ctx.refresh=URL aktualisieren
+msg.refresh_no_page=Für diesen Download gibt es keine Referenzseite zum Öffnen.
+about.no_errors=Keine
+about.recent_errors=Letzte Fehler:
+add.advanced=Erweiterte Optionen
+add.probe_checking=URL wird geprüft...
+add.probe_size=Größe
+auth.forget_confirm=Alle gespeicherten Zugangsdaten löschen?
+auth.message=Dieser Server benötigt einen Benutzernamen und ein Passwort.
+auth.pass=Passwort:
+auth.remember=Für diese Website merken
+auth.title=Zugangsdaten erforderlich
+auth.user=Benutzername:
+btn.clean_history=Verlauf leeren
+btn.forget_credentials=Gespeicherte Zugangsdaten vergessen
+btn.no=Nein
+btn.show_more=Mehr anzeigen
+btn.yes=Ja
+clean.button=Leeren
+clean.orphans=Auch übrig gebliebene Teil-Dateien (.aria2, .part) im Download-Ordner löschen
+clean.text=Alle abgeschlossenen Downloads aus der Liste entfernen? Die Dateien bleiben auf der Festplatte.
+clean.title=Verlauf leeren
+ctx.credentials=Zugangsdaten eingeben...
+ctx.retry_single=Mit 1 Verbindung erneut versuchen
+dup.cancel=Abbrechen
+dup.file=Die Zieldatei existiert bereits.
+dup.hint=Fortsetzen setzt den vorhandenen Eintrag fort. Beide behalten speichert eine weitere Kopie unter neuem Namen. Ersetzen löscht die vorhandene Datei und beginnt neu.
+dup.hint_file=Beide behalten speichert eine weitere Kopie unter neuem Namen. Ersetzen löscht die vorhandene Datei und beginnt neu.
+dup.keep=Beide behalten
+dup.open=Öffnen
+dup.replace=Ersetzen
+dup.resume=Fortsetzen
+dup.title=Doppelter Download
+dup.url=Diese URL ist bereits in der Download-Liste.
+info.tab_advanced=Erweitert
+info.tab_general=Allgemein
+info.tab_network=Netzwerk
+info.tab_progress=Fortschritt
+label.active_conn=Aktive Verbindungen:
+label.after_done=Nach dem Download:
+label.checksum_short=Prüfsumme:
+label.cookie_short=Cookie:
+label.headers_short=Header:
+label.max_conn=Verbindungslimit:
+label.mirror_short=Mirror-URL:
+label.referer=Referer:
+label.remaining=Verbleibend:
+label.retry=Anzahl Wiederholungen:
+label.start_at=Später herunterladen um (HH:MM, leer = jetzt)
+label.user_agent=Benutzeragent:
+menu.check_updates=Nach Updates suchen...
+menu.copy_diag=Diagnose kopieren
+menu.open_log=Log-Ordner öffnen
+msg.diag_copied=Diagnose kopiert
+neat.block=Von dieser Domain niemals automatisch herunterladen
+neat.block_ask=Downloads von {0} nicht mehr übernehmen? Sie bleiben im Browser.
+neat.block_title=Blockierte Websites
+set.blocked=Blockierte Websites (eine pro Zeile; Downloads davon bleiben im Browser)
+set.naming=Namensvorlage ({host}/{type}/{name}; leer = Download-Ordner)
+set.speed_from=Temporäre Begrenzung gilt ab (HH:MM)
+set.speed_to=Temporäre Begrenzung gilt bis (HH:MM)
+set.speed_window=Temporäre Geschwindigkeitsbegrenzung (KB/s, 0 = aus)
+set.tab_updates=Updates
+set.update_check=Automatisch nach einer neuen Version suchen
+set.update_days=Alle (Tage) prüfen
+st.eta=Restzeit
+st.left=Übrig
+status.file_missing=Datei verschoben oder gelöscht
+status.waitingnetwork=Warte auf Netzwerk
+update.available=Version {0} ist verfügbar (Sie haben {1}). Jetzt herunterladen?
+update.downloading=Das Update wurde zu Ihren Downloads hinzugefügt.
+update.error=Updates konnten nicht geprüft werden: {0}
+update.latest=Sie haben die neueste Version ({0}).
+update.notes=Neu:
+update.title=Software-Update

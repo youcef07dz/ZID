@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Português
+code=pt
+name=Português
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Arquivo
+menu.downloads=Downloads
+menu.view=Exibir
+menu.options=Opções
+menu.help=Ajuda
+menu.add_url=Adicionar URL...
+menu.resume_selected=Retomar selecionados
+menu.pause_selected=Pausar selecionados
+menu.restart_selected=Reiniciar selecionados
+menu.export=Exportar lista...
+menu.exit=Sair
+menu.pause_all=Pausar tudo
+menu.resume_all=Retomar tudo
+menu.stop_all=Parar tudo
+menu.theme_light=Tema claro do Windows 7
+menu.theme_dark=Tema escuro do Windows 7
+menu.settings=Configurações...
+menu.about=Sobre...
+
+btn.add=Adicionar URL
+btn.start=Iniciar
+btn.pause=Pausar
+btn.resume=Retomar
+btn.restart=Reiniciar
+btn.edit=Editar
+btn.info=Info
+btn.remove=Remover
+btn.about=Sobre
+btn.stop_all=Parar tudo
+btn.cancel=Cancelar
+btn.ok=OK
+btn.close=Fechar
+btn.paste=Colar
+btn.open_folder=Abrir pasta
+btn.hide=Ocultar
+
+tb.filter=Filtrar...
+
+cat.all=Todos os downloads
+cat.queue=Fila
+cat.downloading=Baixando
+cat.paused=Pausados
+cat.done=Concluídos
+cat.error=Erro
+cat.video=Vídeo
+cat.image=Imagem
+cat.audio=Áudio
+cat.compressed=Compactados
+cat.program=Programas
+cat.other=Outros
+
+col.name=Nome do arquivo
+col.status=Status
+col.type=Tipo
+col.size=Tamanho
+col.progress=Progresso
+col.speed=Velocidade
+col.eta=Tempo restante
+col.date=Data
+
+ctx.open=Abrir
+ctx.folder=Abrir pasta
+ctx.copy=Copiar URL
+ctx.resume=Iniciar / Retomar
+ctx.pause=Pausar
+ctx.restart=Reiniciar
+ctx.edit=Editar...
+ctx.info=Info...
+ctx.prio_high=Prioridade: Alta
+ctx.prio_normal=Prioridade: Normal
+ctx.prio_low=Prioridade: Baixa
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Remover
+
+label.name=Nome:
+label.url=URL:
+label.type=Tipo:
+label.size=Tamanho:
+label.received=Recebido:
+label.status=Status:
+label.started=Iniciado:
+label.priority=Prioridade:
+label.save_to=Salvar em:
+label.file=Arquivo:
+label.speed=Velocidade:
+label.eta=Tempo restante:
+label.urls=URLs (uma por linha)
+label.file_name=Nome do arquivo
+label.save_folder=Pasta de destino
+label.cookie=Cookie (opcional)
+label.connections=Conexões (0 = usar padrão)
+label.speed_limit=Limite de velocidade KB/s (0 = usar padrão)
+
+add.title=Adicionar download
+add.edit_title=Editar download nº {id}
+add.auto_url=(automático da URL)
+add.default_folder=(padrão: Downloads\ZID)
+add.cookie_ph=nome=valor; outro=valor
+add.paste_fail=Não foi possível ler a área de transferência. Pressione Ctrl+V no campo.
+add.skipped={n} linha(s) ignorada(s): apenas URLs http, https e ftp podem ser adicionadas.
+
+info.title=Info do download
+prio.high=Alta
+prio.normal=Normal
+prio.low=Baixa
+
+rm.title=Remover downloads
+rm.text=Remover {n} download(s) da lista?
+rm.also_file=Excluir também o(s) arquivo(s) baixado(s) do disco
+rm.select_first=Selecione uma linha primeiro
+
+set.title=Configurações
+set.maxconc=Máximo de downloads simultâneos
+set.parts=Partes por download
+set.speed=Velocidade máxima (KB/s, 0 = ilimitada)
+set.proxy=Proxy (vazio = direto, ex. http://usuario:senha@host:8080)
+set.clip=Monitorar a área de transferência para URLs http/https
+set.shutdown=Desligar o PC quando a fila terminar
+set.sort=Organizar novos downloads em pastas por tipo (Vídeo, Imagem, ...)
+set.schedule=Iniciar a fila às (HH:MM, vazio = agora)
+set.language=Idioma
+
+status.queued=Na fila
+status.downloading=Baixando
+status.connecting=Conectando
+status.paused=Pausado
+status.done=Concluído
+status.error=Erro
+status.starting=Iniciando...
+status.scheduled=Agendado para
+status.retrying=Erro de rede, tentando novamente
+
+msg.url_copied=URL copiada
+msg.open=Abrir
+msg.file_not_found=Arquivo não encontrado:
+msg.missing_resource=Recurso ausente
+msg.export_failed=Falha ao exportar:
+msg.export=Exportar
+
+tray.show=Mostrar janela
+tray.pause_all=Pausar tudo
+tray.resume_all=Retomar tudo
+tray.exit=Sair
+tray.balloon=Ainda em execução na bandeja do sistema.
+
+about.title=Sobre
+about.folder=Pasta de downloads:
+about.state=Arquivo de estado:
+about.config=Arquivo de configuração:
+
+popup.title=Download - {name}
+
+# empty state
+empty.title=Nada para mostrar
+empty.hint=Adicione um URL, solte um link ou ajuste o filtro.
+menu.retry_all=Tentar novamente todos os erros
+menu.clear_done=Limpar concluídos
+menu.reset_columns=Redefinir layout das colunas
+menu.browsers=Integração com o navegador...
+btn.retry_all=Tentar novamente tudo
+btn.import=Importar...
+btn.open_file=Abrir arquivo
+btn.hide_details=Ocultar detalhes
+btn.show_details=Mostrar detalhes
+label.avg_speed=Velocidade média:
+label.time_taken=Tempo gasto:
+label.mirror=URL do espelho (opcional)
+label.checksum=Soma de verificação (opcional)
+label.headers=Cabeçalhos extras (opcional, um por linha)
+label.item_proxy=Proxy (opcional, vazio = usar padrão)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL(s) já estão na lista. Adicionar mesmo assim?
+set.tab_general=Geral
+set.tab_connection=Conexão
+set.tab_schedule=Agendamento
+set.tab_appearance=Aparência
+set.capture=Tipos de arquivo que a extensão do navegador deve capturar (separados por vírgulas)
+set.stop=Parar às (HH:MM, vazio = nunca)
+set.daily=Repetir todos os dias a janela de início/parada
+set.accent=Cor de destaque
+set.prog_start=Cor inicial da barra de progresso
+set.prog_end=Cor final da barra de progresso
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Ativo
+st.speed=Velocidade
+st.free=Livre
+status.verified=Verificado
+tray.done=Download concluído:
+bi.title=Integração com o navegador
+bi.intro=Escolha sua família de navegadores. A página da extensão será aberta no navegador escolhido.
+bi.firefox=Firefox
+bi.chromium=Navegadores Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Escolha o navegador onde abrir a página da extensão:
+bi.none=Nenhum navegador compatível foi encontrado.
+bi.open_failed=Não é possível iniciar o navegador:
+bi.copy_path=Copiar caminho da extensão
+bi.copied=Copiado
+bi.copy_failed=Falha ao copiar
+neat.title=Adicionar download
+neat.url=URL:
+neat.name=Nome do arquivo:
+neat.folder=Salvar em:
+neat.size=Tamanho:
+neat.unknown_size=Desconhecido
+neat.start=Iniciar
+neat.later=Iniciar depois
+neat.browse=Procurar...
+popup.tab_download=Download
+popup.tab_options=Opções
+popup.parts_downloading=Partes baixando:
+popup.finished_title=Download concluído
+popup.finished=Download finalizado
+popup.after=Quando o download terminar
+popup.after_dialog=Mostrar diálogo de conclusão
+popup.after_none=Não fazer nada
+popup.after_open=Abrir o arquivo
+popup.after_folder=Abrir a pasta
+popup.after_shutdown=Desligar o PC
+popup.saved=Salvo
+btn.apply=Aplicar
+popup.details=Detalhes da conexão
+popup.connections=Conexões ativas:
+popup.parts=Partes:
+popup.remaining=Restante:
+popup.host=Host:
+msg.merged_restart=Este arquivo foi mesclado a partir de fluxos de vídeo e áudio separados. Remova-o e baixe o vídeo novamente para obtê-lo de novo.
+
+ctx.refresh=Atualizar URL
+msg.refresh_no_page=Este download não tem uma página de referência para abrir.
+about.no_errors=Nenhum
+about.recent_errors=Erros recentes:
+add.advanced=Opções avançadas
+add.probe_checking=A verificar o URL...
+add.probe_size=Tamanho
+auth.forget_confirm=Esquecer todas as credenciais de sites guardadas?
+auth.message=Este servidor precisa de um nome de utilizador e uma palavra-passe.
+auth.pass=Palavra-passe:
+auth.remember=Lembrar para este site
+auth.title=Credenciais necessárias
+auth.user=Nome de utilizador:
+btn.clean_history=Limpar histórico
+btn.forget_credentials=Esquecer credenciais guardadas
+btn.no=Não
+btn.show_more=Mostrar mais
+btn.yes=Sim
+clean.button=Limpar
+clean.orphans=Eliminar também os ficheiros parciais restantes (.aria2, .part) na pasta de transferências
+clean.text=Remover todas as transferências concluídas da lista? Os ficheiros transferidos permanecem no disco.
+clean.title=Limpar histórico
+ctx.credentials=Introduzir credenciais...
+ctx.retry_single=Tentar novamente com 1 ligação
+dup.cancel=Cancelar
+dup.file=O ficheiro de destino já existe.
+dup.hint=Retomar continua a entrada existente. Manter ambos guarda outra cópia com um novo nome. Substituir elimina o ficheiro existente e recomeça.
+dup.hint_file=Manter ambos guarda outra cópia com um novo nome. Substituir elimina o ficheiro existente e recomeça.
+dup.keep=Manter ambos
+dup.open=Abrir
+dup.replace=Substituir
+dup.resume=Retomar
+dup.title=Transferência duplicada
+dup.url=Este URL já está na lista de transferências.
+info.tab_advanced=Avançado
+info.tab_general=Geral
+info.tab_network=Rede
+info.tab_progress=Progresso
+label.active_conn=Ligações ativas:
+label.after_done=Após a transferência:
+label.checksum_short=Soma de verificação:
+label.cookie_short=Cookie:
+label.headers_short=Cabeçalhos:
+label.max_conn=Limite de ligações:
+label.mirror_short=URL do espelho:
+label.referer=Referenciador:
+label.remaining=Restante:
+label.retry=Número de tentativas:
+label.start_at=Transferir mais tarde às (HH:MM, vazio = agora)
+label.user_agent=Agente de utilizador:
+menu.check_updates=Verificar atualizações...
+menu.copy_diag=Copiar diagnóstico
+menu.open_log=Abrir pasta de registos
+msg.diag_copied=Diagnóstico copiado
+neat.block=Nunca transferir automaticamente deste domínio
+neat.block_ask=Parar de assumir transferências de {0}? Ficarão no navegador.
+neat.block_title=Sites bloqueados
+set.blocked=Sites bloqueados (um por linha; as suas transferências ficam no navegador)
+set.naming=Modelo de nomes ({host}/{type}/{name}; vazio = pasta de transferências)
+set.speed_from=Limite temporário aplica-se a partir das (HH:MM)
+set.speed_to=Limite temporário aplica-se até às (HH:MM)
+set.speed_window=Limite de velocidade temporário (KB/s, 0 = desligado)
+set.tab_updates=Atualizações
+set.update_check=Verificar automaticamente uma nova versão
+set.update_days=Verificar a cada (dias)
+st.eta=Tempo restante
+st.left=Restante
+status.file_missing=Ficheiro movido ou eliminado
+status.waitingnetwork=A aguardar rede
+update.available=A versão {0} está disponível (tem a {1}). Transferir agora?
+update.downloading=A atualização foi adicionada às suas transferências.
+update.error=Não foi possível verificar atualizações: {0}
+update.latest=Tem a versão mais recente ({0}).
+update.notes=Novidades:
+update.title=Atualização do software

@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - 한국어
+code=ko
+name=한국어
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=파일
+menu.downloads=다운로드
+menu.view=보기
+menu.options=옵션
+menu.help=도움말
+menu.add_url=URL 추가...
+menu.resume_selected=선택 항목 다시 시작
+menu.pause_selected=선택 항목 일시 중지
+menu.restart_selected=선택 항목 재시작
+menu.export=목록 내보내기...
+menu.exit=종료
+menu.pause_all=모두 일시 중지
+menu.resume_all=모두 다시 시작
+menu.stop_all=모두 중지
+menu.theme_light=Windows 7 밝은 테마
+menu.theme_dark=Windows 7 어두운 테마
+menu.settings=설정...
+menu.about=정보...
+
+btn.add=URL 추가
+btn.start=시작
+btn.pause=일시 중지
+btn.resume=다시 시작
+btn.restart=재시작
+btn.edit=편집
+btn.info=정보
+btn.remove=제거
+btn.about=정보
+btn.stop_all=모두 중지
+btn.cancel=취소
+btn.ok=확인
+btn.close=닫기
+btn.paste=붙여넣기
+btn.open_folder=폴더 열기
+btn.hide=숨기기
+
+tb.filter=필터...
+
+cat.all=모든 다운로드
+cat.queue=대기열
+cat.downloading=다운로드 중
+cat.paused=일시 중지됨
+cat.done=완료
+cat.error=오류
+cat.video=동영상
+cat.image=이미지
+cat.audio=오디오
+cat.compressed=압축 파일
+cat.program=프로그램
+cat.other=기타
+
+col.name=파일 이름
+col.status=상태
+col.type=유형
+col.size=크기
+col.progress=진행률
+col.speed=속도
+col.eta=남은 시간
+col.date=날짜
+
+ctx.open=열기
+ctx.folder=폴더 열기
+ctx.copy=URL 복사
+ctx.resume=시작 / 다시 시작
+ctx.pause=일시 중지
+ctx.restart=재시작
+ctx.edit=편집...
+ctx.info=정보...
+ctx.prio_high=우선 순위: 높음
+ctx.prio_normal=우선 순위: 보통
+ctx.prio_low=우선 순위: 낮음
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=제거
+
+label.name=이름:
+label.url=URL:
+label.type=유형:
+label.size=크기:
+label.received=받은 양:
+label.status=상태:
+label.started=시작 시간:
+label.priority=우선 순위:
+label.save_to=저장 위치:
+label.file=파일:
+label.speed=속도:
+label.eta=남은 시간:
+label.urls=URL (한 줄에 하나)
+label.file_name=파일 이름
+label.save_folder=저장 폴더
+label.cookie=Cookie (선택 사항)
+label.connections=연결 수 (0 = 기본값 사용)
+label.speed_limit=속도 제한 KB/s (0 = 기본값 사용)
+
+add.title=다운로드 추가
+add.edit_title=다운로드 #{id} 편집
+add.auto_url=(URL에서 자동)
+add.default_folder=(기본: Downloads\ZID)
+add.cookie_ph=이름=값; 기타=값
+add.paste_fail=클립보드를 읽을 수 없습니다. 입력란에서 Ctrl+V를 누르세요.
+add.skipped={n}개 줄을 건너뛰었습니다. http, https, ftp URL만 추가할 수 있습니다.
+
+info.title=다운로드 정보
+prio.high=높음
+prio.normal=보통
+prio.low=낮음
+
+rm.title=다운로드 제거
+rm.text=목록에서 다운로드 {n}개를 제거할까요?
+rm.also_file=다운로드한 파일도 디스크에서 삭제
+rm.select_first=먼저 행을 선택하세요
+
+set.title=설정
+set.maxconc=최대 동시 다운로드 수
+set.parts=다운로드당 분할 수
+set.speed=최대 속도 (KB/s, 0 = 무제한)
+set.proxy=프록시 (비어 있음 = 직접 연결, 예: http://사용자:비밀번호@호스트:8080)
+set.clip=클립보드에서 http/https URL 감시
+set.shutdown=대기열이 끝나면 PC 종료
+set.sort=새 다운로드를 유형별 폴더로 정리 (동영상, 이미지, ...)
+set.schedule=대기열 시작 시간 (HH:MM, 비어 있음 = 지금)
+set.language=언어
+
+status.queued=대기 중
+status.downloading=다운로드 중
+status.connecting=연결 중
+status.paused=일시 중지됨
+status.done=완료
+status.error=오류
+status.starting=시작 중...
+status.scheduled=예약됨:
+status.retrying=네트워크 오류, 다시 시도 중
+
+msg.url_copied=URL이 복사되었습니다
+msg.open=열기
+msg.file_not_found=파일을 찾을 수 없음:
+msg.missing_resource=리소스 없음
+msg.export_failed=내보내기 실패:
+msg.export=내보내기
+
+tray.show=창 표시
+tray.pause_all=모두 일시 중지
+tray.resume_all=모두 다시 시작
+tray.exit=종료
+tray.balloon=시스템 트레이에서 계속 실행 중입니다.
+
+about.title=정보
+about.folder=다운로드 폴더:
+about.state=상태 파일:
+about.config=설정 파일:
+
+popup.title=다운로드 - {name}
+
+# empty state
+empty.title=표시할 항목이 없습니다
+empty.hint=URL을 추가하거나 링크를 놓거나 필터를 조정하세요.
+menu.retry_all=모든 오류 다시 시도
+menu.clear_done=완료 항목 지우기
+menu.reset_columns=열 레이아웃 초기화
+menu.browsers=브라우저 통합...
+btn.retry_all=모두 다시 시도
+btn.import=가져오기...
+btn.open_file=파일 열기
+btn.hide_details=세부 정보 숨기기
+btn.show_details=세부 정보 표시
+label.avg_speed=평균 속도:
+label.time_taken=소요 시간:
+label.mirror=미러 URL (선택 사항)
+label.checksum=체크섬 (선택 사항)
+label.headers=추가 헤더 (선택 사항, 한 줄에 하나)
+label.item_proxy=프록시 (선택 사항, 비어 있음 = 기본값 사용)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n}개의 URL이 이미 목록에 있습니다. 그래도 추가할까요?
+set.tab_general=일반
+set.tab_connection=연결
+set.tab_schedule=일정
+set.tab_appearance=모양
+set.capture=브라우저 확장이 캡처할 파일 유형 (쉼표로 구분)
+set.stop=중지 시각 (HH:MM, 비어 있음 = 안 함)
+set.daily=시작/중지 시간대를 매일 반복
+set.accent=강조 색상
+set.prog_start=진행률 표시줄 시작 색상
+set.prog_end=진행률 표시줄 끝 색상
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=활성
+st.speed=속도
+st.free=여유
+status.verified=확인됨
+tray.done=다운로드 완료:
+bi.title=브라우저 통합
+bi.intro=브라우저 계열을 선택하세요. 선택한 브라우저에서 확장 페이지가 열립니다.
+bi.firefox=Firefox
+bi.chromium=Chromium 브라우저
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=확장 페이지를 열 브라우저 선택:
+bi.none=지원되는 브라우저를 찾을 수 없습니다.
+bi.open_failed=브라우저를 시작할 수 없습니다:
+bi.copy_path=확장 경로 복사
+bi.copied=복사됨
+bi.copy_failed=복사 실패
+neat.title=다운로드 추가
+neat.url=URL:
+neat.name=파일 이름:
+neat.folder=저장 위치:
+neat.size=크기:
+neat.unknown_size=알 수 없음
+neat.start=시작
+neat.later=나중에 시작
+neat.browse=찾아보기...
+popup.tab_download=다운로드
+popup.tab_options=옵션
+popup.parts_downloading=다운로드 중인 분할:
+popup.finished_title=다운로드 완료
+popup.finished=다운로드가 끝났습니다
+popup.after=다운로드 완료 시
+popup.after_dialog=완료 대화 상자 표시
+popup.after_none=아무 작업 안 함
+popup.after_open=파일 열기
+popup.after_folder=폴더 열기
+popup.after_shutdown=PC 종료
+popup.saved=저장됨
+btn.apply=적용
+popup.details=연결 세부 정보
+popup.connections=활성 연결:
+popup.parts=분할:
+popup.remaining=남은 양:
+popup.host=호스트:
+msg.merged_restart=이 파일은 분리된 동영상과 오디오 스트림에서 병합되었습니다. 파일을 제거하고 동영상을 다시 다운로드하여 다시 가져오세요.
+
+ctx.refresh=URL 새로 고침
+msg.refresh_no_page=이 다운로드에는 열 참조 페이지가 없습니다.
+about.no_errors=오류 없음
+about.recent_errors=최근 오류:
+add.advanced=고급 옵션
+add.probe_checking=URL 확인 중...
+add.probe_size=크기
+auth.forget_confirm=저장된 모든 사이트 자격 증명을 잊으시겠습니까?
+auth.message=이 서버에는 사용자 이름과 비밀번호가 필요합니다.
+auth.pass=비밀번호:
+auth.remember=이 사이트에 대해 기억
+auth.title=자격 증명 필요
+auth.user=사용자 이름:
+btn.clean_history=기록 지우기
+btn.forget_credentials=저장된 자격 증명 잊기
+btn.no=아니요
+btn.show_more=더 보기
+btn.yes=예
+clean.button=지우기
+clean.orphans=다운로드 폴더에 남은 부분 파일(.aria2, .part)도 삭제
+clean.text=완료된 모든 다운로드를 목록에서 제거하시겠습니까? 다운로드한 파일은 디스크에 남습니다.
+clean.title=기록 지우기
+ctx.credentials=자격 증명 입력...
+ctx.retry_single=연결 1개로 다시 시도
+dup.cancel=취소
+dup.file=대상 파일이 이미 있습니다.
+dup.hint=계속은 기존 항목을 이어받습니다. 둘 다 유지는 새 이름으로 사본을 하나 더 저장합니다. 바꾸기는 기존 파일을 삭제하고 처음부터 시작합니다.
+dup.hint_file=둘 다 유지는 새 이름으로 사본을 하나 더 저장합니다. 바꾸기는 기존 파일을 삭제하고 처음부터 시작합니다.
+dup.keep=둘 다 유지
+dup.open=열기
+dup.replace=바꾸기
+dup.resume=계속
+dup.title=중복 다운로드
+dup.url=이 URL은 이미 다운로드 목록에 있습니다.
+info.tab_advanced=고급
+info.tab_general=일반
+info.tab_network=네트워크
+info.tab_progress=진행률
+label.active_conn=활성 연결:
+label.after_done=다운로드 후:
+label.checksum_short=체크섬:
+label.cookie_short=쿠키:
+label.headers_short=헤더:
+label.max_conn=연결 제한:
+label.mirror_short=미러 URL:
+label.referer=참조자:
+label.remaining=남음:
+label.retry=재시도 횟수:
+label.start_at=나중에 다운로드 (HH:MM, 비우면 지금)
+label.user_agent=사용자 에이전트:
+menu.check_updates=업데이트 확인...
+menu.copy_diag=진단 정보 복사
+menu.open_log=로그 폴더 열기
+msg.diag_copied=진단 정보가 복사되었습니다
+neat.block=이 도메인에서 자동으로 다운로드하지 않음
+neat.block_ask={0}에서 다운로드 인계를 중지하시겠습니까? 브라우저에 남습니다.
+neat.block_title=차단된 웹사이트
+set.blocked=차단된 웹사이트 (한 줄에 하나, 해당 다운로드는 브라우저에 남음)
+set.naming=이름 템플릿 ({host}/{type}/{name}, 비우면 다운로드 폴더)
+set.speed_from=임시 제한 시작 (HH:MM)
+set.speed_to=임시 제한 종료 (HH:MM)
+set.speed_window=임시 속도 제한 (KB/s, 0 = 끔)
+set.tab_updates=업데이트
+set.update_check=새 버전 자동 확인
+set.update_days=확인 주기 (일)
+st.eta=남은 시간
+st.left=남음
+status.file_missing=파일이 이동되거나 삭제됨
+status.waitingnetwork=네트워크 대기 중
+update.available=버전 {0} 사용 가능 ({1} 사용 중). 지금 다운로드하시겠습니까?
+update.downloading=업데이트가 다운로드 목록에 추가되었습니다.
+update.error=업데이트를 확인할 수 없습니다: {0}
+update.latest=최신 버전입니다 ({0}).
+update.notes=새로운 기능:
+update.title=소프트웨어 업데이트

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>ZyZoom Internet Downloader - Readme</title>
+<style>
+body{margin:0;background:#eef1f8;color:#232a3b;font-family:Tahoma,Arial,sans-serif;font-size:13px;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding:22px 16px 28px}
+.brand{background:#3730a3;color:#fff;padding:15px 22px;border-radius:6px 6px 0 0;font-size:20px;font-weight:bold}
+.brand .dot{display:inline-block;width:9px;height:9px;background:#22d3ee;border-radius:50%;margin-right:9px;vertical-align:middle}
+.brand .sub{font-size:13px;font-weight:normal;color:#c7d2fe;margin-left:8px}
+.tabs{background:#fff;border:1px solid #d9deea;border-top:0;padding:10px 14px;text-align:center}
+.tab{display:inline-block;margin:0 3px;padding:6px 16px;border:1px solid #c9cef0;background:#f4f6fb;color:#3730a3;border-radius:4px;font-family:Tahoma,Arial,sans-serif;font-size:13px;font-weight:bold;cursor:pointer}
+.tab:hover{background:#eceffd}
+.tab.active{background:#4f46e5;border-color:#4338ca;color:#fff}
+.lang{background:#fff;border:1px solid #d9deea;border-top:0;padding:20px 24px 24px;border-radius:0 0 6px 6px}
+h1{font-size:18px;margin:0 0 4px;color:#1f2550}
+h2{font-size:14px;margin:18px 0 6px;padding-bottom:3px;border-bottom:1px solid #e6e9f5;color:#3730a3}
+p{margin:0 0 9px}
+ul,ol{margin:0 0 9px 20px;padding:0}
+li{margin:3px 0}
+code{background:#f4f6fb;border:1px solid #e1e5f0;padding:0 3px;font-family:Consolas,"Courier New",monospace;font-size:12px}
+b{color:#1f2550}
+.lead{color:#4b5563}
+.foot{margin-top:14px;text-align:center;color:#6b7280;font-size:11px}
+#lang-ar{direction:rtl;text-align:right}
+#lang-ar ul,#lang-ar ol{margin:0 20px 9px 0}
+#lang-ar code{direction:ltr;unicode-bidi:embed;display:inline-block}
+@media print{.tabs{display:none}.wrap{max-width:none}.brand,.lang{border:0}}
+</style>
+</head>
+<body dir="ltr" lang="en">
+<div class="wrap">
+
+  <div class="brand"><span class="dot"></span>ZyZoom Internet Downloader<span class="sub">Readme</span></div>
+
+  <div class="tabs">
+    <button type="button" id="btn-ar" class="tab" onclick="showLang('ar')">العربية</button>
+    <button type="button" id="btn-en" class="tab active" onclick="showLang('en')">English</button>
+    <button type="button" id="btn-fr" class="tab" onclick="showLang('fr')">Français</button>
+  </div>
+
+  <div id="lang-en" class="lang" lang="en">
+    <h1>ZyZoom Internet Downloader</h1>
+    <p class="lead">A lightweight download manager for Windows 7 and newer, with a built-in aria2 engine and browser integration.</p>
+
+    <h2>Overview</h2>
+    <p>ZyZoom Internet Downloader downloads files over HTTP, HTTPS and FTP, splits transfers into parallel connections, resumes interrupted downloads and can fetch video and audio streams from YouTube through the browser extension.</p>
+    <p>The interface is available in 20 languages; change it under <b>Options &gt; Settings</b>.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>Windows 7 SP1 or newer (32-bit or 64-bit).</li>
+      <li>.NET Framework 2.0 or newer.</li>
+      <li>Internet Explorer 8 or newer for the built-in interface; IE11 is recommended on Windows 7 and later.</li>
+      <li>About 20 MB of free disk space (the aria2 engine is included).</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <ol>
+      <li>Run <b>setup.exe</b> and approve the administrator prompt.</li>
+      <li>Keep the default folder (<code>%ProgramFiles%\ZyZoom Internet Downloader</code>) or choose another one.</li>
+      <li>Setup creates Start Menu and Desktop shortcuts and registers an uninstaller.</li>
+    </ol>
+    <p>Upgrading keeps your settings in <code>%APPDATA%\ZID</code> and leaves downloaded files untouched.</p>
+    <p><b>Portable copy:</b> unzip the portable folder and run <code>ZID.exe</code>; no installer is needed. A fresh copy in a writable folder keeps settings, the log and downloads in <code>data\</code> next to the program. An existing <code>%APPDATA%\ZID</code> is reused, and a read-only program folder falls back to it.</p>
+
+    <h2>First run</h2>
+    <ol>
+      <li>Click <b>Add URL</b>, paste a URL, choose a save folder and click <b>OK</b>; the download starts immediately.</li>
+      <li>Use the toolbar or the right-click menu to pause, resume, restart or remove items.</li>
+      <li>Downloads can also be queued or scheduled from the same window.</li>
+    </ol>
+    <p>You can also drag and drop links onto the window. Clipboard watching is optional and off by default (<b>Options &gt; Settings</b>).</p>
+
+    <h2>Browser integration</h2>
+    <p>Open <b>Options &gt; Browser integration</b> and choose your browser family.</p>
+    <ul>
+      <li><b>Chromium (Edge, Brave, Opera, Vivaldi, ...):</b> close the browser completely, then let the app open it with the local extension. On Google Chrome 137 and later, open <code>chrome://extensions</code>, enable <b>Developer mode</b>, choose <b>Load unpacked</b> and select the <code>zid-crx</code> folder inside the program folder.</li>
+      <li><b>Firefox:</b> open <code>about:debugging#/runtime/this-firefox</code>, click <b>Load Temporary Add-on</b> and select <code>zid-xpi\manifest.json</code>. Firefox removes temporary add-ons when it restarts.</li>
+    </ul>
+    <p>On YouTube, open a video, click the floating ZID button, pick a quality and press <b>Download</b>. Video and audio are downloaded as separate files; merging is not included.</p>
+
+    <h2>Uninstall</h2>
+    <p>Open <b>Control Panel &gt; Programs and Features</b> and remove <b>ZyZoom Internet Downloader</b>. Your settings and downloaded files are kept.</p>
+
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><b>"aria2c.exe not found":</b> the <code>tools</code> folder is missing; reinstall.</li>
+      <li><b>YouTube download fails:</b> reload the browser extension and add the video again; old links expire.</li>
+      <li><b>Browser integration does not connect:</b> make sure only one copy of the app is running and port 10007 is free. Logs are in <code>data\app.log</code> (portable) or <code>%APPDATA%\ZID\app.log</code>.</li>
+      <li><b>Windows 7:</b> enable .NET Framework 3.5 (it includes 2.0) in <b>Windows Features</b> if the app does not start.</li>
+    </ul>
+
+    <h2>Credits</h2>
+    <p>Downloads use <b>aria2</b> (GPLv2); TLS uses <b>OpenSSL</b>. License files are in <code>tools\COPYING</code> and <code>tools\LICENSE.OpenSSL</code>.</p>
+  </div>
+
+  <div id="lang-fr" class="lang" lang="fr" style="display:none">
+    <h1>ZyZoom Internet Downloader</h1>
+    <p class="lead">Un gestionnaire de téléchargements léger pour Windows 7 et versions ultérieures, avec le moteur aria2 intégré et l'intégration au navigateur.</p>
+
+    <h2>Présentation</h2>
+    <p>ZyZoom Internet Downloader télécharge des fichiers via HTTP, HTTPS et FTP, divise les transferts en connexions parallèles, reprend les téléchargements interrompus et récupère les flux vidéo et audio de YouTube grâce à l'extension de navigateur.</p>
+    <p>L'interface est disponible en 20 langues ; modifiez-la dans <b>Options &gt; Paramètres</b>.</p>
+
+    <h2>Configuration requise</h2>
+    <ul>
+      <li>Windows 7 SP1 ou version ultérieure (32 ou 64 bits).</li>
+      <li>.NET Framework 2.0 ou version ultérieure.</li>
+      <li>Internet Explorer 8 ou version ultérieure pour l'interface intégrée ; IE11 est recommandé sous Windows 7 et ultérieur.</li>
+      <li>Environ 20 Mo d'espace disque libre (le moteur aria2 est inclus).</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <ol>
+      <li>Lancez <b>setup.exe</b> et acceptez l'invite d'administrateur.</li>
+      <li>Conservez le dossier par défaut (<code>%ProgramFiles%\ZyZoom Internet Downloader</code>) ou choisissez-en un autre.</li>
+      <li>L'installation crée les raccourcis du menu Démarrer et du Bureau et enregistre un désinstalleur.</li>
+    </ol>
+    <p>Une mise à jour conserve vos paramètres dans <code>%APPDATA%\ZID</code> et ne touche pas aux fichiers téléchargés.</p>
+
+    <h2>Premier démarrage</h2>
+    <ol>
+      <li>Cliquez sur <b>Ajouter une URL</b>, collez une URL, choisissez un dossier de destination et cliquez sur <b>OK</b> ; le téléchargement démarre immédiatement.</li>
+      <li>Utilisez la barre d'outils ou le menu contextuel pour mettre en pause, reprendre, redémarrer ou supprimer des éléments.</li>
+      <li>Les téléchargements peuvent aussi être mis en file d'attente ou planifiés depuis la même fenêtre.</li>
+    </ol>
+    <p>Vous pouvez aussi glisser-déposer des liens sur la fenêtre. La surveillance du presse-papiers est facultative et désactivée par défaut (<b>Options &gt; Paramètres</b>).</p>
+
+    <h2>Intégration au navigateur</h2>
+    <p>Ouvrez <b>Options &gt; Intégration au navigateur</b> et choisissez votre famille de navigateur.</p>
+    <ul>
+      <li><b>Chromium (Edge, Brave, Opera, Vivaldi, ...) :</b> fermez complètement le navigateur, puis laissez l'application l'ouvrir avec l'extension locale. Avec Google Chrome 137 et ultérieur, ouvrez <code>chrome://extensions</code>, activez le <b>mode développeur</b>, cliquez sur <b>Charger l'extension non empaquetée</b> et sélectionnez le dossier <code>zid-crx</code> dans le dossier du programme.</li>
+      <li><b>Firefox :</b> ouvrez <code>about:debugging#/runtime/this-firefox</code>, cliquez sur <b>Charger un module complémentaire temporaire</b> et sélectionnez <code>zid-xpi\manifest.json</code>. Firefox supprime les modules temporaires au redémarrage.</li>
+    </ul>
+    <p>Sur YouTube, ouvrez une vidéo, cliquez sur le bouton flottant ZID, choisissez une qualité et cliquez sur <b>Télécharger</b>. La vidéo et l'audio sont téléchargés séparément ; la fusion n'est pas incluse.</p>
+
+    <h2>Désinstallation</h2>
+    <p>Ouvrez <b>Panneau de configuration &gt; Programmes et fonctionnalités</b>, puis supprimez <b>ZyZoom Internet Downloader</b>. Vos paramètres et fichiers téléchargés sont conservés.</p>
+
+    <h2>Dépannage</h2>
+    <ul>
+      <li><b>« aria2c.exe introuvable » :</b> le dossier <code>tools</code> manque ; réinstallez.</li>
+      <li><b>Le téléchargement YouTube échoue :</b> rechargez l'extension et ajoutez la vidéo à nouveau ; les anciens liens expirent.</li>
+      <li><b>L'intégration au navigateur ne se connecte pas :</b> vérifiez qu'une seule copie de l'application est ouverte et que le port 10007 est libre. Les journaux se trouvent dans <code>%APPDATA%\ZID\app.log</code>.</li>
+      <li><b>Windows 7 :</b> activez .NET Framework 3.5 (qui inclut 2.0) dans <b>Fonctionnalités Windows</b> si l'application ne démarre pas.</li>
+    </ul>
+
+    <h2>Crédits</h2>
+    <p>Les téléchargements utilisent <b>aria2</b> (GPLv2) ; TLS utilise <b>OpenSSL</b>. Les licences se trouvent dans <code>tools\COPYING</code> et <code>tools\LICENSE.OpenSSL</code>.</p>
+  </div>
+
+  <div id="lang-ar" class="lang" lang="ar" dir="rtl" style="display:none">
+    <h1>ZyZoom Internet Downloader</h1>
+    <p class="lead">مدير تنزيلات خفيف لنظام Windows 7 والإصدارات الأحدث، مع محرك aria2 المدمج وتكامل مع المتصفح.</p>
+
+    <h2>نظرة عامة</h2>
+    <p>يقوم ZyZoom Internet Downloader بتنزيل الملفات عبر HTTP وHTTPS وFTP، ويقسّم التنزيلات إلى اتصالات متوازية، ويستأنف النقل المتوقف، ويجلب مقاطع الفيديو والصوت من YouTube عبر إضافة المتصفح.</p>
+    <p>الواجهة متوفرة بـ 20 لغة؛ غيّرها من <b>الخيارات &gt; الإعدادات</b>.</p>
+
+    <h2>المتطلبات</h2>
+    <ul>
+      <li>Windows 7 SP1 أو أحدث (32 بت أو 64 بت).</li>
+      <li>.NET Framework 2.0 أو أحدث.</li>
+      <li>Internet Explorer 8 أو أحدث للواجهة المدمجة؛ يُفضّل IE11 على Windows 7 وما بعده.</li>
+      <li>حوالي 20 ميغابايت من المساحة الحرة (محرك aria2 مضمّن).</li>
+    </ul>
+
+    <h2>التثبيت</h2>
+    <ol>
+      <li>شغّل <b>setup.exe</b> ووافق على مطالبة المسؤول.</li>
+      <li>اترك المجلد الافتراضي (<code>%ProgramFiles%\ZyZoom Internet Downloader</code>) أو اختر مجلداً آخر.</li>
+      <li>ينشئ التثبيت اختصارات في قائمة ابدأ وعلى سطح المكتب ويسجّل أداة إزالة.</li>
+    </ol>
+    <p>عند الترقية تُحفظ إعداداتك في <code>%APPDATA%\ZID</code> ولا تُمس الملفات التي تم تنزيلها.</p>
+
+    <h2>البدء</h2>
+    <ol>
+      <li>انقر <b>إضافة URL</b>، والصق عنوان URL واختر مجلد الحفظ، ثم انقر <b>موافق</b>؛ يبدأ التنزيل فوراً.</li>
+      <li>استخدم شريط الأدوات أو قائمة النقر بزر الماوس الأيمن للإيقاف المؤقت أو الاستئناف أو إعادة البدء أو الإزالة.</li>
+      <li>يمكن أيضاً وضع التنزيلات في قائمة الانتظار أو جدولتها من النافذة نفسها.</li>
+    </ol>
+    <p>يمكنك أيضاً سحب الروابط وإفلاتها على النافذة. مراقبة الحافظة اختيارية ومعطّلة افتراضياً (<b>الخيارات &gt; الإعدادات</b>).</p>
+
+    <h2>تكامل المتصفح</h2>
+    <p>افتح <b>الخيارات &gt; تكامل المتصفح</b> واختر عائلة المتصفح.</p>
+    <ul>
+      <li><b>متصفحات Chromium (Edge وBrave وOpera وVivaldi...):</b> أغلق المتصفح تماماً، ثم دع التطبيق يفتحه مع الإضافة المحلية. في Google Chrome 137 وما بعده، افتح <code>chrome://extensions</code>، وفعّل <b>وضع المطوّر</b>، واختر <b>Load unpacked</b>، ثم حدّد مجلد <code>zid-crx</code> داخل مجلد البرنامج.</li>
+      <li><b>Firefox:</b> افتح <code>about:debugging#/runtime/this-firefox</code>، وانقر <b>Load Temporary Add-on</b>، وحدّد <code>zid-xpi\manifest.json</code>. يزيل Firefox الإضافات المؤقتة عند إعادة التشغيل.</li>
+    </ul>
+    <p>على YouTube، افتح فيديو، وانقر زر ZyZoom العائم، واختر الجودة، ثم انقر <b>Download</b>. يتم تنزيل الفيديو والصوت كملفين منفصلين؛ الدمج غير مضمّن.</p>
+
+    <h2>إلغاء التثبيت</h2>
+    <p>افتح <b>لوحة التحكم &gt; البرامج والميزات</b>، ثم أزل <b>ZyZoom Internet Downloader</b>. تُحفظ إعداداتك وملفاتك التي تم تنزيلها.</p>
+
+    <h2>استكشاف الأخطاء</h2>
+    <ul>
+      <li><b>«aria2c.exe غير موجود»:</b> مجلد <code>tools</code> مفقود؛ أعد التثبيت.</li>
+      <li><b>فشل تنزيل YouTube:</b> أعد تحميل إضافة المتصفح وأضف الفيديو مرة أخرى؛ الروابط القديمة تنتهي صلاحيتها.</li>
+      <li><b>لا يتصل تكامل المتصفح:</b> تأكد من تشغيل نسخة واحدة فقط من التطبيق وأن المنفذ 10007 غير مستخدم. السجلات في <code>%APPDATA%\ZID\app.log</code>.</li>
+      <li><b>Windows 7:</b> فعّل .NET Framework 3.5 (يتضمن 2.0) من <b>ميزات Windows</b> إذا لم يبدأ التطبيق.</li>
+    </ul>
+
+    <h2>الشكر والتقدير</h2>
+    <p>يستخدم التنزيل <b>aria2</b> (GPLv2) وTLS يستخدم <b>OpenSSL</b>. ملفات الترخيص في <code>tools\COPYING</code> و<code>tools\LICENSE.OpenSSL</code>.</p>
+  </div>
+
+  <div class="foot">ZyZoom Internet Downloader 1.0 &nbsp;&middot;&nbsp; Windows 7 / 8 / 10 / 11</div>
+</div>
+
+<script type="text/javascript">
+function showLang(code) {
+  var langs = ['ar', 'en', 'fr'];
+  var i, el;
+  for (i = 0; i < langs.length; i++) {
+    el = document.getElementById('lang-' + langs[i]);
+    if (el) el.style.display = (langs[i] === code) ? 'block' : 'none';
+    el = document.getElementById('btn-' + langs[i]);
+    if (el) {
+      el.className = (langs[i] === code) ? 'tab active' : 'tab';
+      el.setAttribute('aria-pressed', langs[i] === code ? 'true' : 'false');
+    }
+  }
+  document.body.dir = (code === 'ar') ? 'rtl' : 'ltr';
+  document.body.lang = code;
+}
+
+function initLang() {
+  var l = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (l.indexOf('ar') === 0) showLang('ar');
+  else if (l.indexOf('fr') === 0) showLang('fr');
+  else showLang('en');
+}
+
+initLang();
+</script>
+</body>
+</html>

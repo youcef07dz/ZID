@@ -1,0 +1,323 @@
+# ZyZoom Internet Downloader - Français
+code=fr
+name=Français
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Fichier
+menu.downloads=Téléchargements
+menu.view=Affichage
+menu.options=Options
+menu.help=Aide
+menu.add_url=Ajouter une URL...
+menu.resume_selected=Reprendre la sélection
+menu.pause_selected=Mettre la sélection en pause
+menu.restart_selected=Redémarrer la sélection
+menu.export=Exporter la liste...
+menu.exit=Quitter
+menu.pause_all=Tout mettre en pause
+menu.resume_all=Tout reprendre
+menu.stop_all=Tout arrêter
+menu.theme_light=Thème clair Windows 7
+menu.theme_dark=Thème sombre Windows 7
+menu.settings=Paramètres...
+menu.about=À propos...
+
+btn.add=Ajouter une URL
+btn.start=Démarrer
+btn.pause=Pause
+btn.resume=Reprendre
+btn.restart=Redémarrer
+btn.edit=Modifier
+btn.info=Infos
+btn.remove=Supprimer
+btn.about=À propos
+btn.stop_all=Tout arrêter
+btn.cancel=Annuler
+btn.ok=OK
+btn.close=Fermer
+btn.paste=Coller
+btn.open_folder=Ouvrir le dossier
+btn.hide=Masquer
+btn.hide_details=Masquer les détails
+btn.show_details=Afficher les détails
+
+tb.filter=Filtrer...
+
+cat.all=Tous les téléchargements
+cat.queue=File d'attente
+cat.downloading=En cours
+cat.paused=En pause
+cat.done=Terminés
+cat.error=Erreur
+cat.video=Vidéo
+cat.image=Image
+cat.audio=Audio
+cat.compressed=Compressés
+cat.program=Programmes
+cat.other=Autres
+
+col.name=Nom du fichier
+col.status=État
+col.type=Type
+col.size=Taille
+col.progress=Progression
+col.speed=Vitesse
+col.eta=Temps restant
+col.date=Date
+
+ctx.open=Ouvrir
+ctx.folder=Ouvrir le dossier
+ctx.copy=Copier l'URL
+ctx.resume=Démarrer / Reprendre
+ctx.pause=Pause
+ctx.restart=Redémarrer
+ctx.edit=Modifier...
+ctx.info=Infos...
+ctx.prio_high=Priorité : haute
+ctx.prio_normal=Priorité : normale
+ctx.prio_low=Priorité : basse
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Supprimer
+
+label.name=Nom :
+label.url=URL :
+label.type=Type :
+label.size=Taille :
+label.received=Reçu :
+label.status=État :
+label.started=Démarré :
+label.priority=Priorité :
+label.save_to=Enregistrer dans :
+label.file=Fichier :
+label.speed=Vitesse :
+label.eta=Temps restant :
+label.urls=URL (une par ligne)
+label.file_name=Nom du fichier
+label.save_folder=Dossier d'enregistrement
+label.cookie=Cookie (facultatif)
+label.connections=Connexions (0 = valeur par défaut)
+label.speed_limit=Limite de vitesse Ko/s (0 = valeur par défaut)
+
+add.title=Ajouter un téléchargement
+add.edit_title=Modifier le téléchargement n° {id}
+add.auto_url=(auto depuis l'URL)
+add.default_folder=(par défaut : Downloads\ZID)
+add.cookie_ph=nom=valeur; autre=valeur
+add.paste_fail=Impossible de lire le presse-papiers. Appuyez sur Ctrl+V dans le champ.
+add.skipped={n} ligne(s) ignorée(s) : seules les URL http, https et ftp peuvent être ajoutées.
+
+info.title=Infos du téléchargement
+prio.high=Haute
+prio.normal=Normale
+prio.low=Basse
+
+rm.title=Supprimer les téléchargements
+rm.text=Supprimer {n} téléchargement(s) de la liste ?
+rm.also_file=Supprimer aussi le(s) fichier(s) téléchargé(s) du disque
+rm.select_first=Sélectionnez d'abord une ligne
+
+set.title=Paramètres
+set.maxconc=Téléchargements simultanés max.
+set.parts=Parties par téléchargement
+set.speed=Vitesse max. (Ko/s, 0 = illimitée)
+set.proxy=Proxy (vide = direct, ex. http://utilisateur:motdepasse@hote:8080)
+set.clip=Surveiller le presse-papiers pour les URL http/https
+set.shutdown=Éteindre le PC quand la file est terminée
+set.sort=Trier les nouveaux téléchargements par type de dossier (Vidéo, Image, ...)
+set.schedule=Démarrer la file à (HH:MM, vide = maintenant)
+set.language=Langue
+
+status.queued=En attente
+status.downloading=Téléchargement
+status.connecting=Connexion
+status.paused=En pause
+status.done=Terminé
+status.error=Erreur
+status.starting=Démarrage...
+status.scheduled=Programmé pour
+status.retrying=Erreur réseau, nouvelle tentative
+
+msg.url_copied=URL copiée
+msg.open=Ouvrir
+msg.file_not_found=Fichier introuvable :
+msg.missing_resource=Ressource manquante
+msg.export_failed=Échec de l'export :
+msg.export=Exporter
+
+tray.show=Afficher la fenêtre
+tray.pause_all=Tout mettre en pause
+tray.resume_all=Tout reprendre
+tray.exit=Quitter
+tray.balloon=Toujours en cours d'exécution dans la zone de notification.
+
+about.title=À propos
+about.folder=Dossier de téléchargement :
+about.state=Fichier d'état :
+about.config=Fichier de configuration :
+
+popup.title=Téléchargement - {name}
+popup.details=Détails de la connexion
+popup.connections=Connexions actives :
+popup.parts=Parties :
+popup.remaining=Restant :
+popup.host=Hôte :
+bi.copy_path=Copier le chemin
+bi.copied=Copié
+bi.copy_failed=Échec de la copie
+
+# empty state
+empty.title=Rien à afficher
+empty.hint=Ajoutez une URL, déposez un lien ou ajustez le filtre.
+menu.retry_all=Réessayer toutes les erreurs
+menu.clear_done=Effacer les terminés
+menu.reset_columns=Réinitialiser la disposition des colonnes
+menu.browsers=Intégration au navigateur...
+btn.retry_all=Tout réessayer
+btn.import=Importer...
+btn.open_file=Ouvrir le fichier
+label.avg_speed=Vitesse moyenne :
+label.time_taken=Temps écoulé :
+label.mirror=URL miroir (facultatif)
+label.checksum=Somme de contrôle (facultatif)
+label.headers=En-têtes supplémentaires (facultatif, un par ligne)
+label.item_proxy=Proxy (facultatif, vide = valeur par défaut)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL sont déjà dans la liste. Ajouter quand même ?
+set.tab_general=Général
+set.tab_connection=Connexion
+set.tab_schedule=Planification
+set.tab_appearance=Apparence
+set.capture=Types de fichiers que l'extension du navigateur doit capturer (séparés par des virgules)
+set.stop=Arrêter à (HH:MM, vide = jamais)
+set.daily=Répéter la plage de démarrage/arrêt chaque jour
+set.accent=Couleur d'accentuation
+set.prog_start=Couleur de début de la barre de progression
+set.prog_end=Couleur de fin de la barre de progression
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Actif
+st.speed=Vitesse
+st.free=Libre
+status.verified=Vérifié
+tray.done=Téléchargement terminé :
+bi.title=Intégration au navigateur
+bi.intro=Choisissez la famille de votre navigateur. La page de l'extension s'ouvrira dans le navigateur sélectionné.
+bi.firefox=Firefox
+bi.chromium=Navigateurs Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Choisissez le navigateur dans lequel ouvrir la page de l'extension :
+bi.none=Aucun navigateur compatible n'a été trouvé.
+bi.open_failed=Impossible de démarrer le navigateur :
+neat.title=Ajouter un téléchargement
+neat.url=URL :
+neat.name=Nom du fichier :
+neat.folder=Enregistrer dans :
+neat.size=Taille :
+neat.unknown_size=Inconnue
+neat.start=Démarrer
+neat.later=Démarrer plus tard
+neat.browse=Parcourir...
+popup.tab_download=Téléchargement
+popup.tab_options=Options
+popup.parts_downloading=Parties en cours de téléchargement :
+popup.finished_title=Téléchargement terminé
+popup.finished=Téléchargement effectué
+popup.after=À la fin du téléchargement
+popup.after_dialog=Afficher la boîte de dialogue de fin
+popup.after_none=Ne rien faire
+popup.after_open=Ouvrir le fichier
+popup.after_folder=Ouvrir le dossier
+popup.after_shutdown=Éteindre le PC
+popup.saved=Enregistré
+btn.apply=Appliquer
+msg.merged_restart=Ce fichier a été fusionné à partir de flux vidéo et audio séparés. Supprimez-le et téléchargez à nouveau la vidéo pour le récupérer.
+
+ctx.refresh=Actualiser l'URL
+msg.refresh_no_page=Ce téléchargement n'a pas de page de référence à ouvrir.
+# updates
+menu.check_updates=Rechercher des mises à jour...
+set.tab_updates=Mises à jour
+set.update_check=Rechercher automatiquement une nouvelle version
+set.update_days=Vérifier tous les (jours)
+update.title=Mise à jour du logiciel
+update.available=La version {0} est disponible (vous avez la {1}). La télécharger maintenant ?
+update.latest=Vous avez la dernière version ({0}).
+update.error=Impossible de vérifier les mises à jour : {0}
+update.downloading=La mise à jour a été ajoutée à vos téléchargements.
+about.no_errors=Aucune
+about.recent_errors=Erreurs récentes :
+add.advanced=Options avancées
+add.probe_checking=Vérification de l'URL...
+add.probe_size=Taille
+auth.forget_confirm=Oublier tous les identifiants de sites enregistrés ?
+auth.message=Ce serveur nécessite un nom d'utilisateur et un mot de passe.
+auth.pass=Mot de passe :
+auth.remember=Se souvenir pour ce site
+auth.title=Identifiants requis
+auth.user=Nom d'utilisateur :
+btn.clean_history=Vider l'historique
+btn.forget_credentials=Oublier les identifiants enregistrés
+btn.no=Non
+btn.show_more=Afficher plus
+btn.yes=Oui
+clean.button=Nettoyer
+clean.orphans=Supprimer aussi les fichiers partiels restants (.aria2, .part) du dossier de téléchargement
+clean.text=Supprimer tous les téléchargements terminés de la liste ? Les fichiers téléchargés restent sur le disque.
+clean.title=Vider l'historique
+ctx.credentials=Saisir les identifiants...
+ctx.retry_single=Réessayer avec 1 connexion
+dup.cancel=Annuler
+dup.file=Le fichier cible existe déjà.
+dup.hint=Reprendre continue l'entrée existante. Conserver les deux enregistre une autre copie sous un nouveau nom. Remplacer supprime le fichier existant et recommence.
+dup.hint_file=Conserver les deux enregistre une autre copie sous un nouveau nom. Remplacer supprime le fichier existant et recommence.
+dup.keep=Conserver les deux
+dup.open=Ouvrir
+dup.replace=Remplacer
+dup.resume=Reprendre
+dup.title=Téléchargement en double
+dup.url=Cette URL est déjà dans la liste des téléchargements.
+info.tab_advanced=Avancé
+info.tab_general=Général
+info.tab_network=Réseau
+info.tab_progress=Progression
+label.active_conn=Connexions actives :
+label.after_done=Après le téléchargement :
+label.checksum_short=Somme de contrôle :
+label.cookie_short=Cookie :
+label.headers_short=En-têtes :
+label.max_conn=Limite de connexions :
+label.mirror_short=URL du miroir :
+label.referer=Référent :
+label.remaining=Restant :
+label.retry=Nombre de tentatives :
+label.start_at=Télécharger plus tard à (HH:MM, vide = maintenant)
+label.user_agent=Agent utilisateur :
+menu.copy_diag=Copier le diagnostic
+menu.open_log=Ouvrir le dossier des journaux
+msg.diag_copied=Diagnostic copié
+neat.block=Ne jamais télécharger automatiquement depuis ce domaine
+neat.block_ask=Arrêter de prendre en charge les téléchargements de {0} ? Ils resteront dans le navigateur.
+neat.block_title=Sites bloqués
+set.blocked=Sites bloqués (un par ligne ; leurs téléchargements restent dans le navigateur)
+set.naming=Modèle de nom ({host}/{type}/{name} ; vide = dossier de téléchargement)
+set.speed_from=Limite temporaire appliquée à partir de (HH:MM)
+set.speed_to=Limite temporaire appliquée jusqu'à (HH:MM)
+set.speed_window=Limite de vitesse temporaire (Ko/s, 0 = désactivé)
+st.eta=Temps restant
+st.left=Restant
+status.file_missing=Fichier déplacé ou supprimé
+status.waitingnetwork=En attente du réseau
+update.notes=Nouveautés :

@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Require the .NET Framework 2.0 compiler
+        shell: cmd
+        run: |
+          if not exist "%WINDIR%\Microsoft.NET\Framework\v2.0.50727\csc.exe" (
+            echo ERROR: .NET Framework 2.0 csc.exe is missing on this runner.
+            exit /b 1
+          )
+
+      - name: Tests
+        shell: cmd
+        run: tests.cmd
+
+      - name: Language key parity
+        shell: powershell
+        run: ./check-lang.ps1
+
+      - name: Extension copies match zid-crx
+        shell: powershell
+        run: ./sync-extensions.ps1 -Check
+
+      - name: Build
+        shell: cmd
+        run: 1-build.cmd

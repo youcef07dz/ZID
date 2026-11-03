@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - 日本語
+code=ja
+name=日本語
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=ファイル
+menu.downloads=ダウンロード
+menu.view=表示
+menu.options=オプション
+menu.help=ヘルプ
+menu.add_url=URL を追加...
+menu.resume_selected=選択項目を再開
+menu.pause_selected=選択項目を一時停止
+menu.restart_selected=選択項目を再起動
+menu.export=リストをエクスポート...
+menu.exit=終了
+menu.pause_all=すべて一時停止
+menu.resume_all=すべて再開
+menu.stop_all=すべて停止
+menu.theme_light=Windows 7 ライトテーマ
+menu.theme_dark=Windows 7 ダークテーマ
+menu.settings=設定...
+menu.about=バージョン情報...
+
+btn.add=URL を追加
+btn.start=開始
+btn.pause=一時停止
+btn.resume=再開
+btn.restart=再起動
+btn.edit=編集
+btn.info=情報
+btn.remove=削除
+btn.about=バージョン情報
+btn.stop_all=すべて停止
+btn.cancel=キャンセル
+btn.ok=OK
+btn.close=閉じる
+btn.paste=貼り付け
+btn.open_folder=フォルダーを開く
+btn.hide=非表示
+
+tb.filter=フィルター...
+
+cat.all=すべてのダウンロード
+cat.queue=キュー
+cat.downloading=ダウンロード中
+cat.paused=一時停止中
+cat.done=完了
+cat.error=エラー
+cat.video=動画
+cat.image=画像
+cat.audio=音声
+cat.compressed=圧縮ファイル
+cat.program=プログラム
+cat.other=その他
+
+col.name=ファイル名
+col.status=状態
+col.type=種類
+col.size=サイズ
+col.progress=進捗
+col.speed=速度
+col.eta=残り時間
+col.date=日付
+
+ctx.open=開く
+ctx.folder=フォルダーを開く
+ctx.copy=URL をコピー
+ctx.resume=開始 / 再開
+ctx.pause=一時停止
+ctx.restart=再起動
+ctx.edit=編集...
+ctx.info=情報...
+ctx.prio_high=優先度: 高
+ctx.prio_normal=優先度: 標準
+ctx.prio_low=優先度: 低
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=削除
+
+label.name=名前:
+label.url=URL:
+label.type=種類:
+label.size=サイズ:
+label.received=受信済み:
+label.status=状態:
+label.started=開始日時:
+label.priority=優先度:
+label.save_to=保存先:
+label.file=ファイル:
+label.speed=速度:
+label.eta=残り時間:
+label.urls=URL（1 行に 1 つ）
+label.file_name=ファイル名
+label.save_folder=保存フォルダー
+label.cookie=Cookie（任意）
+label.connections=接続数（0 = 既定値を使用）
+label.speed_limit=速度制限 KB/s（0 = 既定値を使用）
+
+add.title=ダウンロードを追加
+add.edit_title=ダウンロード #{id} を編集
+add.auto_url=（URL から自動）
+add.default_folder=（既定: Downloads\ZID）
+add.cookie_ph=名前=値; その他=値
+add.paste_fail=クリップボードを読み取れません。入力欄で Ctrl+V を押してください。
+add.skipped={n} 行をスキップしました: 追加できるのは http、https、ftp の URL のみです。
+
+info.title=ダウンロード情報
+prio.high=高
+prio.normal=標準
+prio.low=低
+
+rm.title=ダウンロードを削除
+rm.text=リストから {n} 件のダウンロードを削除しますか？
+rm.also_file=ダウンロードしたファイルもディスクから削除する
+rm.select_first=先に行を選択してください
+
+set.title=設定
+set.maxconc=最大同時ダウンロード数
+set.parts=ダウンロードごとの分割数
+set.speed=最大速度（KB/s、0 = 無制限）
+set.proxy=プロキシ（空 = 直接接続、例: http://ユーザー:パスワード@ホスト:8080）
+set.clip=クリップボードの http/https URL を監視
+set.shutdown=キュー完了後に PC をシャットダウン
+set.sort=新しいダウンロードを種類別フォルダーに整理（動画、画像など）
+set.schedule=キュー開始時刻（HH:MM、空 = すぐに）
+set.language=言語
+
+status.queued=待機中
+status.downloading=ダウンロード中
+status.connecting=接続中
+status.paused=一時停止中
+status.done=完了
+status.error=エラー
+status.starting=開始中...
+status.scheduled=予定:
+status.retrying=ネットワークエラー、再試行中
+
+msg.url_copied=URL をコピーしました
+msg.open=開く
+msg.file_not_found=ファイルが見つかりません:
+msg.missing_resource=リソースがありません
+msg.export_failed=エクスポートに失敗しました:
+msg.export=エクスポート
+
+tray.show=ウィンドウを表示
+tray.pause_all=すべて一時停止
+tray.resume_all=すべて再開
+tray.exit=終了
+tray.balloon=システム トレイで実行中です。
+
+about.title=バージョン情報
+about.folder=ダウンロード フォルダー:
+about.state=状態ファイル:
+about.config=設定ファイル:
+
+popup.title=ダウンロード - {name}
+
+# empty state
+empty.title=表示する項目はありません
+empty.hint=URL を追加するか、リンクをドロップするか、フィルターを調整してください。
+menu.retry_all=すべてのエラーを再試行
+menu.clear_done=完了した項目をクリア
+menu.reset_columns=列レイアウトをリセット
+menu.browsers=ブラウザー連携...
+btn.retry_all=すべて再試行
+btn.import=インポート...
+btn.open_file=ファイルを開く
+btn.hide_details=詳細を隠す
+btn.show_details=詳細を表示
+label.avg_speed=平均速度:
+label.time_taken=所要時間:
+label.mirror=ミラー URL（任意）
+label.checksum=チェックサム（任意）
+label.headers=追加ヘッダー（任意、1 行に 1 つ）
+label.item_proxy=プロキシ（任意、空 = 既定値を使用）
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} 件の URL は既にリストにあります。それでも追加しますか？
+set.tab_general=一般
+set.tab_connection=接続
+set.tab_schedule=スケジュール
+set.tab_appearance=外観
+set.capture=ブラウザー拡張機能が取得するファイルの種類（カンマ区切り）
+set.stop=停止時刻（HH:MM、空 = なし）
+set.daily=開始/停止の時間帯を毎日繰り返す
+set.accent=アクセントカラー
+set.prog_start=プログレスバーの開始色
+set.prog_end=プログレスバーの終了色
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=アクティブ
+st.speed=速度
+st.free=空き
+status.verified=確認済み
+tray.done=ダウンロード完了:
+bi.title=ブラウザー連携
+bi.intro=ブラウザーの系統を選択してください。選択したブラウザーで拡張機能のページが開きます。
+bi.firefox=Firefox
+bi.chromium=Chromium 系ブラウザー
+bi.chromium_hint=Chrome、Edge、Brave、Opera、Vivaldi...
+bi.pick=拡張機能のページを開くブラウザーを選択:
+bi.none=対応しているブラウザーが見つかりませんでした。
+bi.open_failed=ブラウザーを起動できません:
+bi.copy_path=拡張機能のパスをコピー
+bi.copied=コピーしました
+bi.copy_failed=コピーに失敗しました
+neat.title=ダウンロードを追加
+neat.url=URL:
+neat.name=ファイル名:
+neat.folder=保存先:
+neat.size=サイズ:
+neat.unknown_size=不明
+neat.start=開始
+neat.later=後で開始
+neat.browse=参照...
+popup.tab_download=ダウンロード
+popup.tab_options=オプション
+popup.parts_downloading=ダウンロード中の分割:
+popup.finished_title=ダウンロード完了
+popup.finished=ダウンロードが終了しました
+popup.after=ダウンロード完了時の動作
+popup.after_dialog=完了ダイアログを表示
+popup.after_none=何もしない
+popup.after_open=ファイルを開く
+popup.after_folder=フォルダーを開く
+popup.after_shutdown=PC をシャットダウン
+popup.saved=保存しました
+btn.apply=適用
+popup.details=接続の詳細
+popup.connections=アクティブな接続:
+popup.parts=分割:
+popup.remaining=残り:
+popup.host=ホスト:
+msg.merged_restart=このファイルは分離された映像と音声のストリームから結合されました。削除して動画を再度ダウンロードし、再取得してください。
+
+ctx.refresh=URLを更新
+msg.refresh_no_page=このダウンロードには開ける参照ページがありません。
+about.no_errors=エラーはありません
+about.recent_errors=最近のエラー:
+add.advanced=詳細オプション
+add.probe_checking=URL を確認しています...
+add.probe_size=サイズ
+auth.forget_confirm=保存されたすべてのサイト認証情報を忘れますか？
+auth.message=このサーバーにはユーザー名とパスワードが必要です。
+auth.pass=パスワード:
+auth.remember=このサイト用に記憶する
+auth.title=認証情報が必要です
+auth.user=ユーザー名:
+btn.clean_history=履歴を消去
+btn.forget_credentials=保存された認証情報を忘れる
+btn.no=いいえ
+btn.show_more=さらに表示
+btn.yes=はい
+clean.button=消去
+clean.orphans=ダウンロード フォルダー内の残った部分ファイル (.aria2, .part) も削除する
+clean.text=完了したダウンロードをすべて一覧から削除しますか？ダウンロード済みのファイルはディスクに残ります。
+clean.title=履歴を消去
+ctx.credentials=認証情報を入力...
+ctx.retry_single=1 接続で再試行
+dup.cancel=キャンセル
+dup.file=対象ファイルは既に存在します。
+dup.hint=再開は既存の項目を続行します。両方保持は新しい名前でもう 1 つコピーを保存します。置換は既存のファイルを削除して最初からやり直します。
+dup.hint_file=両方保持は新しい名前でもう 1 つコピーを保存します。置換は既存のファイルを削除して最初からやり直します。
+dup.keep=両方保持
+dup.open=開く
+dup.replace=置換
+dup.resume=再開
+dup.title=重複したダウンロード
+dup.url=この URL は既にダウンロード一覧にあります。
+info.tab_advanced=詳細
+info.tab_general=一般
+info.tab_network=ネットワーク
+info.tab_progress=進行状況
+label.active_conn=アクティブな接続:
+label.after_done=ダウンロード後:
+label.checksum_short=チェックサム:
+label.cookie_short=Cookie:
+label.headers_short=ヘッダー:
+label.max_conn=接続上限:
+label.mirror_short=ミラー URL:
+label.referer=リファラー:
+label.remaining=残り:
+label.retry=再試行回数:
+label.start_at=後でダウンロード (HH:MM、空 = 今すぐ)
+label.user_agent=ユーザー エージェント:
+menu.check_updates=更新を確認...
+menu.copy_diag=診断情報をコピー
+menu.open_log=ログ フォルダーを開く
+msg.diag_copied=診断情報をコピーしました
+neat.block=このドメインからは自動ダウンロードしない
+neat.block_ask={0} からのダウンロードの引き継ぎを停止しますか？ブラウザーに残ります。
+neat.block_title=ブロックしたサイト
+set.blocked=ブロックしたサイト (1 行に 1 つ、そこからのダウンロードはブラウザーに残ります)
+set.naming=名前テンプレート ({host}/{type}/{name}、空 = ダウンロード フォルダー)
+set.speed_from=一時上限の開始 (HH:MM)
+set.speed_to=一時上限の終了 (HH:MM)
+set.speed_window=一時的な速度制限 (KB/s、0 = オフ)
+set.tab_updates=更新
+set.update_check=新しいバージョンを自動で確認する
+set.update_days=確認間隔 (日)
+st.eta=残り時間
+st.left=残り
+status.file_missing=ファイルが移動または削除されました
+status.waitingnetwork=ネットワークを待機中
+update.available=バージョン {0} が利用可能です ({1} を使用中)。今すぐダウンロードしますか？
+update.downloading=更新がダウンロード一覧に追加されました。
+update.error=更新を確認できませんでした: {0}
+update.latest=最新バージョンです ({0})。
+update.notes=新着情報:
+update.title=ソフトウェア更新

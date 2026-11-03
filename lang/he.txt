@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - עברית
+code=he
+name=עברית
+dir=rtl
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=קובץ
+menu.downloads=הורדות
+menu.view=תצוגה
+menu.options=אפשרויות
+menu.help=עזרה
+menu.add_url=הוספת URL...
+menu.resume_selected=המשך נבחרים
+menu.pause_selected=השהה נבחרים
+menu.restart_selected=הפעל מחדש נבחרים
+menu.export=ייצוא רשימה...
+menu.exit=יציאה
+menu.pause_all=השהה הכול
+menu.resume_all=המשך הכול
+menu.stop_all=עצור הכול
+menu.theme_light=ערכת נושא בהירה של Windows 7
+menu.theme_dark=ערכת נושא כהה של Windows 7
+menu.settings=הגדרות...
+menu.about=אודות...
+
+btn.add=הוספת URL
+btn.start=התחל
+btn.pause=השהה
+btn.resume=המשך
+btn.restart=הפעל מחדש
+btn.edit=עריכה
+btn.info=מידע
+btn.remove=הסרה
+btn.about=אודות
+btn.stop_all=עצור הכול
+btn.cancel=ביטול
+btn.ok=אישור
+btn.close=סגור
+btn.paste=הדבק
+btn.open_folder=פתח תיקייה
+btn.hide=הסתר
+
+tb.filter=סינון...
+
+cat.all=כל ההורדות
+cat.queue=תור
+cat.downloading=בהורדה
+cat.paused=מושהה
+cat.done=הושלם
+cat.error=שגיאה
+cat.video=וידאו
+cat.image=תמונה
+cat.audio=שמע
+cat.compressed=דחוס
+cat.program=תוכנית
+cat.other=אחר
+
+col.name=שם קובץ
+col.status=מצב
+col.type=סוג
+col.size=גודל
+col.progress=התקדמות
+col.speed=מהירות
+col.eta=זמן שנותר
+col.date=תאריך
+
+ctx.open=פתח
+ctx.folder=פתח תיקייה
+ctx.copy=העתק URL
+ctx.resume=התחל / המשך
+ctx.pause=השהה
+ctx.restart=הפעל מחדש
+ctx.edit=עריכה...
+ctx.info=מידע...
+ctx.prio_high=עדיפות: גבוהה
+ctx.prio_normal=עדיפות: רגילה
+ctx.prio_low=עדיפות: נמוכה
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=הסרה
+
+label.name=שם:
+label.url=URL:
+label.type=סוג:
+label.size=גודל:
+label.received=התקבל:
+label.status=מצב:
+label.started=התחיל:
+label.priority=עדיפות:
+label.save_to=שמור ב:
+label.file=קובץ:
+label.speed=מהירות:
+label.eta=זמן שנותר:
+label.urls=כתובות URL (אחת בכל שורה)
+label.file_name=שם קובץ
+label.save_folder=תיקיית שמירה
+label.cookie=Cookie (אופציונלי)
+label.connections=חיבורים (0 = השתמש בברירת מחדל)
+label.speed_limit=הגבלת מהירות KB/s (0 = השתמש בברירת מחדל)
+
+add.title=הוספת הורדה
+add.edit_title=עריכת הורדה #{id}
+add.auto_url=(אוטומטי מה-URL)
+add.default_folder=(ברירת מחדל: Downloads\ZID)
+add.cookie_ph=שם=ערך; אחר=ערך
+add.paste_fail=לא ניתן לקרוא את לוח הגזירים. לחץ Ctrl+V בשדה.
+add.skipped=דולגו {n} שורות. ניתן להוסיף רק כתובות http, https ו-ftp.
+
+info.title=מידע על ההורדה
+prio.high=גבוהה
+prio.normal=רגילה
+prio.low=נמוכה
+
+rm.title=הסרת הורדות
+rm.text=להסיר {n} הורדות מהרשימה?
+rm.also_file=מחק גם את הקבצים שהורדו מהדיסק
+rm.select_first=בחר שורה תחילה
+
+set.title=הגדרות
+set.maxconc=מספר הורדות מקבילות מרבי
+set.parts=חלקים לכל הורדה
+set.speed=מהירות מרבית (KB/s, 0 = ללא הגבלה)
+set.proxy=פרוקסי (ריק = ישיר, לדוגמה http://משתמש:סיסמה@מארח:8080)
+set.clip=נטר לוח גזירים לכתובות http/https
+set.shutdown=כבה את המחשב כשהתור מסתיים
+set.sort=סדר הורדות חדשות בתיקיות לפי סוג (וידאו, תמונה, ...)
+set.schedule=שעת התחלת התור (HH:MM, ריק = עכשיו)
+set.language=שפה
+
+status.queued=בתור
+status.downloading=בהורדה
+status.connecting=מתחבר
+status.paused=מושהה
+status.done=הושלם
+status.error=שגיאה
+status.starting=מתחיל...
+status.scheduled=מתוזמן:
+status.retrying=שגיאת רשת, מנסה שוב
+
+msg.url_copied=ה-URL הועתק
+msg.open=פתח
+msg.file_not_found=הקובץ לא נמצא:
+msg.missing_resource=המשאב חסר
+msg.export_failed=הייצוא נכשל:
+msg.export=ייצוא
+
+tray.show=הצג חלון
+tray.pause_all=השהה הכול
+tray.resume_all=המשך הכול
+tray.exit=יציאה
+tray.balloon=עדיין פועל במגש המערכת.
+
+about.title=אודות
+about.folder=תיקיית הורדות:
+about.state=קובץ מצב:
+about.config=קובץ הגדרות:
+
+popup.title=הורדה - {name}
+
+# empty state
+empty.title=אין מה להציג
+empty.hint=הוסף כתובת, גרור קישור או שנה את הסינון.
+menu.retry_all=נסה שוב את כל השגיאות
+menu.clear_done=נקה שהושלמו
+menu.reset_columns=אפס פריסת עמודות
+menu.browsers=שילוב עם הדפדפן...
+btn.retry_all=נסה שוב הכול
+btn.import=ייבוא...
+btn.open_file=פתח קובץ
+btn.hide_details=הסתר פרטים
+btn.show_details=הצג פרטים
+label.avg_speed=מהירות ממוצעת:
+label.time_taken=זמן שחלף:
+label.mirror=כתובת URL של מראה (אופציונלי)
+label.checksum=סכום ביקורת (אופציונלי)
+label.headers=כותרות נוספות (אופציונלי, אחת בכל שורה)
+label.item_proxy=פרוקסי (אופציונלי, ריק = השתמש בברירת מחדל)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} כתובות URL כבר נמצאות ברשימה. להוסיף בכל זאת?
+set.tab_general=כללי
+set.tab_connection=חיבור
+set.tab_schedule=תזמון
+set.tab_appearance=מראה
+set.capture=סוגי קבצים שהתוסף בדפדפן יקלוט (מופרדים בפסיק)
+set.stop=עצירה בשעה (HH:MM, ריק = אף פעם)
+set.daily=חזור על חלון ההתחלה/עצירה בכל יום
+set.accent=צבע הדגשה
+set.prog_start=צבע תחילת פס ההתקדמות
+set.prog_end=צבע סוף פס ההתקדמות
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=פעיל
+st.speed=מהירות
+st.free=פנוי
+status.verified=מאומת
+tray.done=ההורדה הושלמה:
+bi.title=שילוב עם הדפדפן
+bi.intro=בחר את משפחת הדפדפן שלך. עמוד התוסף ייפתח בדפדפן שתבחר.
+bi.firefox=Firefox
+bi.chromium=דפדפני Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=בחר את הדפדפן שבו ייפתח עמוד התוסף:
+bi.none=לא נמצא דפדפן נתמך.
+bi.open_failed=לא ניתן להפעיל את הדפדפן:
+bi.copy_path=העתק נתיב תוסף
+bi.copied=הועתק
+bi.copy_failed=ההעתקה נכשלה
+neat.title=הוספת הורדה
+neat.url=URL:
+neat.name=שם קובץ:
+neat.folder=שמור ב:
+neat.size=גודל:
+neat.unknown_size=לא ידוע
+neat.start=התחל
+neat.later=התחל מאוחר יותר
+neat.browse=עיון...
+popup.tab_download=הורדה
+popup.tab_options=אפשרויות
+popup.parts_downloading=חלקים בהורדה:
+popup.finished_title=ההורדה הושלמה
+popup.finished=ההורדה הסתיימה
+popup.after=כשההורדה מסתיימת
+popup.after_dialog=הצג תיבת סיום
+popup.after_none=אל תעשה דבר
+popup.after_open=פתח את הקובץ
+popup.after_folder=פתח את התיקייה
+popup.after_shutdown=כבה את המחשב
+popup.saved=נשמר
+btn.apply=החל
+popup.details=פרטי חיבור
+popup.connections=חיבורים פעילים:
+popup.parts=חלקים:
+popup.remaining=נותר:
+popup.host=מארח:
+msg.merged_restart=קובץ זה מוזג מזרמי וידאו ושמע נפרדים. הסר אותו והורד את הווידאו שוב כדי להביא אותו מחדש.
+
+ctx.refresh=רענן כתובת URL
+msg.refresh_no_page=אין להורדה הזו דף מקור לפתיחה.
+about.no_errors=אין שגיאות
+about.recent_errors=שגיאות אחרונות:
+add.advanced=אפשרויות מתקדמות
+add.probe_checking=בודק את הכתובת...
+add.probe_size=גודל
+auth.forget_confirm=לשכוח את כל פרטי הכניסה השמורים לאתרים?
+auth.message=השרת הזה דורש שם משתמש וסיסמה.
+auth.pass=סיסמה:
+auth.remember=זכור עבור אתר זה
+auth.title=נדרשים פרטי כניסה
+auth.user=שם משתמש:
+btn.clean_history=נקה היסטוריה
+btn.forget_credentials=שכח פרטי כניסה שמורים
+btn.no=לא
+btn.show_more=הצג עוד
+btn.yes=כן
+clean.button=נקה
+clean.orphans=למחוק גם קבצים חלקיים שנותרו (.aria2, .part) בתיקיית ההורדות
+clean.text=להסיר את כל ההורדות שהסתיימו מהרשימה? הקבצים שהורדו יישארו בדיסק.
+clean.title=נקה היסטוריה
+ctx.credentials=הזן פרטי כניסה...
+ctx.retry_single=נסה שוב עם חיבור אחד
+dup.cancel=ביטול
+dup.file=קובץ היעד כבר קיים.
+dup.hint=המשך מחדש את הרשומה הקיימת. שמור את שניהם שומר עותק נוסף בשם חדש. החלף מוחק את הקובץ הקיים ומתחיל מחדש.
+dup.hint_file=שמור את שניהם שומר עותק נוסף בשם חדש. החלף מוחק את הקובץ הקיים ומתחיל מחדש.
+dup.keep=שמור את שניהם
+dup.open=פתח
+dup.replace=החלף
+dup.resume=המשך
+dup.title=הורדה כפולה
+dup.url=הכתובת הזו כבר נמצאת ברשימת ההורדות.
+info.tab_advanced=מתקדם
+info.tab_general=כללי
+info.tab_network=רשת
+info.tab_progress=התקדמות
+label.active_conn=חיבורים פעילים:
+label.after_done=לאחר ההורדה:
+label.checksum_short=סכום ביקורת:
+label.cookie_short=קוקי:
+label.headers_short=כותרות:
+label.max_conn=מגבלת חיבורים:
+label.mirror_short=כתובת מראה:
+label.referer=מפנה:
+label.remaining=נותר:
+label.retry=מספר ניסיונות:
+label.start_at=הורד מאוחר יותר ב- (HH:MM, ריק = עכשיו)
+label.user_agent=סוכן משתמש:
+menu.check_updates=בדוק עדכונים...
+menu.copy_diag=העתק אבחון
+menu.open_log=פתח תיקיית יומן
+msg.diag_copied=האבחון הועתק
+neat.block=לעולם אל תוריד אוטומטית מהתחום הזה
+neat.block_ask=להפסיק לקחת הורדות מ-{0}? הן יישארו בדפדפן.
+neat.block_title=אתרים חסומים
+set.blocked=אתרים חסומים (אחד בכל שורה; ההורדות מהם יישארו בדפדפן)
+set.naming=תבנית שמות ({host}/{type}/{name}; ריק = תיקיית ההורדות)
+set.speed_from=הגבלה זמנית חלה מ- (HH:MM)
+set.speed_to=הגבלה זמנית חלה עד (HH:MM)
+set.speed_window=הגבלת מהירות זמנית (KB/s, 0 = כבוי)
+set.tab_updates=עדכונים
+set.update_check=בדוק אוטומטית גרסה חדשה
+set.update_days=בדוק כל (ימים)
+st.eta=זמן משוער
+st.left=נותר
+status.file_missing=הקובץ הועבר או נמחק
+status.waitingnetwork=ממתין לרשת
+update.available=גרסה {0} זמינה (יש לך {1}). להוריד עכשיו?
+update.downloading=העדכון נוסף להורדות שלך.
+update.error=לא ניתן היה לבדוק עדכונים: {0}
+update.latest=יש לך את הגרסה העדכנית ({0}).
+update.notes=מה חדש:
+update.title=עדכון תוכנה

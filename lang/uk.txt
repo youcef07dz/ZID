@@ -1,0 +1,322 @@
+# ZyZoom Internet Downloader - Українська
+code=uk
+name=Українська
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=Файл
+menu.downloads=Завантаження
+menu.view=Вигляд
+menu.options=Параметри
+menu.help=Довідка
+menu.add_url=Додати URL...
+menu.resume_selected=Продовжити вибрані
+menu.pause_selected=Призупинити вибрані
+menu.restart_selected=Перезапустити вибрані
+menu.export=Експортувати список...
+menu.exit=Вихід
+menu.pause_all=Призупинити все
+menu.resume_all=Продовжити все
+menu.stop_all=Зупинити все
+menu.theme_light=Світла тема Windows 7
+menu.theme_dark=Темна тема Windows 7
+menu.settings=Налаштування...
+menu.about=Про програму...
+
+btn.add=Додати URL
+btn.start=Старт
+btn.pause=Призупинити
+btn.resume=Продовжити
+btn.restart=Перезапустити
+btn.edit=Редагувати
+btn.info=Інформація
+btn.remove=Видалити
+btn.about=Про програму
+btn.stop_all=Зупинити все
+btn.cancel=Скасувати
+btn.ok=OK
+btn.close=Закрити
+btn.paste=Вставити
+btn.open_folder=Відкрити теку
+btn.hide=Сховати
+
+tb.filter=Фільтр...
+
+cat.all=Усі завантаження
+cat.queue=Черга
+cat.downloading=Завантажується
+cat.paused=Призупинено
+cat.done=Завершено
+cat.error=Помилка
+cat.video=Відео
+cat.image=Зображення
+cat.audio=Аудіо
+cat.compressed=Стиснене
+cat.program=Програма
+cat.other=Інше
+
+col.name=Ім'я файлу
+col.status=Стан
+col.type=Тип
+col.size=Розмір
+col.progress=Прогрес
+col.speed=Швидкість
+col.eta=Залишилось
+col.date=Дата
+
+ctx.open=Відкрити
+ctx.folder=Відкрити теку
+ctx.copy=Копіювати URL
+ctx.resume=Старт / продовжити
+ctx.pause=Призупинити
+ctx.restart=Перезапустити
+ctx.edit=Редагувати...
+ctx.info=Інформація...
+ctx.prio_high=Пріоритет: високий
+ctx.prio_normal=Пріоритет: звичайний
+ctx.prio_low=Пріоритет: низький
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Видалити
+
+label.name=Назва:
+label.url=URL:
+label.type=Тип:
+label.size=Розмір:
+label.received=Отримано:
+label.status=Стан:
+label.started=Почато:
+label.priority=Пріоритет:
+label.save_to=Зберегти в:
+label.file=Файл:
+label.speed=Швидкість:
+label.eta=Залишилось:
+label.urls=URL-адреси (по одній у рядку)
+label.file_name=Ім'я файлу
+label.save_folder=Тека збереження
+label.cookie=Cookie (необов'язково)
+label.connections=З'єднання (0 = використати типове)
+label.speed_limit=Обмеження швидкості KB/s (0 = типове)
+
+add.title=Додати завантаження
+add.edit_title=Редагувати завантаження #{id}
+add.auto_url=(автоматично з URL)
+add.default_folder=(Типово: Downloads\ZID)
+add.cookie_ph=назва=значення; інше=значення
+add.paste_fail=Не вдалося прочитати буфер обміну. Натисніть Ctrl+V у полі.
+add.skipped=Пропущено {n} рядків. Можна додавати лише URL http, https і ftp.
+
+info.title=Інформація про завантаження
+prio.high=Високий
+prio.normal=Звичайний
+prio.low=Низький
+
+rm.title=Видалити завантаження
+rm.text=Видалити {n} завантажень зі списку?
+rm.also_file=Також видалити завантажені файли з диска
+rm.select_first=Спочатку виберіть рядок
+
+set.title=Налаштування
+set.maxconc=Максимум одночасних завантажень
+set.parts=Частин на завантаження
+set.speed=Максимальна швидкість (KB/s, 0 = без обмежень)
+set.proxy=Проксі (порожньо = напряму, напр. http://користувач:пароль@хост:8080)
+set.clip=Стежити за буфером обміну щодо URL http/https
+set.shutdown=Вимкнути ПК після завершення черги
+set.sort=Сортувати нові завантаження в теки за типом (відео, зображення, ...)
+set.schedule=Час старту черги (ГГ:ХХ, порожньо = зараз)
+set.language=Мова
+
+status.queued=У черзі
+status.downloading=Завантаження
+status.connecting=З'єднання
+status.paused=Призупинено
+status.done=Завершено
+status.error=Помилка
+status.starting=Запуск...
+status.scheduled=Заплановано:
+status.retrying=Помилка мережі, повторна спроба
+
+msg.url_copied=URL скопійовано
+msg.open=Відкрити
+msg.file_not_found=Файл не знайдено:
+msg.missing_resource=Ресурс відсутній
+msg.export_failed=Експорт не вдався:
+msg.export=Експорт
+
+tray.show=Показати вікно
+tray.pause_all=Призупинити все
+tray.resume_all=Продовжити все
+tray.exit=Вихід
+tray.balloon=Досі працює в системному лотку.
+
+about.title=Про програму
+about.folder=Тека завантажень:
+about.state=Файл стану:
+about.config=Файл налаштувань:
+
+popup.title=Завантаження - {name}
+
+# empty state
+empty.title=Немає що показати
+empty.hint=Додайте URL, перетягніть посилання або змініть фільтр.
+menu.retry_all=Повторити всі помилки
+menu.clear_done=Очистити завершені
+menu.reset_columns=Скинути макет стовпців
+menu.browsers=Інтеграція з браузерами...
+btn.retry_all=Повторити все
+btn.import=Імпорт...
+btn.open_file=Відкрити файл
+btn.hide_details=Сховати подробиці
+btn.show_details=Показати подробиці
+label.avg_speed=Середня швидкість:
+label.time_taken=Витрачений час:
+label.mirror=Дзеркало URL (необов'язково)
+label.checksum=Контрольна сума (необов'язково)
+label.headers=Додаткові заголовки (необов'язково, по одному в рядку)
+label.item_proxy=Проксі (необов'язково, порожньо = типове)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} URL уже є у списку. Все одно додати?
+set.tab_general=Загальні
+set.tab_connection=З'єднання
+set.tab_schedule=Розклад
+set.tab_appearance=Зовнішній вигляд
+set.capture=Типи файлів, які перехоплює розширення браузера (через кому)
+set.stop=Зупинити о (ГГ:ХХ, порожньо = ніколи)
+set.daily=Повторювати вікно старту й зупинки щодня
+set.accent=Колір акценту
+set.prog_start=Початковий колір індикатора прогресу
+set.prog_end=Кінцевий колір індикатора прогресу
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=Активно
+st.speed=Швидкість
+st.free=Вільно
+status.verified=Перевірено
+tray.done=Завантаження завершено:
+bi.title=Інтеграція з браузерами
+bi.intro=Виберіть родину браузера. Сторінка розширення відкриється у вибраному браузері.
+bi.firefox=Firefox
+bi.chromium=Браузери Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Виберіть браузер, у якому відкрити сторінку розширення:
+bi.none=Підтримуваний браузер не знайдено.
+bi.open_failed=Не вдалося запустити браузер:
+bi.copy_path=Копіювати шлях до розширення
+bi.copied=Скопійовано
+bi.copy_failed=Не вдалося скопіювати
+neat.title=Додати завантаження
+neat.url=URL:
+neat.name=Ім'я файлу:
+neat.folder=Зберегти в:
+neat.size=Розмір:
+neat.unknown_size=Невідомо
+neat.start=Почати
+neat.later=Почати пізніше
+neat.browse=Огляд...
+popup.tab_download=Завантаження
+popup.tab_options=Параметри
+popup.parts_downloading=Частин завантажується:
+popup.finished_title=Завантаження завершено
+popup.finished=Завантаження завершено
+popup.after=Після завершення завантаження
+popup.after_dialog=Показати вікно завершення
+popup.after_none=Нічого не робити
+popup.after_open=Відкрити файл
+popup.after_folder=Відкрити теку
+popup.after_shutdown=Вимкнути ПК
+popup.saved=Збережено
+btn.apply=Застосувати
+popup.details=Подробиці з'єднання
+popup.connections=Активних з'єднань:
+popup.parts=Частин:
+popup.remaining=Залишилось:
+popup.host=Хост:
+msg.merged_restart=Цей файл об'єднано з окремих відео- та аудіопотоків. Видаліть його й завантажте відео знову, щоб отримати файл повторно.
+
+ctx.refresh=Оновити URL
+msg.refresh_no_page=У цього завантаження немає сторінки-джерела для відкриття.
+about.no_errors=Помилок немає
+about.recent_errors=Нещодавні помилки:
+add.advanced=Додаткові параметри
+add.probe_checking=Перевірка URL...
+add.probe_size=Розмір
+auth.forget_confirm=Забути всі збережені облікові дані сайтів?
+auth.message=Цьому серверу потрібні ім'я користувача та пароль.
+auth.pass=Пароль:
+auth.remember=Запам'ятати для цього сайту
+auth.title=Потрібні облікові дані
+auth.user=Ім'я користувача:
+btn.clean_history=Очистити історію
+btn.forget_credentials=Забути збережені облікові дані
+btn.no=Ні
+btn.show_more=Показати більше
+btn.yes=Так
+clean.button=Очистити
+clean.orphans=Також видалити залишкові часткові файли (.aria2, .part) у папці завантажень
+clean.text=Видалити всі завершені завантаження зі списку? Завантажені файли залишаться на диску.
+clean.title=Очистити історію
+ctx.credentials=Введіть облікові дані...
+ctx.retry_single=Повторити з 1 з'єднанням
+dup.cancel=Скасувати
+dup.file=Цільовий файл уже існує.
+dup.hint=Продовжити продовжує наявний запис. Зберегти обидва зберігає ще одну копію під новим ім'ям. Замінити видаляє наявний файл і починає заново.
+dup.hint_file=Зберегти обидва зберігає ще одну копію під новим ім'ям. Замінити видаляє наявний файл і починає заново.
+dup.keep=Зберегти обидва
+dup.open=Відкрити
+dup.replace=Замінити
+dup.resume=Продовжити
+dup.title=Повторне завантаження
+dup.url=Цей URL уже є у списку завантажень.
+info.tab_advanced=Додатково
+info.tab_general=Загальні
+info.tab_network=Мережа
+info.tab_progress=Поступ
+label.active_conn=Активні з'єднання:
+label.after_done=Після завантаження:
+label.checksum_short=Контрольна сума:
+label.cookie_short=Cookie:
+label.headers_short=Заголовки:
+label.max_conn=Ліміт з'єднань:
+label.mirror_short=Дзеркальний URL:
+label.referer=Джерело:
+label.remaining=Залишилося:
+label.retry=Кількість спроб:
+label.start_at=Завантажити пізніше о (HH:MM, порожньо = зараз)
+label.user_agent=User agent:
+menu.check_updates=Перевірити оновлення...
+menu.copy_diag=Копіювати діагностику
+menu.open_log=Відкрити папку журналу
+msg.diag_copied=Діагностику скопійовано
+neat.block=Ніколи не завантажувати автоматично з цього домену
+neat.block_ask=Припинити перехоплювати завантаження з {0}? Вони залишаться в браузері.
+neat.block_title=Заблоковані сайти
+set.blocked=Заблоковані сайти (по одному в рядку; їхні завантаження залишаються в браузері)
+set.naming=Шаблон назв ({host}/{type}/{name}; порожньо = папка завантажень)
+set.speed_from=Тимчасовий ліміт діє з (HH:MM)
+set.speed_to=Тимчасовий ліміт діє до (HH:MM)
+set.speed_window=Тимчасовий ліміт швидкості (КБ/с, 0 = вимк.)
+set.tab_updates=Оновлення
+set.update_check=Автоматично перевіряти нову версію
+set.update_days=Перевіряти кожні (днів)
+st.eta=Залишилося часу
+st.left=Залишилося
+status.file_missing=Файл переміщено або видалено
+status.waitingnetwork=Очікування мережі
+update.available=Доступна версія {0} (у вас {1}). Завантажити зараз?
+update.downloading=Оновлення додано до ваших завантажень.
+update.error=Не вдалося перевірити оновлення: {0}
+update.latest=У вас остання версія ({0}).
+update.notes=Що нового:
+update.title=Оновлення програми

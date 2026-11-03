@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZyZoom icon generator</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:"Segoe UI","Helvetica Neue",Tahoma,sans-serif;font-size:13px;background:#f5f6f9;color:#1b2130;-ms-user-select:none;user-select:none}
+body.dark{background:#0f131a;color:#e6eaf1}
+header{display:flex;align-items:center;height:44px;padding:0 18px;color:#fff;background:#4f46e5;background:linear-gradient(90deg,#4f46e5,#7c3aed)}
+body.dark header{background:linear-gradient(90deg,#312e81,#6d28d9)}
+header .dot{width:10px;height:10px;border-radius:50%;margin-right:10px;background:#22d3ee;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+header h1{margin:0;font-size:14px;font-weight:600;letter-spacing:.2px}
+header .sp{flex:1}
+header button{font:inherit;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:5px 12px;cursor:pointer}
+header button:hover{background:rgba(255,255,255,.22)}
+main{max-width:980px;margin:0 auto;padding:22px 18px 40px;display:flex;flex-wrap:wrap;gap:16px}
+.card{flex:1 1 420px;background:#fff;border:1px solid #e6e9f0;border-radius:10px;box-shadow:0 1px 2px rgba(15,23,42,.04);padding:18px 20px}
+body.dark .card{background:#171d27;border-color:#2a3240;box-shadow:0 1px 2px rgba(0,0,0,.35)}
+.card h2{margin:0 0 4px;font-size:13px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#6b7480}
+body.dark .card h2{color:#93a0b4}
+.muted{color:#68717f;margin:0 0 14px}
+body.dark .muted{color:#93a0b4}
+.colors{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0}
+.colors input[type=color]{width:32px;height:26px;padding:0;border:1px solid #dfe3ec;border-radius:6px;background:#fff;cursor:pointer}
+.colors .sw{width:22px;height:22px;padding:0;border-radius:50%;border:1px solid rgba(15,23,42,.18);cursor:pointer}
+.colors .sw.on{box-shadow:0 0 0 2px #fff,0 0 0 4px #6366f1}
+body.dark .colors input[type=color]{border-color:#2b3341;background:#1b212c;color-scheme:dark}
+body.dark .colors .sw.on{box-shadow:0 0 0 2px #171d27,0 0 0 4px #818cf8}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.tags .tag{font:inherit;font-size:11px;font-weight:600;padding:4px 11px;border-radius:999px;border:1px solid #e3e7f0;background:#fff;color:#5b6478;cursor:pointer}
+.tags .tag:hover{background:#f5f7fb;border-color:#cfd6e6;color:#3730a3}
+.tags .tag.on{background:#4f46e5;border-color:#4338ca;color:#fff}
+body.dark .tags .tag{background:#1b212c;border-color:#2b3341;color:#aeb9cb}
+body.dark .tags .tag:hover{background:#232b38;border-color:#3a4557;color:#c7d2fe}
+body.dark .tags .tag.on{background:#6366f1;border-color:#4f46e5;color:#fff}
+.designs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.design{display:flex;align-items:center;gap:8px;padding:5px 11px 5px 6px;font:inherit;font-size:12px;font-weight:600;color:#3b4354;background:#fff;border:1px solid #e3e7f0;border-radius:8px;cursor:pointer}
+.design:hover{background:#f5f7fb;border-color:#cfd6e6}
+.design.on{border-color:#6366f1;box-shadow:0 0 0 2px rgba(99,102,241,.2)}
+.design canvas{display:block;width:22px;height:22px}
+body.dark .design{background:#1b212c;border-color:#2b3341;color:#dbe2ee}
+body.dark .design:hover{background:#232b38;border-color:#3a4557}
+body.dark .design.on{border-color:#818cf8;box-shadow:0 0 0 2px rgba(129,140,248,.25)}
+.sizes{display:flex;flex-wrap:wrap;align-items:flex-end;gap:22px 18px;padding:18px 0 6px}
+figure{margin:0;text-align:center}
+figure canvas{display:block;margin:0 auto;filter:drop-shadow(0 2px 4px rgba(15,23,42,.18))}
+figure figcaption{margin-top:6px;font-size:10px;font-weight:600;color:#8a93a3}
+body.dark figure figcaption{color:#7c8798}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+button.btn{font:inherit;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;border:1px solid #dfe3ec;background:#fff;color:#333b4f}
+button.btn:hover{background:#f5f7fb;border-color:#cfd6e6;color:#3730a3}
+body.dark button.btn{background:#1b212c;color:#dbe2ee;border-color:#2b3341}
+body.dark button.btn:hover{background:#232b38;border-color:#3a4557;color:#c7d2fe}
+button.btn.primary{background:#4f46e5;border-color:#4338ca;color:#fff}
+button.btn.primary:hover{background:#6366f1;border-color:#4f46e5;color:#fff}
+.formats{display:flex;align-items:center;gap:8px;margin:0 0 12px}
+.formats .seg{font:inherit;font-size:12px;font-weight:600;padding:6px 14px;border-radius:8px;border:1px solid #dfe3ec;background:#fff;color:#333b4f;cursor:pointer}
+.formats .seg:hover{background:#f5f7fb;border-color:#cfd6e6}
+.formats .seg.on{background:#eef1ff;border-color:#6366f1;color:#4338ca;box-shadow:0 0 0 2px rgba(99,102,241,.15)}
+.formats select{margin-left:2px;padding:6px 8px;font:inherit;font-size:12px;font-weight:600;border:1px solid #dfe3ec;border-radius:8px;background:#fff;color:#333b4f;cursor:pointer}
+body.dark .formats .seg{background:#1b212c;border-color:#2b3341;color:#dbe2ee}
+body.dark .formats .seg:hover{background:#232b38;border-color:#3a4557}
+body.dark .formats .seg.on{background:#232a3d;border-color:#818cf8;color:#c7d2fe;box-shadow:0 0 0 2px rgba(129,140,248,.18)}
+body.dark .formats select{background:#1b212c;border-color:#2b3341;color:#dbe2ee;color-scheme:dark}
+.checks{margin:16px 0 0;padding:12px 14px;border-radius:8px;background:#f7f8fb;border:1px solid #eceff5;font-size:12px;color:#68717f}
+body.dark .checks{background:#12171e;border-color:#232b37;color:#93a0b4}
+.checks b{color:#1b2130}
+body.dark .checks b{color:#e6eaf1}
+.checks ul{margin:6px 0 0;padding-left:18px}
+.checks li{margin:2px 0}
+</style>
+</head>
+<body>
+<header>
+  <span class="dot"></span>
+  <h1>ZyZoom icon generator</h1>
+  <span class="sp"></span>
+  <button id="theme" type="button">Dark</button>
+</header>
+<main>
+  <section class="card">
+    <h2>Preview</h2>
+    <div class="tags" id="tags"></div>
+    <div class="designs" id="designs"></div>
+    <div class="colors" id="colors"></div>
+    <div class="sizes" id="sizes"></div>
+  </section>
+  <section class="card">
+    <h2>Export</h2>
+    <p class="muted">Every icon is drawn and packaged in this page before the download starts. Nothing is uploaded.</p>
+    <div class="formats">
+      <button class="seg on" type="button" data-format="ico">ICO</button>
+      <button class="seg" type="button" data-format="png">PNG</button>
+      <select id="pngSize" style="display:none"></select>
+    </div>
+    <div class="row">
+      <button class="btn primary" id="zip" type="button">Download all (.zip)</button>
+      <button class="btn" id="ico" type="button">Download .ico</button>
+    </div>
+    <div class="checks">
+      <b id="stat">Generating...</b>
+      <ul>
+        <li><b>app.ico</b> - 32-bit PNG entries, 16 to 256 px, Windows Vista and newer.</li>
+        <li><b>icon-16.png ... icon-256.png</b> - individual sizes for stores and docs.</li>
+        <li>22 icons grouped by tag: Transfer, Files, Media, Web, System and Status.</li>
+        <li>The gradient and white glyph follow the chosen design and accent color above.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script>
+var ICON_SIZES = [16, 20, 24, 32, 40, 48, 64, 96, 128, 256];
+var COLORS = ['#4f46e5', '#2563eb', '#0891b2', '#059669', '#d97706', '#dc2626', '#7c3aed', '#0f172a'];
+var TAGS = ['Transfer', 'Files', 'Media', 'Web', 'System', 'Status'];
+var ACCENT = '#4f46e5';
+
+function hexToRgb(hex) {
+  hex = hex.replace('#', '');
+  return [parseInt(hex.substr(0, 2), 16), parseInt(hex.substr(2, 2), 16), parseInt(hex.substr(4, 2), 16)];
+}
+
+function shade(hex, amount) {
+  var c = hexToRgb(hex), out = [];
+  for (var i = 0; i < 3; i++) {
+    var v = amount >= 0 ? c[i] + (255 - c[i]) * amount : c[i] * (1 + amount);
+    out.push(Math.max(0, Math.min(255, Math.round(v))));
+  }
+  return 'rgb(' + out.join(',') + ')';
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function stroke(ctx, size, width) {
+  ctx.strokeStyle = '#fff';
+  ctx.lineWidth = Math.max(1, size * (width || 0.09));
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+}
+
+var DESIGNS = [
+  {
+    id: 'download', name: 'Download', tag: 'Transfer',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.095);
+      ctx.beginPath(); ctx.moveTo(s * 0.5, s * 0.27); ctx.lineTo(s * 0.5, s * 0.63); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.31, s * 0.47); ctx.lineTo(s * 0.5, s * 0.66); ctx.lineTo(s * 0.69, s * 0.47); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.29, s * 0.80); ctx.lineTo(s * 0.71, s * 0.80); ctx.stroke();
+    }
+  },
+  {
+    id: 'cloud', name: 'Cloud', tag: 'Transfer',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.arc(s * 0.40, s * 0.56, s * 0.13, 0, Math.PI * 2);
+      ctx.arc(s * 0.54, s * 0.47, s * 0.16, 0, Math.PI * 2);
+      ctx.arc(s * 0.67, s * 0.58, s * 0.11, 0, Math.PI * 2);
+      ctx.arc(s * 0.54, s * 0.61, s * 0.13, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = shade(ACCENT, -0.32);
+      ctx.lineWidth = Math.max(1, s * 0.055);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath(); ctx.moveTo(s * 0.54, s * 0.49); ctx.lineTo(s * 0.54, s * 0.66); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.47, s * 0.60); ctx.lineTo(s * 0.54, s * 0.67); ctx.lineTo(s * 0.61, s * 0.60); ctx.stroke();
+    }
+  },
+  {
+    id: 'folder', name: 'Folder', tag: 'Files',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      roundRect(ctx, s * 0.25, s * 0.31, s * 0.22, s * 0.12, s * 0.035); ctx.fill();
+      roundRect(ctx, s * 0.24, s * 0.37, s * 0.52, s * 0.32, s * 0.05); ctx.fill();
+    }
+  },
+  {
+    id: 'bolt', name: 'Bolt', tag: 'Transfer',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(s * 0.57, s * 0.19);
+      ctx.lineTo(s * 0.33, s * 0.56);
+      ctx.lineTo(s * 0.47, s * 0.56);
+      ctx.lineTo(s * 0.43, s * 0.81);
+      ctx.lineTo(s * 0.67, s * 0.44);
+      ctx.lineTo(s * 0.53, s * 0.44);
+      ctx.closePath();
+      ctx.fill();
+    }
+  },
+  {
+    id: 'globe', name: 'Globe', tag: 'Web',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.075);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.27, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.ellipse(s * 0.5, s * 0.5, s * 0.115, s * 0.27, 0, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.23, s * 0.5); ctx.lineTo(s * 0.77, s * 0.5); ctx.stroke();
+    }
+  },
+  {
+    id: 'disk', name: 'Disk', tag: 'Files',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.075);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.26, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.085, 0, Math.PI * 2); ctx.stroke();
+    }
+  },
+  {
+    id: 'music', name: 'Music', tag: 'Media',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s * 0.37, s * 0.68, s * 0.075, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(s * 0.63, s * 0.63, s * 0.075, 0, Math.PI * 2); ctx.fill();
+      stroke(ctx, s, 0.055);
+      ctx.beginPath(); ctx.moveTo(s * 0.445, s * 0.68); ctx.lineTo(s * 0.445, s * 0.37); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.705, s * 0.63); ctx.lineTo(s * 0.705, s * 0.32); ctx.stroke();
+      stroke(ctx, s, 0.085);
+      ctx.beginPath(); ctx.moveTo(s * 0.445, s * 0.37); ctx.lineTo(s * 0.705, s * 0.32); ctx.stroke();
+    }
+  },
+  {
+    id: 'video', name: 'Video', tag: 'Media',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.06);
+      roundRect(ctx, s * 0.25, s * 0.29, s * 0.50, s * 0.42, s * 0.07); ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(s * 0.45, s * 0.39); ctx.lineTo(s * 0.45, s * 0.61); ctx.lineTo(s * 0.62, s * 0.50);
+      ctx.closePath(); ctx.fill();
+    }
+  },
+  {
+    id: 'archive', name: 'Archive', tag: 'Files',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      roundRect(ctx, s * 0.28, s * 0.25, s * 0.44, s * 0.50, s * 0.06); ctx.fill();
+      ctx.fillStyle = shade(ACCENT, -0.32);
+      ctx.fillRect(s * 0.475, s * 0.25, s * 0.05, s * 0.32);
+      roundRect(ctx, s * 0.455, s * 0.58, s * 0.09, s * 0.10, s * 0.02); ctx.fill();
+    }
+  },
+  {
+    id: 'code', name: 'Code', tag: 'Web',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.07);
+      ctx.beginPath(); ctx.moveTo(s * 0.42, s * 0.36); ctx.lineTo(s * 0.29, s * 0.50); ctx.lineTo(s * 0.42, s * 0.64); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.58, s * 0.36); ctx.lineTo(s * 0.71, s * 0.50); ctx.lineTo(s * 0.58, s * 0.64); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.55, s * 0.32); ctx.lineTo(s * 0.45, s * 0.68); ctx.stroke();
+    }
+  },
+  {
+    id: 'shield', name: 'Shield', tag: 'System',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(s * 0.50, s * 0.20);
+      ctx.lineTo(s * 0.72, s * 0.29);
+      ctx.lineTo(s * 0.72, s * 0.50);
+      ctx.quadraticCurveTo(s * 0.72, s * 0.68, s * 0.50, s * 0.81);
+      ctx.quadraticCurveTo(s * 0.28, s * 0.68, s * 0.28, s * 0.50);
+      ctx.lineTo(s * 0.28, s * 0.29);
+      ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = shade(ACCENT, -0.32);
+      ctx.lineWidth = Math.max(1, s * 0.065);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath(); ctx.moveTo(s * 0.40, s * 0.50); ctx.lineTo(s * 0.47, s * 0.58); ctx.lineTo(s * 0.62, s * 0.42); ctx.stroke();
+    }
+  },
+  {
+    id: 'star', name: 'Star', tag: 'Status',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      for (var i = 0; i < 10; i++) {
+        var a = -Math.PI / 2 + i * Math.PI / 5;
+        var r = (i % 2 ? 0.125 : 0.29) * s;
+        var x = s * 0.5 + Math.cos(a) * r, y = s * 0.51 + Math.sin(a) * r;
+        if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y);
+      }
+      ctx.closePath(); ctx.fill();
+    }
+  },
+  {
+    id: 'file', name: 'File', tag: 'Files',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(s * 0.33, s * 0.20);
+      ctx.lineTo(s * 0.58, s * 0.20);
+      ctx.lineTo(s * 0.69, s * 0.31);
+      ctx.lineTo(s * 0.69, s * 0.80);
+      ctx.lineTo(s * 0.33, s * 0.80);
+      ctx.closePath(); ctx.fill();
+      ctx.fillStyle = shade(ACCENT, -0.30);
+      ctx.beginPath();
+      ctx.moveTo(s * 0.58, s * 0.20); ctx.lineTo(s * 0.69, s * 0.31); ctx.lineTo(s * 0.58, s * 0.31);
+      ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = shade(ACCENT, -0.30);
+      ctx.lineWidth = Math.max(1, s * 0.04);
+      ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(s * 0.40, s * 0.55); ctx.lineTo(s * 0.62, s * 0.55); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(s * 0.40, s * 0.65); ctx.lineTo(s * 0.57, s * 0.65); ctx.stroke();
+    }
+  },
+  {
+    id: 'image', name: 'Image', tag: 'Media',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.06);
+      roundRect(ctx, s * 0.25, s * 0.29, s * 0.50, s * 0.42, s * 0.06); ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s * 0.39, s * 0.41, s * 0.045, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(s * 0.29, s * 0.66); ctx.lineTo(s * 0.43, s * 0.50); ctx.lineTo(s * 0.52, s * 0.60);
+      ctx.lineTo(s * 0.59, s * 0.53); ctx.lineTo(s * 0.71, s * 0.66);
+      ctx.closePath(); ctx.fill();
+    }
+  },
+  {
+    id: 'play', name: 'Play', tag: 'Media',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.27, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = shade(ACCENT, -0.18);
+      ctx.beginPath();
+      ctx.moveTo(s * 0.44, s * 0.37); ctx.lineTo(s * 0.44, s * 0.63); ctx.lineTo(s * 0.64, s * 0.50);
+      ctx.closePath(); ctx.fill();
+    }
+  },
+  {
+    id: 'link', name: 'Link', tag: 'Web',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.06);
+      ctx.save();
+      ctx.translate(s * 0.5, s * 0.5);
+      ctx.rotate(-Math.PI / 4);
+      roundRect(ctx, -s * 0.30, -s * 0.10, s * 0.34, s * 0.20, s * 0.10); ctx.stroke();
+      roundRect(ctx, -s * 0.04, -s * 0.10, s * 0.34, s * 0.20, s * 0.10); ctx.stroke();
+      ctx.restore();
+    }
+  },
+  {
+    id: 'wifi', name: 'Wifi', tag: 'Web',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.065);
+      var cx = s * 0.5, cy = s * 0.72;
+      var radii = [0.10, 0.18, 0.26];
+      for (var i = 0; i < radii.length; i++) {
+        ctx.beginPath();
+        ctx.arc(cx, cy, s * radii[i], Math.PI * 1.22, Math.PI * 1.78);
+        ctx.stroke();
+      }
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(cx, cy, s * 0.045, 0, Math.PI * 2); ctx.fill();
+    }
+  },
+  {
+    id: 'settings', name: 'Settings', tag: 'System',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.055);
+      var ys = [0.34, 0.50, 0.66], knobs = [0.42, 0.60, 0.36];
+      for (var i = 0; i < ys.length; i++) {
+        ctx.beginPath(); ctx.moveTo(s * 0.28, s * ys[i]); ctx.lineTo(s * 0.72, s * ys[i]); ctx.stroke();
+      }
+      for (var j = 0; j < knobs.length; j++) {
+        ctx.fillStyle = '#fff';
+        ctx.beginPath(); ctx.arc(s * knobs[j], s * ys[j], s * 0.075, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = shade(ACCENT, -0.25);
+        ctx.beginPath(); ctx.arc(s * knobs[j], s * ys[j], s * 0.028, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+  },
+  {
+    id: 'lock', name: 'Lock', tag: 'System',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.075);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.44, s * 0.13, Math.PI, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = '#fff';
+      roundRect(ctx, s * 0.32, s * 0.44, s * 0.36, s * 0.30, s * 0.05); ctx.fill();
+      ctx.fillStyle = shade(ACCENT, -0.30);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.56, s * 0.042, 0, Math.PI * 2); ctx.fill();
+      ctx.fillRect(s * 0.485, s * 0.56, s * 0.03, s * 0.09);
+    }
+  },
+  {
+    id: 'info', name: 'Info', tag: 'System',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.07);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.27, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.36, s * 0.04, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(s * 0.5, s * 0.47); ctx.lineTo(s * 0.5, s * 0.64); ctx.stroke();
+    }
+  },
+  {
+    id: 'check', name: 'Check', tag: 'Status',
+    glyph: function (ctx, s) {
+      stroke(ctx, s, 0.07);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.27, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(s * 0.35, s * 0.51); ctx.lineTo(s * 0.46, s * 0.62); ctx.lineTo(s * 0.66, s * 0.39);
+      ctx.stroke();
+    }
+  },
+  {
+    id: 'warning', name: 'Warning', tag: 'Status',
+    glyph: function (ctx, s) {
+      ctx.fillStyle = '#fff';
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = Math.max(1, s * 0.05);
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(s * 0.5, s * 0.23); ctx.lineTo(s * 0.77, s * 0.73); ctx.lineTo(s * 0.23, s * 0.73);
+      ctx.closePath(); ctx.stroke(); ctx.fill();
+      ctx.strokeStyle = shade(ACCENT, -0.32);
+      ctx.lineWidth = Math.max(1, s * 0.055);
+      ctx.beginPath(); ctx.moveTo(s * 0.5, s * 0.42); ctx.lineTo(s * 0.5, s * 0.58); ctx.stroke();
+      ctx.fillStyle = shade(ACCENT, -0.32);
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.66, s * 0.032, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+];
+
+function designById(id) {
+  for (var i = 0; i < DESIGNS.length; i++) if (DESIGNS[i].id === id) return DESIGNS[i];
+  return DESIGNS[0];
+}
+
+function drawIcon(canvas, size, designId) {
+  canvas.width = size;
+  canvas.height = size;
+  var ctx = canvas.getContext('2d');
+  var g = ctx.createLinearGradient(0, 0, size, size);
+  g.addColorStop(0, shade(ACCENT, 0.16));
+  g.addColorStop(1, shade(ACCENT, -0.18));
+  roundRect(ctx, 0, 0, size, size, size * 0.23);
+  ctx.fillStyle = g;
+  ctx.fill();
+  designById(designId).glyph(ctx, size);
+}
+
+function pngBytes(size, designId) {
+  var canvas = document.createElement('canvas');
+  drawIcon(canvas, size, designId);
+  var b64 = canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, '');
+  var bin = atob(b64);
+  var out = new Uint8Array(bin.length);
+  for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+
+function u32(n) {
+  return [n & 255, (n >>> 8) & 255, (n >>> 16) & 255, (n >>> 24) & 255];
+}
+
+function u16(n) {
+  return [n & 255, (n >>> 8) & 255];
+}
+
+// ICO container holding PNG images (supported since Windows Vista).
+function buildIco(images) {
+  var count = images.length;
+  var total = 6 + 16 * count;
+  for (var i = 0; i < count; i++) total += images[i].bytes.length;
+  var out = new Uint8Array(total);
+  var pos = 0;
+  function put(b) { for (var k = 0; k < b.length; k++) out[pos++] = b[k]; }
+  put([0, 0, 1, 0]);
+  put(u16(count));
+  var offset = 6 + 16 * count;
+  for (var j = 0; j < count; j++) {
+    var px = images[j].size;
+    put([px >= 256 ? 0 : px, px >= 256 ? 0 : px, 0, 0]);
+    put(u16(1));
+    put(u16(32));
+    put(u32(images[j].bytes.length));
+    put(u32(offset));
+    offset += images[j].bytes.length;
+  }
+  for (var k = 0; k < count; k++) put(images[k].bytes);
+  return out;
+}
+
+var CRC_TABLE = (function () {
+  var t = new Uint32Array(256);
+  for (var n = 0; n < 256; n++) {
+    var c = n;
+    for (var k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+    t[n] = c >>> 0;
+  }
+  return t;
+})();
+
+function crc32(bytes) {
+  var c = 0xffffffff;
+  for (var i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 255] ^ (c >>> 8);
+  return (c ^ 0xffffffff) >>> 0;
+}
+
+function dosTime(d) {
+  return ((d.getHours() & 31) << 11) | ((d.getMinutes() & 63) << 5) | ((d.getSeconds() / 2) & 31);
+}
+
+function dosDate(d) {
+  return (((d.getFullYear() - 1980) & 127) << 9) | (((d.getMonth() + 1) & 15) << 5) | (d.getDate() & 31);
+}
+
+function utf8(s) {
+  return new TextEncoder().encode(s);
+}
+
+// ZIP archive with stored (uncompressed) entries - the icons are already compressed PNGs.
+function buildZip(files) {
+  var now = new Date();
+  var time = dosTime(now), date = dosDate(now);
+  var parts = [], central = [], offset = 0;
+  for (var i = 0; i < files.length; i++) {
+    var name = utf8(files[i].name);
+    var data = files[i].data;
+    var crc = crc32(data);
+    var local = [].concat([0x50, 0x4b, 0x03, 0x04], u16(20), u16(0), u16(0), u16(time), u16(date),
+      u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0));
+    parts.push(new Uint8Array(local), name, data);
+    central.push(new Uint8Array([].concat([0x50, 0x4b, 0x01, 0x02], u16(20), u16(20), u16(0), u16(0),
+      u16(time), u16(date), u32(crc), u32(data.length), u32(data.length), u16(name.length),
+      u16(0), u16(0), u16(0), u16(0), u32(0), u32(offset))), name);
+    offset += local.length + name.length + data.length;
+  }
+  var centralSize = 0;
+  for (var j = 0; j < central.length; j++) centralSize += central[j].length;
+  var end = new Uint8Array([].concat([0x50, 0x4b, 0x05, 0x06], u16(0), u16(0), u16(files.length),
+    u16(files.length), u32(centralSize), u32(offset), u16(0)));
+  var all = parts.concat(central, [end]);
+  var size = 0;
+  for (var k = 0; k < all.length; k++) size += all[k].length;
+  var out = new Uint8Array(size);
+  var pos = 0;
+  for (var m = 0; m < all.length; m++) { out.set(all[m], pos); pos += all[m].length; }
+  return out;
+}
+
+function download(bytes, name, type) {
+  var blob = new Blob([bytes], { type: type });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { iconSizes: ICON_SIZES, buildIco: buildIco, buildZip: buildZip, crc32: crc32, drawIcon: drawIcon };
+}
+
+if (typeof document !== 'undefined' && document.getElementById) {
+  (function () {
+    var icoBytes = null, pngs = [], design = 'download';
+    function reset() { icoBytes = null; pngs = []; }
+
+    window.iconGen = {
+      pngBytes: pngBytes, buildIco: buildIco, buildZip: buildZip, sizes: ICON_SIZES, designs: DESIGNS,
+      accent: function () { return ACCENT; },
+      setAccent: function (c) { setAccent(c); }
+    };
+
+    function renderColors() {
+      var box = document.getElementById('colors');
+      box.innerHTML = '';
+      var pick = document.createElement('input');
+      pick.type = 'color';
+      pick.id = 'color';
+      pick.value = ACCENT;
+      pick.title = 'Custom color';
+      pick.oninput = function () { setAccent(this.value); };
+      box.appendChild(pick);
+      for (var i = 0; i < COLORS.length; i++) {
+        (function (c) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'sw' + (c === ACCENT ? ' on' : '');
+          b.setAttribute('data-color', c);
+          b.style.background = c;
+          b.title = c;
+          b.onclick = function () { setAccent(c); };
+          box.appendChild(b);
+        })(COLORS[i]);
+      }
+    }
+
+    function setAccent(c) {
+      if (!/^#[0-9a-f]{6}$/i.test(c || '') || c.toLowerCase() === ACCENT) return;
+      ACCENT = c.toLowerCase();
+      reset();
+      var pick = document.getElementById('color');
+      if (pick) pick.value = ACCENT;
+      var sws = document.querySelectorAll('#colors .sw');
+      for (var i = 0; i < sws.length; i++) {
+        sws[i].className = 'sw' + (sws[i].getAttribute('data-color') === ACCENT ? ' on' : '');
+      }
+      renderSizes();
+    }
+
+    var format = 'ico', pngSize = 256, activeTag = 'All';
+
+    function renderTags() {
+      var box = document.getElementById('tags');
+      box.innerHTML = '';
+      var tags = ['All'].concat(TAGS);
+      for (var i = 0; i < tags.length; i++) {
+        (function (tag) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'tag' + (tag === activeTag ? ' on' : '');
+          b.textContent = tag;
+          b.onclick = function () {
+            if (activeTag === tag) return;
+            activeTag = tag;
+            if (tag !== 'All' && designById(design).tag !== tag) {
+              for (var j = 0; j < DESIGNS.length; j++) {
+                if (DESIGNS[j].tag === tag) { design = DESIGNS[j].id; reset(); renderSizes(); break; }
+              }
+            }
+            renderTags();
+            renderDesigns();
+          };
+          box.appendChild(b);
+        })(tags[i]);
+      }
+    }
+
+    function updateSave() {
+      var b = document.getElementById('ico');
+      b.textContent = format === 'ico' ? 'Download .ico' : 'Download .png';
+      b.title = format === 'ico' ? 'Single .ico with every size' : 'Single ' + pngSize + ' px .png';
+    }
+
+    function renderFormats() {
+      var segs = document.querySelectorAll('.formats .seg');
+      for (var i = 0; i < segs.length; i++) {
+        var seg = segs[i];
+        seg.className = 'seg' + (seg.getAttribute('data-format') === format ? ' on' : '');
+        seg.onclick = function () {
+          format = this.getAttribute('data-format');
+          document.getElementById('pngSize').style.display = format === 'png' ? '' : 'none';
+          renderFormats();
+          updateSave();
+        };
+      }
+      var sel = document.getElementById('pngSize');
+      if (!sel.options.length) {
+        for (var j = 0; j < ICON_SIZES.length; j++) {
+          var o = document.createElement('option');
+          o.value = ICON_SIZES[j];
+          o.textContent = ICON_SIZES[j] + ' px';
+          sel.appendChild(o);
+        }
+        sel.value = pngSize;
+      }
+      sel.onchange = function () { pngSize = parseInt(this.value, 10); updateSave(); };
+    }
+
+    function generate() {
+      if (icoBytes) return { ico: icoBytes, pngs: pngs };
+      pngs = ICON_SIZES.map(function (s) { return { size: s, bytes: pngBytes(s, design) }; });
+      icoBytes = buildIco(pngs);
+      var head = new DataView(icoBytes.buffer);
+      if (head.getUint16(2, true) !== 1 || head.getUint16(4, true) !== ICON_SIZES.length) throw new Error('ICO build failed');
+      return { ico: icoBytes, pngs: pngs };
+    }
+
+    function renderDesigns() {
+      var box = document.getElementById('designs');
+      box.innerHTML = '';
+      for (var i = 0; i < DESIGNS.length; i++) {
+        var d = DESIGNS[i];
+        if (activeTag !== 'All' && d.tag !== activeTag) continue;
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'design' + (d.id === design ? ' on' : '');
+        var c = document.createElement('canvas');
+        drawIcon(c, 48, d.id);
+        b.appendChild(c);
+        var label = document.createElement('span');
+        label.textContent = d.name;
+        b.appendChild(label);
+        b.onclick = (function (id) {
+          return function () {
+            if (design === id) return;
+            design = id;
+            reset();
+            renderDesigns();
+            renderSizes();
+          };
+        })(d.id);
+        box.appendChild(b);
+      }
+    }
+
+    function renderSizes() {
+      var sizes = document.getElementById('sizes');
+      sizes.innerHTML = '';
+      for (var i = 0; i < ICON_SIZES.length; i++) {
+        var s = ICON_SIZES[i];
+        var fig = document.createElement('figure');
+        var c = document.createElement('canvas');
+        drawIcon(c, s, design);
+        var cap = document.createElement('figcaption');
+        cap.textContent = s + ' px';
+        fig.appendChild(c);
+        fig.appendChild(cap);
+        sizes.appendChild(fig);
+      }
+      var g = generate();
+      var total = g.pngs.reduce(function (n, p) { return n + p.bytes.length; }, 0);
+      document.getElementById('stat').textContent =
+        designById(design).name + ' - ' + ICON_SIZES.length + ' sizes - app.ico ' +
+        (g.ico.length / 1024).toFixed(1) + ' KB - zip ' +
+        ((total + g.ico.length) / 1024 + 1).toFixed(1) + ' KB';
+    }
+
+    document.getElementById('zip').onclick = function () {
+      var g = generate();
+      var files = [{ name: 'app.ico', data: g.ico }];
+      for (var i = 0; i < g.pngs.length; i++) {
+        files.push({ name: 'icon-' + g.pngs[i].size + '.png', data: g.pngs[i].bytes });
+      }
+      download(buildZip(files), 'zid-icons-' + design + '.zip', 'application/zip');
+    };
+
+    document.getElementById('ico').onclick = function () {
+      var g = generate();
+      if (format === 'ico') { download(g.ico, 'app.ico', 'image/x-icon'); return; }
+      for (var i = 0; i < g.pngs.length; i++) {
+        if (g.pngs[i].size === pngSize) {
+          download(g.pngs[i].bytes, 'icon-' + pngSize + '.png', 'image/png');
+          return;
+        }
+      }
+    };
+
+    var themeBtn = document.getElementById('theme');
+    if (location.hash === '#dark') { document.body.classList.add('dark'); themeBtn.textContent = 'Light'; }
+    themeBtn.onclick = function () {
+      var dark = document.body.classList.toggle('dark');
+      themeBtn.textContent = dark ? 'Light' : 'Dark';
+    };
+
+    renderTags();
+    renderDesigns();
+    renderColors();
+    renderFormats();
+    updateSave();
+    renderSizes();
+  })();
+}
+</script>
+</body>
+</html>

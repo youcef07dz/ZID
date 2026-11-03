@@ -1,0 +1,323 @@
+# ZyZoom Internet Downloader - العربية
+code=ar
+name=العربية
+dir=rtl
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=ملف
+menu.downloads=التنزيلات
+menu.view=عرض
+menu.options=خيارات
+menu.help=مساعدة
+menu.add_url=إضافة عنوان URL...
+menu.resume_selected=استئناف المحدد
+menu.pause_selected=إيقاف المحدد مؤقتًا
+menu.restart_selected=إعادة بدء المحدد
+menu.export=تصدير القائمة...
+menu.exit=خروج
+menu.pause_all=إيقاف الكل مؤقتًا
+menu.resume_all=استئناف الكل
+menu.stop_all=إيقاف الكل
+menu.theme_light=سمة Windows 7 الفاتحة
+menu.theme_dark=سمة Windows 7 الداكنة
+menu.settings=الإعدادات...
+menu.about=حول...
+
+btn.add=إضافة URL
+btn.start=بدء
+btn.pause=إيقاف مؤقت
+btn.resume=استئناف
+btn.restart=إعادة بدء
+btn.edit=تعديل
+btn.info=معلومات
+btn.remove=إزالة
+btn.about=حول
+btn.stop_all=إيقاف الكل
+btn.cancel=إلغاء
+btn.ok=موافق
+btn.close=إغلاق
+btn.paste=لصق
+btn.open_folder=فتح المجلد
+btn.hide=إخفاء
+btn.hide_details=إخفاء التفاصيل
+btn.show_details=إظهار التفاصيل
+
+tb.filter=تصفية...
+
+cat.all=كل التنزيلات
+cat.queue=قائمة الانتظار
+cat.downloading=جارٍ التنزيل
+cat.paused=متوقف مؤقتًا
+cat.done=مكتمل
+cat.error=خطأ
+cat.video=فيديو
+cat.image=صورة
+cat.audio=صوت
+cat.compressed=مضغوط
+cat.program=برامج
+cat.other=أخرى
+
+col.name=اسم الملف
+col.status=الحالة
+col.type=النوع
+col.size=الحجم
+col.progress=التقدم
+col.speed=السرعة
+col.eta=الوقت المتبقي
+col.date=التاريخ
+
+ctx.open=فتح
+ctx.folder=فتح المجلد
+ctx.copy=نسخ URL
+ctx.resume=بدء / استئناف
+ctx.pause=إيقاف مؤقت
+ctx.restart=إعادة بدء
+ctx.edit=تعديل...
+ctx.info=معلومات...
+ctx.prio_high=الأولوية: عالية
+ctx.prio_normal=الأولوية: عادية
+ctx.prio_low=الأولوية: منخفضة
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=إزالة
+
+label.name=الاسم:
+label.url=URL:
+label.type=النوع:
+label.size=الحجم:
+label.received=المستلم:
+label.status=الحالة:
+label.started=بدأ في:
+label.priority=الأولوية:
+label.save_to=حفظ في:
+label.file=الملف:
+label.speed=السرعة:
+label.eta=الوقت المتبقي:
+label.urls=عناوين URL (واحد في كل سطر)
+label.file_name=اسم الملف
+label.save_folder=مجلد الحفظ
+label.cookie=Cookie (اختياري)
+label.connections=الاتصالات (0 = استخدام الافتراضي)
+label.speed_limit=حد السرعة KB/s (0 = استخدام الافتراضي)
+
+add.title=إضافة تنزيل
+add.edit_title=تعديل التنزيل رقم {id}
+add.auto_url=(تلقائي من URL)
+add.default_folder=(الافتراضي: Downloads\ZID)
+add.cookie_ph=الاسم=القيمة; آخر=القيمة
+add.paste_fail=تعذرت قراءة الحافظة. اضغط Ctrl+V داخل الحقل.
+add.skipped=تم تخطي {n} سطر: يمكن إضافة عناوين http وhttps وftp فقط.
+
+info.title=معلومات التنزيل
+prio.high=عالية
+prio.normal=عادية
+prio.low=منخفضة
+
+rm.title=إزالة التنزيلات
+rm.text=إزالة {n} تنزيل من القائمة؟
+rm.also_file=حذف الملف/الملفات التي تم تنزيلها من القرص أيضًا
+rm.select_first=حدد صفًا أولاً
+
+set.title=الإعدادات
+set.maxconc=الحد الأقصى للتنزيلات المتزامنة
+set.parts=الأجزاء لكل تنزيل
+set.speed=السرعة القصوى (KB/s، 0 = بلا حد)
+set.proxy=الوكيل (فارغ = مباشر، مثال http://user:pass@host:8080)
+set.clip=مراقبة الحافظة لعناوين http/https
+set.shutdown=إيقاف تشغيل الكمبيوتر عند اكتمال قائمة الانتظار
+set.sort=ترتيب التنزيلات الجديدة في مجلدات حسب النوع (فيديو، صورة، ...)
+set.schedule=بدء قائمة الانتظار عند (HH:MM، فارغ = الآن)
+set.language=اللغة
+
+status.queued=في قائمة الانتظار
+status.downloading=جارٍ التنزيل
+status.connecting=جارٍ الاتصال
+status.paused=متوقف مؤقتًا
+status.done=مكتمل
+status.error=خطأ
+status.starting=جارٍ البدء...
+status.scheduled=مجدول في
+status.retrying=خطأ في الشبكة، إعادة المحاولة
+
+msg.url_copied=تم نسخ URL
+msg.open=فتح
+msg.file_not_found=الملف غير موجود:
+msg.missing_resource=المورد مفقود
+msg.export_failed=فشل التصدير:
+msg.export=تصدير
+
+tray.show=إظهار النافذة
+tray.pause_all=إيقاف الكل مؤقتًا
+tray.resume_all=استئناف الكل
+tray.exit=خروج
+tray.balloon=لا يزال قيد التشغيل في علبة النظام.
+
+about.title=حول
+about.folder=مجلد التنزيل:
+about.state=ملف الحالة:
+about.config=ملف الإعدادات:
+
+popup.title=تنزيل - {name}
+popup.details=تفاصيل الاتصال
+popup.connections=الاتصالات النشطة:
+popup.parts=الأجزاء:
+popup.remaining=المتبقي:
+popup.host=المضيف:
+bi.copy_path=نسخ مسار الإضافة
+bi.copied=تم النسخ
+bi.copy_failed=تعذر النسخ
+
+# empty state
+empty.title=لا شيء لعرضه
+empty.hint=أضف رابطًا أو أفلت رابطًا أو عدّل عامل التصفية.
+menu.retry_all=إعادة محاولة كل الأخطاء
+menu.clear_done=مسح المكتمل
+menu.reset_columns=إعادة تعيين تخطيط الأعمدة
+menu.browsers=تكامل المتصفح...
+btn.retry_all=إعادة محاولة الكل
+btn.import=استيراد...
+btn.open_file=فتح الملف
+label.avg_speed=متوسط السرعة:
+label.time_taken=الوقت المستغرق:
+label.mirror=عنوان URL للنسخة المتطابقة (اختياري)
+label.checksum=المجموع الاختباري (اختياري)
+label.headers=ترويسات إضافية (اختياري، واحد في كل سطر)
+label.item_proxy=الوكيل (اختياري، فارغ = استخدام الافتراضي)
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.dupe={n} من عناوين URL موجودة بالفعل في القائمة. هل تريد الإضافة على أي حال؟
+set.tab_general=عام
+set.tab_connection=الاتصال
+set.tab_schedule=الجدولة
+set.tab_appearance=المظهر
+set.capture=أنواع الملفات التي يجب أن تلتقطها إضافة المتصفح (مفصولة بفواصل)
+set.stop=الإيقاف عند (HH:MM، فارغ = أبدًا)
+set.daily=تكرار نافذة البدء/الإيقاف كل يوم
+set.accent=لون التمييز
+set.prog_start=لون بداية شريط التقدم
+set.prog_end=لون نهاية شريط التقدم
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+st.active=نشط
+st.speed=السرعة
+st.free=متاح
+status.verified=تم التحقق
+tray.done=اكتمل التنزيل:
+bi.title=تكامل المتصفح
+bi.intro=اختر عائلة متصفحك. ستُفتح صفحة الإضافة في المتصفح الذي تختاره.
+bi.firefox=Firefox
+bi.chromium=متصفحات Chromium
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=اختر المتصفح لفتح صفحة الإضافة فيه:
+bi.none=لم يتم العثور على متصفح مدعوم.
+bi.open_failed=تعذر بدء المتصفح:
+neat.title=إضافة تنزيل
+neat.url=URL:
+neat.name=اسم الملف:
+neat.folder=حفظ في:
+neat.size=الحجم:
+neat.unknown_size=غير معروف
+neat.start=بدء
+neat.later=البدء لاحقًا
+neat.browse=استعراض...
+popup.tab_download=التنزيل
+popup.tab_options=الخيارات
+popup.parts_downloading=الأجزاء قيد التنزيل:
+popup.finished_title=اكتمل التنزيل
+popup.finished=انتهى التنزيل
+popup.after=عند انتهاء التنزيل
+popup.after_dialog=إظهار مربع الحوار عند الانتهاء
+popup.after_none=عدم فعل أي شيء
+popup.after_open=فتح الملف
+popup.after_folder=فتح المجلد
+popup.after_shutdown=إيقاف تشغيل الكمبيوتر
+popup.saved=محفوظ
+btn.apply=تطبيق
+msg.merged_restart=تم دمج هذا الملف من مساري فيديو وصوت منفصلين. أزله ونزّل الفيديو مرة أخرى لإعادة جلبه.
+
+ctx.refresh=تحديث الرابط
+msg.refresh_no_page=لا يحتوي هذا التنزيل على صفحة مرجعية لفتحها.
+# updates
+menu.check_updates=التحقق من التحديثات...
+set.tab_updates=التحديثات
+set.update_check=التحقق من وجود إصدار جديد تلقائيًا
+set.update_days=التحقق كل (أيام)
+update.title=تحديث البرنامج
+update.available=الإصدار {0} متوفر (لديك {1}). هل تريد تنزيله الآن؟
+update.latest=لديك أحدث إصدار ({0}).
+update.error=تعذّر التحقق من التحديثات: {0}
+update.downloading=تمت إضافة التحديث إلى التنزيلات.
+about.no_errors=لا توجد أخطاء
+about.recent_errors=الأخطاء الأخيرة:
+add.advanced=خيارات متقدمة
+add.probe_checking=جارٍ التحقق من الرابط...
+add.probe_size=الحجم
+auth.forget_confirm=نسيان جميع بيانات اعتماد المواقع المحفوظة؟
+auth.message=هذا الخادم يحتاج إلى اسم مستخدم وكلمة مرور.
+auth.pass=كلمة المرور:
+auth.remember=التذكّر لهذا الموقع
+auth.title=بيانات الاعتماد مطلوبة
+auth.user=اسم المستخدم:
+btn.clean_history=مسح السجل
+btn.forget_credentials=نسيان بيانات الاعتماد المحفوظة
+btn.no=لا
+btn.show_more=عرض المزيد
+btn.yes=نعم
+clean.button=تنظيف
+clean.orphans=حذف الملفات الجزئية المتبقية (.aria2، .part) في مجلد التنزيل أيضًا
+clean.text=إزالة كل التنزيلات المكتملة من القائمة؟ ستبقى الملفات المنزّلة على القرص.
+clean.title=مسح السجل
+ctx.credentials=أدخل بيانات الاعتماد...
+ctx.retry_single=إعادة المحاولة باتصال واحد
+dup.cancel=إلغاء
+dup.file=الملف الهدف موجود بالفعل.
+dup.hint=متابعة تستأنف الإدخال الموجود. الاحتفاظ بكليهما يحفظ نسخة أخرى باسم جديد. استبدال يحذف الملف الموجود ويبدأ من جديد.
+dup.hint_file=الاحتفاظ بكليهما يحفظ نسخة أخرى باسم جديد. استبدال يحذف الملف الموجود ويبدأ من جديد.
+dup.keep=الاحتفاظ بكليهما
+dup.open=فتح
+dup.replace=استبدال
+dup.resume=متابعة
+dup.title=تنزيل مكرر
+dup.url=هذا الرابط موجود بالفعل في قائمة التنزيلات.
+info.tab_advanced=متقدم
+info.tab_general=عام
+info.tab_network=الشبكة
+info.tab_progress=التقدم
+label.active_conn=الاتصالات النشطة:
+label.after_done=بعد التنزيل:
+label.checksum_short=المجموع الاختباري:
+label.cookie_short=ملف تعريف الارتباط:
+label.headers_short=الترويسات:
+label.max_conn=حد الاتصالات:
+label.mirror_short=رابط المرآة:
+label.referer=المُحيل:
+label.remaining=المتبقي:
+label.retry=عدد المحاولات:
+label.start_at=التنزيل لاحقًا في (HH:MM، فارغ = الآن)
+label.user_agent=وكيل المستخدم:
+menu.copy_diag=نسخ التشخيص
+menu.open_log=فتح مجلد السجل
+msg.diag_copied=تم نسخ التشخيص
+neat.block=عدم التنزيل التلقائي أبدًا من هذا النطاق
+neat.block_ask=التوقف عن تولّي التنزيلات من {0}؟ ستبقى في المتصفح.
+neat.block_title=المواقع المحظورة
+set.blocked=المواقع المحظورة (واحد في كل سطر؛ تبقى تنزيلاتها في المتصفح)
+set.naming=قالب التسمية ({host}/{type}/{name}؛ فارغ = مجلد التنزيل)
+set.speed_from=ينطبق الحد المؤقت من (HH:MM)
+set.speed_to=ينطبق الحد المؤقت حتى (HH:MM)
+set.speed_window=حد سرعة مؤقت (KB/s، 0 = إيقاف)
+st.eta=الوقت المتوقع
+st.left=المتبقي
+status.file_missing=تم نقل الملف أو حذفه
+status.waitingnetwork=في انتظار الشبكة
+update.notes=الجديد:

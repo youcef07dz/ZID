@@ -1,0 +1,326 @@
+# ZyZoom Internet Downloader language file
+# Keep the keys (left of =) unchanged. Missing keys fall back to en.txt.
+code=en
+name=English
+dir=ltr
+
+app.title=ZyZoom Internet Downloader
+
+menu.file=File
+menu.downloads=Downloads
+menu.view=View
+menu.options=Options
+menu.help=Help
+menu.add_url=Add URL...
+menu.resume_selected=Resume Selected
+menu.pause_selected=Pause Selected
+menu.restart_selected=Restart Selected
+menu.export=Export list...
+menu.exit=Exit
+menu.pause_all=Pause All
+menu.resume_all=Resume All
+menu.retry_all=Retry all errors
+menu.stop_all=Stop All
+menu.clear_done=Clear completed
+menu.theme_light=Default
+menu.theme_dark=Dark Theme
+menu.reset_columns=Reset column layout
+menu.settings=Settings...
+menu.browsers=Browser integration...
+menu.about=About...
+menu.open_log=Open log folder
+menu.copy_diag=Copy diagnostics
+
+btn.add=Add URL
+btn.start=Start
+btn.pause=Pause
+btn.resume=Resume
+btn.restart=Restart
+btn.retry_all=Retry all
+btn.edit=Edit
+btn.info=Info
+btn.remove=Remove
+btn.about=About
+btn.stop_all=Stop All
+btn.clean_history=Clean history
+btn.forget_credentials=Forget saved credentials
+btn.cancel=Cancel
+btn.ok=OK
+btn.close=Close
+btn.paste=Paste
+btn.import=Import...
+btn.open_folder=Open folder
+btn.open_file=Open file
+btn.hide=Hide
+btn.hide_details=Hide details
+btn.show_details=Show details
+btn.show_more=Show more
+
+tb.filter=Filter...
+
+cat.all=All Downloads
+cat.queue=Queue
+cat.downloading=Downloading
+cat.paused=Paused
+cat.done=Done
+cat.error=Error
+cat.video=Video
+cat.image=Image
+cat.audio=Audio
+cat.compressed=Compressed
+cat.program=Program
+cat.other=Other
+
+col.name=File Name
+col.status=Status
+col.type=Type
+col.size=Size
+col.progress=Progress
+col.speed=Speed
+col.eta=ETA
+col.date=Date
+
+ctx.open=Open
+ctx.folder=Open Folder
+ctx.copy=Copy URL
+ctx.resume=Start / Resume
+ctx.pause=Pause
+ctx.restart=Restart
+ctx.credentials=Enter credentials...
+ctx.edit=Edit...
+ctx.info=Info...
+ctx.retry_single=Retry with 1 connection
+ctx.prio_high=Priority: High
+ctx.prio_normal=Priority: Normal
+ctx.prio_low=Priority: Low
+ctx.move_up=Move Up
+ctx.move_down=Move Down
+ctx.remove=Remove
+
+label.name=Name:
+label.url=URL:
+label.type=Type:
+label.size=Size:
+label.received=Received:
+label.status=Status:
+label.started=Started:
+label.priority=Priority:
+label.save_to=Save to:
+label.file=File:
+label.speed=Speed:
+label.eta=ETA:
+label.avg_speed=Average speed:
+label.time_taken=Time taken:
+label.urls=URLs (one per line)
+label.file_name=File Name
+label.save_folder=Save Folder
+label.cookie=Cookie (optional)
+label.mirror=Mirror URL (optional)
+label.checksum=Checksum (optional)
+label.headers=Extra headers (optional, one per line)
+label.connections=Connections (0 = use default)
+label.speed_limit=Speed limit KB/s (0 = use default)
+label.start_at=Download later at (HH:MM, empty = now)
+label.item_proxy=Proxy (optional, empty = use default)
+label.remaining=Remaining:
+label.active_conn=Active connections:
+label.max_conn=Connection limit:
+label.user_agent=User agent:
+label.referer=Referer:
+label.cookie_short=Cookie:
+label.headers_short=Headers:
+label.mirror_short=Mirror URL:
+label.checksum_short=Checksum:
+label.retry=Retry count:
+label.after_done=After download:
+
+add.title=Add Download
+add.advanced=Advanced options
+add.probe_checking=Checking the URL...
+add.probe_size=Size
+add.edit_title=Edit Download #{id}
+add.auto_url=(auto from URL)
+add.default_folder=(default: Downloads\ZID)
+add.cookie_ph=name=value; other=value
+add.mirror_ph=https://mirror.example.com/file.zip
+add.checksum_ph=sha-256=...
+add.headers_ph=Origin: https://example.com
+add.paste_fail=Cannot read clipboard. Press Ctrl+V inside the field instead.
+add.skipped={n} line(s) skipped: only http, https and ftp URLs can be added.
+add.dupe={n} URL(s) are already in the list. Add anyway?
+
+info.title=Download Info
+info.tab_general=General
+info.tab_progress=Progress
+info.tab_network=Network
+info.tab_advanced=Advanced
+prio.high=High
+prio.normal=Normal
+prio.low=Low
+
+rm.title=Remove Downloads
+rm.text=Remove {n} download(s) from the list?
+rm.also_file=Also delete the downloaded file(s) from disk
+rm.select_first=Select a row first
+clean.title=Clean history
+clean.text=Remove all finished downloads from the list? The downloaded files stay on disk.
+clean.orphans=Also delete leftover partial files (.aria2, .part) in the download folder
+clean.button=Clean
+
+set.title=Settings
+set.tab_general=General
+set.tab_connection=Connection
+set.tab_schedule=Schedule
+set.tab_appearance=Appearance
+set.capture=File types the browser extension should capture (comma separated)
+set.maxconc=Max concurrent downloads
+set.parts=Parts per download
+set.speed=Max speed (KB/s, 0 = unlimited)
+set.speed_window=Temporary speed cap (KB/s, 0 = off)
+set.speed_from=Temporary cap applies from (HH:MM)
+set.speed_to=Temporary cap applies until (HH:MM)
+set.proxy=Proxy (empty = direct, e.g. http://user:pass@host:8080)
+set.clip=Watch the clipboard for http/https URLs
+set.shutdown=Shut down the PC when the queue finishes
+set.sort=Sort new downloads into type folders (Video, Image, ...)
+set.naming=Naming template ({host}/{type}/{name}; empty = download folder)
+set.blocked=Blocked websites (one per line; downloads from them stay in the browser)
+set.schedule=Start queue at (HH:MM, empty = start now)
+set.stop=Stop at (HH:MM, empty = never)
+set.daily=Repeat the start/stop window every day
+set.language=Language
+set.accent=Accent color
+set.prog_start=Progress bar start color
+set.prog_end=Progress bar end color
+set.scheme=UI color scheme
+set.scheme_indigo=Indigo
+set.scheme_midnight=Midnight
+set.scheme_ocean=Ocean
+set.scheme_forest=Forest
+set.scheme_ember=Ember
+set.scheme_slate=Slate
+set.scheme_contrast=High contrast
+set.scheme_xp=Windows XP
+btn.reset_colors=Reset colors
+
+status.queued=Queued
+st.active=Active
+st.speed=Speed
+st.left=Left
+st.eta=ETA
+st.free=Free
+status.downloading=Downloading
+status.connecting=Connecting
+status.paused=Paused
+status.waitingnetwork=Waiting for network
+status.done=Done
+status.file_missing=File moved or deleted
+status.verified=Verified
+status.error=Error
+status.starting=Starting...
+status.scheduled=Scheduled for
+status.retrying=Network error, retrying
+
+msg.url_copied=URL copied
+dup.title=Duplicate download
+dup.url=This URL is already in the download list.
+dup.file=The target file already exists.
+dup.hint=Resume continues the existing entry. Keep both downloads another copy under a new name. Replace deletes the existing file and starts over.
+dup.hint_file=Keep both downloads another copy under a new name. Replace deletes the existing file and starts over.
+dup.resume=Resume
+dup.open=Open
+dup.keep=Keep both
+dup.replace=Replace
+dup.cancel=Cancel
+msg.diag_copied=Diagnostics copied
+msg.open=Open
+msg.file_not_found=File not found:
+msg.missing_resource=Missing resource
+msg.export_failed=Export failed:
+msg.export=Export
+
+tray.show=Show window
+tray.pause_all=Pause All
+tray.resume_all=Resume All
+tray.exit=Exit
+tray.done=Download complete:
+tray.balloon=Still running in the system tray.
+
+about.title=About
+about.folder=Download folder:
+about.state=State file:
+about.config=Config file:
+about.recent_errors=Recent errors:
+about.no_errors=None
+auth.title=Credentials required
+auth.message=This server needs a user name and password.
+auth.user=User name:
+auth.pass=Password:
+auth.remember=Remember for this site
+auth.forget_confirm=Forget all saved site credentials?
+
+bi.title=Browser integration
+bi.intro=Choose your browser family. The extension page will open in the browser you pick.
+bi.firefox=Firefox
+bi.chromium=Chromium browsers
+bi.chromium_hint=Chrome, Edge, Brave, Opera, Vivaldi...
+bi.pick=Choose the browser to open the extension page in:
+bi.none=No supported browser was found.
+bi.open_failed=Cannot start the browser:
+bi.copy_path=Copy extension path
+bi.copied=Copied
+bi.copy_failed=Copy failed
+
+neat.title=Add download
+neat.url=URL:
+neat.name=File name:
+neat.folder=Save to:
+neat.size=Size:
+neat.unknown_size=Unknown
+neat.start=Start
+neat.later=Start later
+neat.browse=Browse...
+neat.block=Never auto download from this domain
+neat.block_ask=Stop taking over downloads from {0}? They will stay in the browser.
+neat.block_title=Blocked websites
+btn.yes=Yes
+btn.no=No
+
+popup.title=Download - {name}
+popup.tab_download=Download
+popup.tab_options=Options
+popup.parts_downloading=Parts downloading:
+popup.finished_title=Download complete
+popup.finished=Download finished
+popup.after=When download finishes
+popup.after_dialog=Show finished dialog
+popup.after_none=Do nothing
+popup.after_open=Open the file
+popup.after_folder=Open the folder
+popup.after_shutdown=Shut down the PC
+popup.saved=Saved
+btn.apply=Apply
+popup.details=Connection details
+popup.connections=Active connections:
+popup.parts=Parts:
+popup.remaining=Remaining:
+popup.host=Host:
+msg.merged_restart=This file was merged from separate video and audio streams. Remove it and download the video again to re-fetch it.
+
+# empty state
+empty.title=Nothing to show
+empty.hint=Add a URL, drop a link, or adjust the filter.
+
+ctx.refresh=Refresh URL
+msg.refresh_no_page=This download has no reference page to open.
+# updates
+menu.check_updates=Check for updates...
+set.tab_updates=Updates
+set.update_check=Check for a new version automatically
+set.update_days=Check every (days)
+update.title=Software update
+update.available=Version {0} is available (you have {1}). Download it now?
+update.latest=You have the latest version ({0}).
+update.error=Could not check for updates: {0}
+update.downloading=The update was added to your downloads.
+update.notes=What's new:
