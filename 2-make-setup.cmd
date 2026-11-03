@@ -21,7 +21,7 @@ if errorlevel 1 (
 
 rem Inno Setup 5.6.1 builds the installer.
 set "ISCC="
-if exist "inno\ISCC.exe" set "ISCC=inno\ISCC.exe"
+if exist "src\inno\ISCC.exe" set "ISCC=src\inno\ISCC.exe"
 
 if not defined ISCC (
     echo [ERROR] Inno Setup 5.6.1 compiler ^(ISCC.exe^) not found.

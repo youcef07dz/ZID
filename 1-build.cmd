@@ -69,12 +69,12 @@ if errorlevel 1 goto :fail
 if exist "%ROOT%README.html" copy /Y "%ROOT%README.html" "%OUT%README.html" >nul
 if exist "%ROOT%app.ico" copy /Y "%ROOT%app.ico" "%OUT%app.ico" >nul
 if exist "%ROOT%download.ico" copy /Y "%ROOT%download.ico" "%OUT%download.ico" >nul
-if exist "%ROOT%tools" (
+if exist "%ROOT%src\tools" (
     echo [INFO] Copying tools...
-    xcopy /E /I /Y /Q "%ROOT%tools" "%OUT%tools" >nul
+    xcopy /E /I /Y /Q "%ROOT%src\tools" "%OUT%tools" >nul
 )
 rem aria2 needs the CA bundle; a half-copied tools folder breaks every HTTPS link.
-if exist "%ROOT%tools\ca-certificates.crt" if not exist "%OUT%tools\ca-certificates.crt" (
+if exist "%ROOT%src\tools\ca-certificates.crt" if not exist "%OUT%tools\ca-certificates.crt" (
     echo [ERROR] tools\ca-certificates.crt was not copied.
     goto :fail
 )
