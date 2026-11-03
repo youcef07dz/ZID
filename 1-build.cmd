@@ -17,8 +17,7 @@ echo === Building ZID [%CONFIG%] with csc.exe ===
 echo.
 
 if not exist "%ROOT%src\Program.cs"  ( echo [ERROR] Program.cs not found.  & goto :fail )
-set "UI=%ROOT%ui.html"
-if exist "%ROOT%src\ui.html" set "UI=%ROOT%src\ui.html"
+set "UI=%ROOT%src\ui.html"
 if not exist "%UI%" ( echo [ERROR] ui.html not found. & goto :fail )
 
 set "CSC="
@@ -79,23 +78,23 @@ if exist "%ROOT%tools\ca-certificates.crt" if not exist "%OUT%tools\ca-certifica
     echo [ERROR] tools\ca-certificates.crt was not copied.
     goto :fail
 )
-if exist "%ROOT%lang" (
+if exist "%ROOT%src\lang" (
     echo [INFO] Copying languages...
-    xcopy /E /I /Y /Q "%ROOT%lang" "%OUT%lang" >nul
+    xcopy /E /I /Y /Q "%ROOT%src\lang" "%OUT%lang" >nul
 )
-if exist "%ROOT%zid-crx" (
+if exist "%ROOT%src\zid-crx" (
     echo [INFO] Copying Chromium extension...
-    xcopy /E /I /Y /Q "%ROOT%zid-crx" "%OUT%zid-crx" >nul
+    xcopy /E /I /Y /Q "%ROOT%src\zid-crx" "%OUT%zid-crx" >nul
 )
-if exist "%ROOT%zid-crx109" (
+if exist "%ROOT%src\zid-crx109" (
     echo [INFO] Copying Chromium extension for Chrome 109 / Win7...
-    xcopy /E /I /Y /Q "%ROOT%zid-crx109" "%OUT%zid-crx109" >nul
+    xcopy /E /I /Y /Q "%ROOT%src\zid-crx109" "%OUT%zid-crx109" >nul
 )
-if exist "%ROOT%zid-xpi" (
+if exist "%ROOT%src\zid-xpi" (
     echo [INFO] Copying Firefox extension...
-    xcopy /E /I /Y /Q "%ROOT%zid-xpi" "%OUT%zid-xpi" >nul
+    xcopy /E /I /Y /Q "%ROOT%src\zid-xpi" "%OUT%zid-xpi" >nul
     echo [INFO] Packaging Firefox extension as .xpi...
-    powershell -NoProfile -ExecutionPolicy Bypass -File "%ROOT%make-xpi.ps1" -Source "%ROOT%zid-xpi" -OutputDir "%ROOT%bin\%CONFIG%"
+    powershell -NoProfile -ExecutionPolicy Bypass -File "%ROOT%make-xpi.ps1" -Source "%ROOT%src\zid-xpi" -OutputDir "%ROOT%bin\%CONFIG%"
     if errorlevel 1 goto :fail
 )
 

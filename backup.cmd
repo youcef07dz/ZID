@@ -19,11 +19,8 @@ if errorlevel 1 (
     echo [ERROR] Could not copy src.
     exit /b 1
 )
-for %%F in (build.cmd tests.cmd make-setup.cmd setup.iss smoke-recovery.ps1 task.md ui.html README.html) do (
+for %%F in (1-build.cmd 2-make-setup.cmd 3-makehash.cmd 4-push.cmd tests.cmd setup.iss smoke-recovery.ps1 check-lang.ps1 sync-extensions.ps1 make-xpi.ps1 version.json task.md README.html) do (
     if exist "%ROOT%%%F" copy /Y "%ROOT%%%F" "%DEST%\%%F" >nul
-)
-for %%D in (zid-crx zid-crx109 zid-xpi) do (
-    if exist "%ROOT%%%D" xcopy "%ROOT%%%D" "%DEST%\%%D" /E /I /Y /Q >nul
 )
 
 echo [OK] Backup created: %DEST%

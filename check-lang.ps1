@@ -5,7 +5,7 @@ param([switch]$Strict)
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$dir  = Join-Path $root "lang"
+$dir  = Join-Path $root "src\lang"
 $base = Join-Path $dir "en.txt"
 
 function Get-Keys([string]$path) {

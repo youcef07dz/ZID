@@ -6,7 +6,8 @@ param([switch]$Check)
 
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
-$source = Join-Path $root 'zid-crx'
+$base = Join-Path $root 'src'
+$source = Join-Path $base 'zid-crx'
 $targets = @('zid-crx109', 'zid-xpi')
 $shared = @('content.js', 'common.js', 'capture.json', 'injected\youtube.js',
             'icons\icon16.png', 'icons\icon48.png', 'icons\icon128.png')
@@ -36,7 +37,7 @@ $background = [IO.File]::ReadAllBytes((Join-Path $source 'background.js'))
 
 foreach ($target in $targets) {
     foreach ($file in $shared) {
-        $to = Join-Path (Join-Path $root $target) $file
+        $to = Join-Path (Join-Path $base $target) $file
         if ($Check) {
             if (-not (Same-Bytes (Join-Path $source $file) $to)) {
                 Write-Host "[DRIFT] $to"
@@ -55,7 +56,7 @@ foreach ($target in $targets) {
             'chrome.action.onClicked', 'chrome.browserAction.onClicked')
         $bg = $utf8.GetBytes($text)
     }
-    Put-Bytes (Join-Path (Join-Path $root $target) 'background.js') $bg
+    Put-Bytes (Join-Path (Join-Path $base $target) 'background.js') $bg
 }
 
 if ($drift -gt 0) {
